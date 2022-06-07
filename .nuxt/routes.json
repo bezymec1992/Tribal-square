@@ -1,0 +1,32 @@
+[
+  {
+    "name": "for-partners",
+    "path": "/for-partners",
+    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/for-partners.vue",
+    "chunkName": "pages/for-partners"
+  },
+  {
+    "name": "main",
+    "path": "/main",
+    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/main.vue",
+    "chunkName": "pages/main"
+  },
+  {
+    "name": "our-products",
+    "path": "/our-products",
+    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/our-products.vue",
+    "chunkName": "pages/our-products"
+  },
+  {
+    "name": "privacy-policy",
+    "path": "/privacy-policy",
+    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/privacy-policy.vue",
+    "chunkName": "pages/privacy-policy"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
