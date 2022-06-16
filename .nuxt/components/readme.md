@@ -9,4 +9,5 @@ You can directly use them in pages and other components without the need to impo
 - `<ContactForm>` | `<contact-form>` (components/ContactForm.vue)
 - `<Footer>` | `<footer>` (components/Footer.vue)
 - `<Header>` | `<header>` (components/Header.vue)
+- `<OurPartners>` | `<our-partners>` (components/OurPartners.vue)
 - `<InputsInput>` | `<inputs-input>` (components/Inputs/Input.vue)

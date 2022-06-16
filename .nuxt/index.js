@@ -13,11 +13,11 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_7d3819e2 from 'nuxt_plugin_plugin_7d3819e2' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_workbox_3bf2164e from 'nuxt_plugin_workbox_3bf2164e' // Source: .\\workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_757e4664 from 'nuxt_plugin_metaplugin_757e4664' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
-import nuxt_plugin_iconplugin_6c2efb7c from 'nuxt_plugin_iconplugin_6c2efb7c' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
-import nuxt_plugin_fontLoader_3a8f0424 from 'nuxt_plugin_fontLoader_3a8f0424' // Source: .\\fontLoader.js (mode: 'client')
+import nuxt_plugin_plugin_15a9610e from 'nuxt_plugin_plugin_15a9610e' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_workbox_5ac40f38 from 'nuxt_plugin_workbox_5ac40f38' // Source: .\\workbox.js (mode: 'client')
+import nuxt_plugin_metaplugin_55284bb8 from 'nuxt_plugin_metaplugin_55284bb8' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
+import nuxt_plugin_iconplugin_59cff12c from 'nuxt_plugin_iconplugin_59cff12c' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
+import nuxt_plugin_fontLoader_61772a0c from 'nuxt_plugin_fontLoader_61772a0c' // Source: .\\fontLoader.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -85,7 +85,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Tribal Square","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=0"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"hid":"font-preload","rel":"preload","as":"style","href":"\u002Ffonts\u002Fstylesheet.css"}],"style":[],"script":[],"noscript":[{"hid":"font-noscript","innerHTML":"\u003Clink rel=\"stylesheet\" href=\"\u002Ffonts\u002Fstylesheet.css\"\u003E"}],"__dangerouslyDisableSanitizersByTagID":{"font-noscript":["innerHTML"]}},
+    head: {"title":"Tribal Square","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=0"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"},{"hid":"charset","charset":"utf-8"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"test"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"test"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"test"},{"hid":"og:description","name":"og:description","property":"og:description","content":"To make it easy for you to get started with GitLab, here's a list of recommended next steps."}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"hid":"font-preload","rel":"preload","as":"style","href":"\u002Ffonts\u002Fstylesheet.css"},{"hid":"shortcut-icon","rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64x64.e3e9fb.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512x512.e3e9fb.png","sizes":"512x512"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.fdeca86f.json","hid":"manifest"}],"style":[],"script":[],"noscript":[{"hid":"font-noscript","innerHTML":"\u003Clink rel=\"stylesheet\" href=\"\u002Ffonts\u002Fstylesheet.css\"\u003E"}],"__dangerouslyDisableSanitizersByTagID":{"font-noscript":["innerHTML"]},"htmlAttrs":{"lang":"en"}},
 
     store,
     router,
@@ -214,24 +214,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_7d3819e2 === 'function') {
-    await nuxt_plugin_plugin_7d3819e2(app.context, inject)
+  if (typeof nuxt_plugin_plugin_15a9610e === 'function') {
+    await nuxt_plugin_plugin_15a9610e(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_workbox_3bf2164e === 'function') {
-    await nuxt_plugin_workbox_3bf2164e(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_5ac40f38 === 'function') {
+    await nuxt_plugin_workbox_5ac40f38(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_metaplugin_757e4664 === 'function') {
-    await nuxt_plugin_metaplugin_757e4664(app.context, inject)
+  if (typeof nuxt_plugin_metaplugin_55284bb8 === 'function') {
+    await nuxt_plugin_metaplugin_55284bb8(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_iconplugin_6c2efb7c === 'function') {
-    await nuxt_plugin_iconplugin_6c2efb7c(app.context, inject)
+  if (typeof nuxt_plugin_iconplugin_59cff12c === 'function') {
+    await nuxt_plugin_iconplugin_59cff12c(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_fontLoader_3a8f0424 === 'function') {
-    await nuxt_plugin_fontLoader_3a8f0424(app.context, inject)
+  if (process.client && typeof nuxt_plugin_fontLoader_61772a0c === 'function') {
+    await nuxt_plugin_fontLoader_61772a0c(app.context, inject)
   }
 
   // Lock enablePreview in context

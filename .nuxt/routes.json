@@ -2,22 +2,22 @@
   {
     "name": "breakpoints",
     "path": "/breakpoints",
-    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\breakpoints.vue",
+    "component": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\team-squre\\\\tribal-square\\\\pages\\\\breakpoints.vue",
     "chunkName": "pages/breakpoints",
-    "_name": "_6aae3b9c"
+    "_name": "_0caf8e76"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\contact.vue",
+    "component": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\team-squre\\\\tribal-square\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact",
-    "_name": "_985c91cc"
+    "_name": "_64d286f4"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\team-squre\\\\tribal-square\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_58a4c34c"
+    "_name": "_c1287cb4"
   }
 ]
