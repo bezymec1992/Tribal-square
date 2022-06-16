@@ -2,24 +2,24 @@
 <div class="our-partners">
     <div class="our-parnters">
 		<div class="container">
-			<h2 class="our-partners__title">Our partners</h2>
+			<h2 class="our-partners__title h2">Our partners</h2>
 			<div class="our-partners__people row justify-content-sm-center">
-				<div class="col-sm-auto col-xl-3">
+				<div class="partners__people col-sm-auto col-xl-3">
 					<img src="../assets/imgs/our-partners01.png" alt="partner-photo" width="310" height="380">
 					<p class="our-partners__name">Black, Marvin</p>
 					<p class="our-partners__job">Starbucks</p>
 				</div>
-				<div class="col-sm-auto col-xl-3">
+				<div class="partners__people col-sm-auto col-xl-3">
 					<img src="../assets/imgs/our-partners02.png" alt="partner-photo" width="310" height="380">
 					<p class="our-partners__name">Cooper, Kristin</p>
 					<p class="our-partners__job">MasterCard</p>
 				</div>
-				<div class="col-sm-auto  col-xl-3">
+				<div class="partners__people col-sm-auto  col-xl-3">
 					<img src="../assets/imgs/our-partners03.png" alt="partner-photo" width="310" height="380">
 					<p class="our-partners__name">Miles, Esther</p>
 					<p class="our-partners__job">IBM</p>
 				</div>
-				<div class="col-sm-auto col-xl-3">
+				<div class="partners__people col-sm-auto col-xl-3">
 					<img src="../assets/imgs/our-partners04.png" alt="partner-photo" width="310" height="380">
 					<p class="our-partners__name">Flores, Juanita</p>
 					<p class="our-partners__job">L'Oréal</p>
@@ -72,45 +72,52 @@ export default {
 
 <style lang="scss" scoped>
 .our-partners {
-	padding: 100px 0;
+	padding: 10rem 0;
 	.our-partners__items {
 		max-width: 116.3rem;
-		border-bottom: 1px solid gray;
-		padding-bottom: 70px;
-		margin-top: 120px;
+		border-bottom: 0.1rem solid rgb($black, 0.2);
+		padding-bottom: 7rem;
+		padding-top: 6rem; ///12
 		@include media-breakpoint-down(md) {
-				margin-top: 30px;
-				padding-bottom: 10px;
+				padding-top: 3rem;
+				padding-bottom: 1rem;
 				.our-partners__item {
-					margin-bottom: 30px;
+					margin-bottom: 3rem;
 				}
 			}
 	}
 	.container {
  		max-width: 133.9rem;
 		.our-partners__people {
+			.partners__people img {
+				width: 100%;
+				height: auto;
+			}
+			.partners__people {
+				margin-bottom: 6rem;
+			}
 			@include media-breakpoint-down(md) {
 				display: none;
 			}
 		}
 		.our-partners__title {
 		text-align: center;
-		margin-bottom: 60px;
+		margin-bottom: 6rem;
 		@include media-breakpoint-down(md) {
-				margin-bottom: 0px;
+				margin-bottom: 0rem;
 			}
 		}
 
 		.our-partners__name {
-			margin-top: 30px;
-			line-height: 4rem;
+			margin-top: 3rem;
+			line-height: 1.27;
 			font-size: 22px;
 			font-weight: 400;
 		}
 		.our-partners__job {
 			opacity: 0.5;
-			font-size: 20px;
-			line-height: 40px;
+			font-size: 2rem;
+			line-height: 1.27;
 		}
  	}
 	
