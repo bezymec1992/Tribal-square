@@ -42,6 +42,7 @@ export default {
     "@nuxtjs/style-resources",
   ],
 
+  
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
