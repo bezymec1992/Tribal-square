@@ -1,32 +1,23 @@
 [
   {
-    "name": "for-partners",
-    "path": "/for-partners",
-    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/for-partners.vue",
-    "chunkName": "pages/for-partners"
+    "name": "breakpoints",
+    "path": "/breakpoints",
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\breakpoints.vue",
+    "chunkName": "pages/breakpoints",
+    "_name": "_6aae3b9c"
   },
   {
-    "name": "main",
-    "path": "/main",
-    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/main.vue",
-    "chunkName": "pages/main"
-  },
-  {
-    "name": "our-products",
-    "path": "/our-products",
-    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/our-products.vue",
-    "chunkName": "pages/our-products"
-  },
-  {
-    "name": "privacy-policy",
-    "path": "/privacy-policy",
-    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/privacy-policy.vue",
-    "chunkName": "pages/privacy-policy"
+    "name": "contact",
+    "path": "/contact",
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_985c91cc"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/Andrii/Desktop/new_tribe_agency/tribal-square/tribal-square/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_58a4c34c"
   }
 ]

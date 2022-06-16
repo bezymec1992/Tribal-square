@@ -4,7 +4,7 @@ export default {
     title: "Tribal Square",
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, user-scalable=0" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
@@ -15,19 +15,15 @@ export default {
   css: ["@/assets/scss/styles.scss"],
 
   styleResources: {
-    scss: [ "./assets/scss/_vars.scss", "./assets/scss/_mixins.scss",]
+    scss: ["./assets/scss/_vars.scss", "./assets/scss/_mixins.scss", "./bootstrap/scss/_mixins.scss"],
   },
 
-  webfontloader: {
-    google: {
-      families: ["Minigap:300,400,500,700", "Pontiff Wide:400", "Oswald:700,900", "Good Brush:700"]
-    },
+  fontLoader: {
+    url: '/fonts/stylesheet.css'
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    // {src: '~/plugins/Vuelidate' },  { src: '~/plugins/vue-plyr', mode: 'client' }
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,15 +32,16 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     "@nuxtjs/eslint-module",
+    'nuxt-font-loader'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    "nuxt-webfontloader",
     "@nuxtjs/pwa",
     "@nuxtjs/style-resources",
   ],
+
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -55,8 +52,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  server: {
-    // host: '0' 
-    // default: localhost
-  }
 };

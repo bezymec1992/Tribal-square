@@ -1,5 +1,5 @@
 {
-  "title": "trible-square",
+  "title": "test",
   "meta": [
     {
       "hid": "charset",
@@ -18,7 +18,7 @@
     {
       "hid": "apple-mobile-web-app-title",
       "name": "apple-mobile-web-app-title",
-      "content": "trible-square"
+      "content": "test"
     },
     {
       "hid": "og:type",
@@ -30,24 +30,30 @@
       "hid": "og:title",
       "name": "og:title",
       "property": "og:title",
-      "content": "trible-square"
+      "content": "test"
     },
     {
       "hid": "og:site_name",
       "name": "og:site_name",
       "property": "og:site_name",
-      "content": "trible-square"
+      "content": "test"
     }
   ],
   "link": [
     {
       "hid": "shortcut-icon",
       "rel": "shortcut icon",
-      "href": "/favicon.ico"
+      "href": "/_nuxt/icons/icon_64x64.e3e9fb.png"
+    },
+    {
+      "hid": "apple-touch-icon",
+      "rel": "apple-touch-icon",
+      "href": "/_nuxt/icons/icon_512x512.e3e9fb.png",
+      "sizes": "512x512"
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.a9f39752.json",
+      "href": "/_nuxt/manifest.6fabea71.json",
       "hid": "manifest"
     }
   ],

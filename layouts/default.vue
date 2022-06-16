@@ -1,25 +1,34 @@
 <template>
-  <transition>
-    <div class="wrapper">
-      <nav-bar />
-      <main class="main">
-        <nuxt />
-      </main>
-      <footer-section v-if="this.$route.path !== '/contact'" />
-    </div>
-  </transition>
+	<transition>
+		<div class="wrapper">
+			<Header class="style-2" />
+			<main class="main">
+				<nuxt />
+			</main>
+			<Footer />
+		</div>
+	</transition>
 </template>
 
 <script>
-import NavBar from "~/components/NavBar";
-import FooterSection from "~/components/FooterSection";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import globalBreakpoints from "@/mixins/globalBreakpoints";
 
 export default {
-  components: { NavBar, FooterSection },
-  data() {
-    return {};
-  },
-  methods: {},
-  Computed: {},
+	components: {
+		Header,
+		Footer
+	},
+	mixins: [globalBreakpoints],
+	mounted() {
+		this.correctVh();
+	},
+	methods: {
+		correctVh() {
+			const vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty("--vh", vh + "px");
+		}
+	}
 };
 </script>

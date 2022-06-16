@@ -4,11 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2f18bdf3 = () => interopDefault(import('../pages/for-partners.vue' /* webpackChunkName: "pages/for-partners" */))
-const _77e25506 = () => interopDefault(import('../pages/main.vue' /* webpackChunkName: "pages/main" */))
-const _6b301889 = () => interopDefault(import('../pages/our-products.vue' /* webpackChunkName: "pages/our-products" */))
-const _35ec2cdb = () => interopDefault(import('../pages/privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
-const _c17e9384 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _6aae3b9c = () => interopDefault(import('..\\pages\\breakpoints.vue' /* webpackChunkName: "pages/breakpoints" */))
+const _985c91cc = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
+const _58a4c34c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -22,24 +20,16 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/for-partners",
-    component: _2f18bdf3,
-    name: "for-partners"
+    path: "/breakpoints",
+    component: _6aae3b9c,
+    name: "breakpoints"
   }, {
-    path: "/main",
-    component: _77e25506,
-    name: "main"
-  }, {
-    path: "/our-products",
-    component: _6b301889,
-    name: "our-products"
-  }, {
-    path: "/privacy-policy",
-    component: _35ec2cdb,
-    name: "privacy-policy"
+    path: "/contact",
+    component: _985c91cc,
+    name: "contact"
   }, {
     path: "/",
-    component: _c17e9384,
+    component: _58a4c34c,
     name: "index"
   }],
 

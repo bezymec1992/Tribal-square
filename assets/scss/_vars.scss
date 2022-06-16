@@ -1,22 +1,42 @@
-// Colors
+//fonts
+$mini-gap: "Minigap";
+$pontiff-wide: "Pontiff Wide";
 
-$accentColor: #500AC9;
-$btnColor: #FFDB1C;
-$mainBgColor: #EEF3F5;
-$mainTextColor: #000000;
-$footerColor: #1C354D;
-$bgColor: white;
-$hoverColor: #1C354D;
-$textColor: white;
-$iconHoverColor:#FFDB1C; 
-$burgerColor:#000000;
+// bootstrap grid
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$grid-gutter-width-mobile: $grid-gutter-width;
 
-//Text
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
 
-$f-fam-base: 'Minigap', sans-serif;
-$f-size-base: 18px;
-$f-ln-hgh-base: 32px;
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1302px
+);
 
-// Hover
+// colors
+$white: #fff;
+$black: #000;
+$red: red;
+$purple: #500ac9;
+$cloud-burst: #1c354c;
+$candlelight: #ffdb1c;
 
-$hover-trans-dur: 0.6s;
+// // base vars
+$text-color-base: $black;
+$body-bg: $white;
+$font-family-base: $mini-gap;
+$font-size-base: 1.8rem;
+$font-weight-base: 400;
+$line-height-base: 1.2;
+$links-color-base: inherit;
+$transition: all 0.3s ease;

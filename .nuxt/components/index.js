@@ -1,8 +1,7 @@
-export { default as BurgerMenu } from '../../components/BurgerMenu.vue'
-export { default as FooterSection } from '../../components/FooterSection.vue'
-export { default as NavBar } from '../../components/NavBar.vue'
-export { default as SocialBar } from '../../components/SocialBar.vue'
-export { default as Product } from '../../components/product.vue'
+export { default as ContactForm } from '../..\\components\\ContactForm.vue'
+export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as Header } from '../..\\components\\Header.vue'
+export { default as InputsInput } from '../..\\components\\Inputs\\Input.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
