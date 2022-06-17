@@ -1,17 +1,23 @@
 <template>
   <div>
     <div class="home-page">
+      <customer-experience-section />
       <solution-section />
     </div>
   </div>
 </template>
 
 <script>
+import CustomerExperienceSection from "~/components/CustomerExperienceSection.vue";
 import SolutionSection from "~/components/SolutionSection.vue";
 export default {
-  components: { SolutionSection },
+  components: {
+    CustomerExperienceSection,
+    SolutionSection,
+  },
 };
 </script>
+    
 
 <style lang="scss" scoped>
 .home-page {
