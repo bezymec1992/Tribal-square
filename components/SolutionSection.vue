@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .solution {
-  background-color: $aqua-haze;
+  background-color: $white;
   padding: 0 7rem;
   @include media-breakpoint-down(lg) {
     padding: 0;
