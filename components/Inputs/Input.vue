@@ -1,8 +1,10 @@
 <template>
-	<div class="input-group">
+	<div class="input-group" :class="{ focus: labelShow }">
 		<label v-if="inputType === 'input'">
-			<span v-if="label" class="label">{{ label }}</span>
-			<input class="form-control" :type="type" :placeholder="placeholder" :value="value" v-on="listeners" @input="onInput" />
+			<transition name="fade">
+				<span v-if="label && labelShow" class="label">{{ label }}</span>
+			</transition>
+			<input class="form-control" :type="type" :placeholder="placeholder" :value="value" v-on="listeners" @input="onInput" @focus="showHideLabel(true)" @blur="showHideLabel(false)" />
 			<slot name="error">
 				<span v-if="errorShowing" class="error-message"
 					><span>{{ errorMessage }}</span></span
@@ -10,9 +12,11 @@
 			</slot>
 		</label>
 		<label v-if="inputType === 'textarea'">
-			<span v-if="label" class="label">{{ label }}</span>
+			<transition name="fade">
+				<span v-if="label && labelShow" class="label">{{ label }}</span>
+			</transition>
 			<div class="textarea-holder">
-				<textarea ref="textarea" class="form-control" :maxlength="maxlength" :placeholder="placeholder" :value="value" v-on="listeners" @input="onInput"></textarea>
+				<textarea ref="textarea" class="form-control" :maxlength="maxlength" :placeholder="placeholder" :value="value" v-on="listeners" @input="onInput" @focus="showHideLabel(true)" @blur="showHideLabel(false)"></textarea>
 				<span class="maxlength">
 					{{ maxLength }}
 				</span>
@@ -63,6 +67,11 @@ export default {
 			default: 500
 		}
 	},
+	data() {
+		return {
+			labelShow: false
+		};
+	},
 	computed: {
 		listeners() {
 			const { input, ...rest } = this.$listeners;
@@ -79,6 +88,9 @@ export default {
 		},
 		onChange(value) {
 			this.$emit("change", value.target.value);
+		},
+		showHideLabel(value) {
+			this.labelShow = value;
 		}
 	}
 };
@@ -89,28 +101,34 @@ export default {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 4rem;
+	margin-bottom: 3.3rem;
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 2.5rem;
+	}
 
 	label {
 		width: 100%;
 	}
 
 	.label {
+		position: absolute;
+		top: 0;
+		left: 1.4rem;
+		transform: translateY(-50%);
 		display: block;
-		margin-bottom: 1rem;
-		font-size: 2rem;
-		line-height: 1.3;
-
-		@include media-breakpoint-down(md) {
-			font-size: 1.4rem;
-		}
+		padding: 0.5rem 0.3rem;
+		font-size: 1.4rem;
+		color: rgba($black, 0.8);
+		background: $aqua-haze;
+		z-index: 2;
 	}
 
 	.form-control {
-		padding: 1rem 1.8rem;
-		font-size: 1.6rem;
+		padding: 1.6rem 1.5rem;
+		font-size: 1.5rem;
 		color: $black;
-		border: 0.1rem solid rgba($black, 0.2);
+		border: 0.1rem solid rgba($black, 0.4);
 		border-radius: 0.2rem;
 
 		&::placeholder {
@@ -123,6 +141,7 @@ export default {
 
 		&:focus {
 			box-shadow: none;
+			border-color: $purple;
 		}
 	}
 
@@ -145,11 +164,20 @@ export default {
 
 	.error-message {
 		position: absolute;
-		font-size: 1.6rem;
+		left: 0;
+		bottom: -2rem;
+		font-size: 1.5rem;
 		color: $red;
 
 		@include media-breakpoint-down(md) {
-			font-size: 1.5rem;
+			bottom: -1.6rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	&.focus {
+		.label {
+			color: $purple;
 		}
 	}
 }

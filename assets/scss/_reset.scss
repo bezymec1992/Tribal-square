@@ -100,5 +100,6 @@ input[type="submit"]::-moz-focus-inner {
 
 	@include media-breakpoint-down(md) {
 		font-size: 2.8rem;
+		line-height: 1.2;
 	}
 }

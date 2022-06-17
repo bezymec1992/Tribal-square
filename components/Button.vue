@@ -1,21 +1,21 @@
 <template>
-	<nuxt-link v-if="type == 'nuxt-link'" :to="to" class="btn"
+	<nuxt-link v-if="type === 'nuxt-link'" :to="to" class="btn"
 		>{{ title }}
-		<span class="icon-holder">
+		<span v-if="hasIconSlot" class="icon-holder">
 			<slot name="icon" />
 		</span>
 	</nuxt-link>
-	<a v-else-if="type == 'href'" :href="href" target="_blank" class="btn"
+	<a v-else-if="type === 'href'" :href="href" target="_blank" class="btn"
 		>{{ title }}
 
-		<span class="icon-holder">
+		<span v-if="hasIconSlot" class="icon-holder">
 			<slot name="icon" />
 		</span>
 	</a>
-	<button v-else-if="type == 'button'" class="btn" @click="click">
+	<button v-else-if="type === 'button'" class="btn" @click="click">
 		{{ title }}
 
-		<span class="icon-holder">
+		<span v-if="hasIconSlot" class="icon-holder">
 			<slot name="icon" />
 		</span>
 	</button>
@@ -46,6 +46,11 @@ export default {
 		}
 	},
 
+	computed: {
+		hasIconSlot() {
+			return !!this.$slots.icon;
+		}
+	},
 	methods: {
 		click() {
 			this.$emit("click");
@@ -57,6 +62,7 @@ export default {
 <style lang="scss" scoped>
 .btn {
 	display: inline-flex;
+	justify-content: center;
 	align-items: center;
 	padding: 1.6rem 4.35rem;
 	font-size: 2.2rem;

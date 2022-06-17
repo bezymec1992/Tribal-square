@@ -12,7 +12,7 @@
 							</p>
 						</div>
 
-						<Button title="ABOUT US" class="btn-warning">
+						<Button title="ABOUT US" class="btn-warning" type="nuxt-link" to="/contact">
 							<template #icon>
 								<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -26,6 +26,8 @@
 		</Intro-section>
 		<CustomerExperienceSection />
 		<OurPartners />
+		<SolutionSection />
+		<ContactSection />
 	</div>
 </template>
 
@@ -33,8 +35,10 @@
 import OurPartners from "@/components/OurPartners";
 import IntroSection from "@/components/IntroSection";
 import Button from "@/components/Button";
+import SolutionSection from "@/components/SolutionSection";
 import CustomerExperienceSection from "@/components/CustomerExperienceSection";
-export default { components: { OurPartners, IntroSection, Button, CustomerExperienceSection } };
+import ContactSection from "@/components/ContactSection";
+export default { components: { OurPartners, IntroSection, Button, CustomerExperienceSection, SolutionSection, ContactSection } };
 </script>
 
 <style lang="scss" scoped>
