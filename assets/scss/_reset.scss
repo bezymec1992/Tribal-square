@@ -93,4 +93,8 @@ input[type="submit"]::-moz-focus-inner {
 .h2 {
 	font-size: 4rem;
 	line-height: 1.5;
+
+	@include media-breakpoint-down(md) {
+		font-size: 2.8rem;
+	}
 }

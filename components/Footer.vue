@@ -4,39 +4,40 @@
 			<div class="row">
 				<div class="col-xl-5">
 					<strong class="logo">LOGO</strong>
+					<SocialLinks color="white" hover-color="#ffdb1c" />
 					<div class="text-holder">
 						<p>Feel free to contact us at</p>
 					</div>
 					<a href="mailto:hello@tribalsquare.com" class="mail-link">hello@tribalsquare.com</a>
-					<ul class="menu style-1">
+					<ul class="menu style-1 d-none d-xl-flex">
 						<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
 						<li><nuxt-link to="/">Privacy Policy</nuxt-link></li>
 					</ul>
 				</div>
 				<div class="col-xl-7">
 					<div class="row">
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-3 order-1 order-md-1">
 							<ul class="menu style-2">
 								<li v-for="(item, index) in menu[0]" :key="index">
 									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
 								</li>
 							</ul>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-3 order-3 order-md-2">
 							<ul class="menu style-2">
 								<li v-for="(item, index) in menu[1]" :key="index">
 									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
 								</li>
 							</ul>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-3 order-4 order-md-3">
 							<ul class="menu style-2">
 								<li v-for="(item, index) in menu[2]" :key="index">
 									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
 								</li>
 							</ul>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-3 order-2 order-md-4">
 							<ul class="menu style-2">
 								<li v-for="(item, index) in menu[3]" :key="index">
 									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
@@ -45,14 +46,25 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-12">
+					<ul class="menu style-1 d-xl-none">
+						<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
+						<li><nuxt-link to="/">Privacy Policy</nuxt-link></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>
 </template>
 
 <script>
+import SocialLinks from "@/components/SocialLinks";
+
 export default {
 	name: "Footer",
+	components: {
+		SocialLinks
+	},
 	data() {
 		return {
 			menu: [
@@ -141,13 +153,31 @@ export default {
 	color: $white;
 	background: $cloud-burst;
 
+	@include media-breakpoint-down(md) {
+		padding-top: 5rem;
+		padding-bottom: 4.5rem;
+	}
+
 	.logo {
 		display: block;
 		font-size: 4rem;
+		line-height: 2;
 		font-weight: 400;
 
 		@include media-breakpoint-down(md) {
 			font-size: 3.2rem;
+		}
+	}
+
+	.social-links {
+		margin-bottom: 14.3rem;
+
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 7rem;
+		}
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 3.3rem;
 		}
 	}
 
@@ -190,6 +220,8 @@ export default {
 		}
 
 		&.style-1 {
+			display: flex;
+
 			li {
 				&:not(:last-child) {
 					margin-right: 4.1rem;
@@ -202,6 +234,10 @@ export default {
 		}
 
 		&.style-2 {
+			@include media-breakpoint-down(xl) {
+				margin-bottom: 6rem;
+			}
+
 			li {
 				&:not(:last-child) {
 					margin-bottom: 3rem;
