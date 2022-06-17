@@ -10,4 +10,5 @@ You can directly use them in pages and other components without the need to impo
 - `<Footer>` | `<footer>` (components/Footer.vue)
 - `<Header>` | `<header>` (components/Header.vue)
 - `<OurPartners>` | `<our-partners>` (components/OurPartners.vue)
+- `<Solutions>` | `<solutions>` (components/Solutions.vue)
 - `<InputsInput>` | `<inputs-input>` (components/Inputs/Input.vue)

@@ -11,6 +11,9 @@
   "OurPartners": {
     "description": "Auto imported from components/OurPartners.vue"
   },
+  "Solutions": {
+    "description": "Auto imported from components/Solutions.vue"
+  },
   "InputsInput": {
     "description": "Auto imported from components/Inputs/Input.vue"
   }
