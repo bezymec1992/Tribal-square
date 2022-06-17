@@ -38,7 +38,18 @@
 <script>
 export default {
 	name: "SocialLinks",
-	props: ["color", "hoverColor"],
+	props: {
+		color: {
+			type: String,
+			default: "black"
+		},
+
+		hoverColor: {
+			type: String,
+			default: "black"
+		}
+	},
+
 	data() {
 		return {
 			style: {

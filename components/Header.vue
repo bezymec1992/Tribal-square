@@ -72,6 +72,11 @@ export default {
 	padding-bottom: 2.4rem;
 	background: $white;
 
+	@include media-breakpoint-down(md) {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
 	> .container {
 		display: flex;
 		align-items: center;
@@ -83,6 +88,10 @@ export default {
 		font-family: $pontiff-wide;
 		font-size: 4rem;
 		z-index: 100;
+
+		@include media-breakpoint-down(md) {
+			font-size: 2.4rem;
+		}
 	}
 
 	.main-nav {
