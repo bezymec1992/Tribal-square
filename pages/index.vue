@@ -1,5 +1,6 @@
 <template>
 	<div class="home-page">
+<<<<<<< HEAD
 		<div class="our-parnters">
 			<div class="container">
 				<div class="row">
@@ -10,10 +11,14 @@
 				</div>
 			</div>
 		</div>
+=======
+		<OurPartners/>
+>>>>>>> origin/vasyl-partner
 	</div>
 </template>
 
 <script>
+<<<<<<< HEAD
 export default {};
 </script>
 
@@ -25,4 +30,18 @@ export default {};
 		}
 	}
 }
+=======
+import OurPartners from '@/components/OurPartners';
+export default { components: { OurPartners } };
+</script>
+
+<style lang="scss" scoped>
+// .home-page {
+// 	.our-parnters {
+// 		.container {
+// 			max-width: 133.9rem;
+// 		}
+// 	}
+// }
+>>>>>>> origin/vasyl-partner
 </style>
