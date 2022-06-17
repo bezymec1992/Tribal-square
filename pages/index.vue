@@ -24,6 +24,7 @@
 				</div>
 			</div>
 		</Intro-section>
+		<CustomerExperienceSection />
 		<OurPartners />
 	</div>
 </template>
@@ -31,8 +32,9 @@
 <script>
 import OurPartners from "@/components/OurPartners";
 import IntroSection from "@/components/IntroSection";
-import Button from "@/components/Button.vue";
-export default { components: { OurPartners, IntroSection, Button } };
+import Button from "@/components/Button";
+import CustomerExperienceSection from "@/components/CustomerExperienceSection";
+export default { components: { OurPartners, IntroSection, Button, CustomerExperienceSection } };
 </script>
 
 <style lang="scss" scoped>
