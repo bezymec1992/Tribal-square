@@ -39,9 +39,9 @@ export default {
 <style lang="scss" scoped>
 .solution {
   background-color: $white;
-  padding: 0 7rem;
+  padding: 16.6rem 7rem;
   @include media-breakpoint-down(lg) {
-    padding: 0;
+    padding: 8rem 2rem;
   }
 
   &__wrap {
@@ -65,33 +65,17 @@ export default {
   }
 
   &__title {
-    padding-top: 16.6rem;
+    // padding-top: 16.6rem;
     padding-bottom: 4rem;
-
-    @include media-breakpoint-down(lg) {
-      padding-top: 5rem;
-    }
   }
   &__subtitle {
-    font-family: "Minigap";
-    font-style: normal;
-    font-weight: 400;
     font-size: 2.2rem;
     line-height: 1.81;
-    color: $black;
-    padding-bottom: 17rem;
-
-    @include media-breakpoint-down(lg) {
-      padding-bottom: 5rem;
-    }
+    // padding-bottom: 17rem;
   }
   &__right {
     display: flex;
     justify-content: center;
-
-    @include media-breakpoint-down(lg) {
-      padding-top: 5.2rem;
-    }
   }
   &__visual {
     width: 100%;

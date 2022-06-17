@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="home-page">
-      <div class="solution">
-        <solution-section />
-      </div>
+      <solution-section />
     </div>
   </div>
 </template>
