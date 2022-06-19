@@ -2,26 +2,34 @@
   <div>
     <div class="solution">
       <div class="container">
-        <div class="solution__wrap">
-          <div class="solution__left">
-            <h2 class="solution__title h2">
-              We provide solutions that help your business grow
-            </h2>
-            <div class="solution__subtitle">
-              <p>
+        <div class="row flex-md-row-reverse">
+          <div
+            class="
+              col-12 col-md-6
+              justify-content-center
+              align-items-center
+              d-flex
+            "
+          >
+            <img
+              class="solution__img"
+              src="../assets/images/solution-001.svg"
+              alt="image description"
+            />
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="solution__body">
+              <h4 class="solution__title">
+                We provide solutions that help your business grow
+              </h4>
+
+              <p class="solution__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 egestas in est ut aliquet. Pellentesque ac blandit leo, nec
                 porta velit. Nulla facilisi. Phasellus at placerat felis.
                 Intege.
               </p>
             </div>
-          </div>
-          <div class="solution__right">
-            <img
-              class="solution__visual"
-              src="../assets/images/solution-001.svg"
-              alt="image description"
-            />
           </div>
         </div>
       </div>
@@ -39,47 +47,39 @@ export default {
 <style lang="scss" scoped>
 .solution {
   background-color: $white;
-  padding: 16.6rem 7rem;
-  @include media-breakpoint-down(lg) {
-    padding: 8rem 2rem;
-  }
-
-  &__wrap {
-    display: flex;
-    flex-direction: row;
-
-    @include media-breakpoint-down(lg) {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-    }
-  }
-
-  &__left {
-    margin: auto;
-    max-width: 50%;
-
-    @include media-breakpoint-down(lg) {
-      max-width: 100%;
-    }
+  padding: 3.8rem 0 8rem;
+  @include media-breakpoint-up(lg) {
+    padding-top: 16.6rem;
+    padding-bottom: 17.4rem;
   }
 
   &__title {
-    // padding-top: 16.6rem;
-    padding-bottom: 4rem;
+    font-size: 2.8rem;
+    line-height: 1.42;
+    margin-bottom: 3rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 4rem;
+      line-height: 1.5;
+      margin-bottom: 4rem;
+    }
   }
-  &__subtitle {
-    font-size: 2.2rem;
-    line-height: 1.81;
-    // padding-bottom: 17rem;
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.66;
+    @include media-breakpoint-up(lg) {
+      font-size: 2.2rem;
+      line-height: 1.81;
+    }
   }
-  &__right {
-    display: flex;
-    justify-content: center;
+  &__img {
+    margin-bottom: 2.6rem;
   }
-  &__visual {
-    width: 100%;
-    height: auto;
-  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  display: inline-block;
 }
 </style>

@@ -1,30 +1,31 @@
 <template>
   <div>
-    <div class="customer-experience__section" style="max-width: 144rem">
-      <div class="customer-experience__wrap row g-0">
-        <div class="col">
-          <div class="customer-experience__visual">
-            <picture>
-              <source
-                srcset="../assets/images/customer-experience-min-003.png"
-                media="(max-width: 992px)"
-              />
-              <img
-                src="../assets/images/customer-experience-002.png"
-                class="customer-experience__img img-fluid rounded-start"
-                alt="image description"
-                width="720"
-                height="600"
-              />
-            </picture>
-          </div>
+    <div class="customer-experience">
+      <div class="row">
+        <div
+          class="
+            col-12 col-md-6
+            justify-content-center
+            align-items-center
+            customer-experience__visual
+          "
+        >
+          <img
+            class="customer-experience__img d-none d-sm-flex w-100"
+            src="../assets/images/customer-experience-002.jpg"
+            alt="image description"
+          />
+          <img
+            class="customer-experience__img d-sm-none w-100"
+            src="../assets/images/customer-experience-mb-003.jpg"
+            alt="image description"
+          />
         </div>
-        <div class="customer-experience__body col">
-          <div class="customer-experience__inner">
-            <h2 class="customer-experience__title h2">
-              Transform your customer experience
-            </h2>
-          </div>
+
+        <div class="col-12 col-md-6 customer-experience__body">
+          <h3 class="customer-experience__title">
+            Develop applications on a reliable, scalable platform .
+          </h3>
         </div>
       </div>
     </div>
@@ -39,37 +40,47 @@ export default {
 
 <style lang="scss" scoped>
 .customer-experience {
-  &__wrap {
-    @include media-breakpoint-down(lg) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
   &__visual {
     background-color: $mauve;
   }
   &__img {
-    width: 100%;
-    height: 100%;
-    // object-fit: cover;
     opacity: 70%;
+    @include media-breakpoint-up(md) {
+      height: 100%;
+    }
+    // @include media-breakpoint-up(lg) {
+    //   height: auto;
+    // }
   }
   &__body {
     background-color: $purple;
   }
-  &__inner {
-    padding: 20rem 11.6rem 18.3rem 9.4rem;
-
-    @include media-breakpoint-down(xxl) {
-      padding: 12rem 7rem 9rem 7rem;
+  &__title {
+    padding: 5rem 4rem 14.5rem;
+    color: $white;
+    font-size: 2.8rem;
+    line-height: 1.24;
+    @include media-breakpoint-up(md) {
+      padding: 10rem 5.8rem 14rem 4.7rem;
+      // font-size: 4rem;
+      // line-height: 1.5;
     }
-    @include media-breakpoint-down(md) {
-      padding: 5rem 4rem 5.3rem 4rem;
+    @include media-breakpoint-up(xl) {
+      padding: 20rem 11.6rem 28rem 9.4rem;
+      font-size: 4rem;
+      line-height: 1.5;
     }
   }
-  &__title {
-    color: $white;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  display: inline-block;
+}
+.row > * {
+  @include media-breakpoint-up(md) {
+    padding-right: 0;
   }
 }
 </style>
