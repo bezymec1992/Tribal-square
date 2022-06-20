@@ -2,7 +2,7 @@
 	<div class="input-group" :class="{ focus: labelShow }">
 		<label v-if="inputType === 'input'">
 			<transition name="fade">
-				<span v-if="label && labelShow" class="label">{{ label }}</span>
+				<span v-if="(label && labelShow) || value.length > 0" class="label">{{ label }}</span>
 			</transition>
 			<input class="form-control" :type="type" :placeholder="placeholder" :value="value" v-on="listeners" @input="onInput" @focus="showHideLabel(true)" @blur="showHideLabel(false)" />
 			<slot name="error">
@@ -13,7 +13,7 @@
 		</label>
 		<label v-if="inputType === 'textarea'">
 			<transition name="fade">
-				<span v-if="label && labelShow" class="label">{{ label }}</span>
+				<span v-if="(label && labelShow) || value.length > 0" class="label">{{ label }}</span>
 			</transition>
 			<div class="textarea-holder">
 				<textarea ref="textarea" class="form-control" :maxlength="maxlength" :placeholder="placeholder" :value="value" v-on="listeners" @input="onInput" @focus="showHideLabel(true)" @blur="showHideLabel(false)"></textarea>
