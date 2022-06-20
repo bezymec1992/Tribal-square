@@ -1,30 +1,28 @@
 <template>
   <div>
-    <div class="row">
-      <div class="container">
+    <div class="container cookies">
+      <div class="row justify-content-end">
         <img
           src="../assets/images/close.svg"
           alt="close"
-          class="cookies__close"
+          class="col-12 cookies__close d-flex"
         />
-        <div class="cookies">
-          <div class="col-12 col-md-6 cookies__body">
-            <h3 class="cookies__title">We use cookies</h3>
-            <p class="cookies__text">
-              This website uses cookies to ensure you get the best expierence on
-              our website.
-            </p>
-          </div>
-          <div class="col-12 col-md-6">
-            <nuxt-link to="/privacy-policy">
-              <button
-                type="button"
-                class="cookies__button btn-warning text-uppercase"
-              >
-                Accept
-              </button>
-            </nuxt-link>
-          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h3 class="cookies__title">We use cookies</h3>
+          <p class="cookies__text">
+            This website uses cookies to ensure you get the best expierence on
+            our website.
+          </p>
+        </div>
+        <div class="col-12 col-md-6 cookies__right">
+          <nuxt-link to="/privacy-policy">
+            <button type="button" class="cookies__button text-uppercase">
+              Accept
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -47,12 +45,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .cookies {
+  background-color: $white;
   padding: 2.4rem 2rem 4rem;
+
   &__close {
     width: 3.2rem;
     height: 3.2rem;
-    float: right;
-    margin-right: 2rem;
     cursor: pointer;
     opacity: 70%;
   }
@@ -66,13 +64,26 @@ export default {
     font-size: 1.4rem;
     line-height: 1.57;
   }
+  &__right {
+    @include media-breakpoint-up(md) {
+      padding: 2.6rem 5rem 2rem 11.2rem;
+    }
+  }
   &__button {
+    background-color: $candlelight;
     border: none;
     text-align: center;
     width: 100%;
     height: 5.2rem;
     font-size: 1.8rem;
     line-height: 1.11;
+
+    @include media-breakpoint-up(md) {
+      width: 22rem;
+    }
   }
+}
+.row {
+  --bs-gutter-x: 0;
 }
 </style>
