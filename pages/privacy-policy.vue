@@ -150,9 +150,7 @@
 </template>
 
 <script>
-export default {
-  name: "PrivacyPolicy",
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -165,10 +163,7 @@ export default {
       padding: 0 5rem;
     }
   }
-  &__title {
-  }
-  &__subtitle {
-  }
+
   &__text {
     margin-bottom: 3rem;
     font-style: 1.4rem;

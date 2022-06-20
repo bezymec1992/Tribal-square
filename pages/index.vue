@@ -4,7 +4,7 @@
       <customer-experience-section :title="content.titles.title1" />
       <solution-section />
       <customer-engagement />
-      <privacy-policy />
+      <privacy-policy-cookies />
     </div>
   </div>
 </template>
@@ -13,14 +13,14 @@
 import CustomerExperienceSection from "~/components/CustomerExperienceSection.vue";
 import CustomerEngagement from "~/components/CustomerEngagement.vue";
 import SolutionSection from "~/components/SolutionSection.vue";
-import PrivacyPolicy from "~/components/PrivacyPolicy.vue";
+import PrivacyPolicyCookies from "~/components/PrivacyPolicyCookies.vue";
 
 export default {
   components: {
     CustomerExperienceSection,
     SolutionSection,
     CustomerEngagement,
-    PrivacyPolicy,
+    PrivacyPolicyCookies,
   },
   data() {
     return {
