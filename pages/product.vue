@@ -179,6 +179,7 @@
     }
 
     .location {
+        overflow: hidden;
         background: #EEF3F5;
         max-width: 1240px;
         height: 600px;
