@@ -24,7 +24,7 @@
 
         <div class="col-12 col-md-6 customer-experience__body">
           <h3 class="customer-experience__title">
-            Develop applications on a reliable, scalable platform .
+            {{ title }}
           </h3>
         </div>
       </div>
@@ -35,6 +35,12 @@
 <script>
 export default {
   name: "CustomerExperience",
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 
@@ -48,9 +54,6 @@ export default {
     @include media-breakpoint-up(md) {
       height: 100%;
     }
-    // @include media-breakpoint-up(lg) {
-    //   height: auto;
-    // }
   }
   &__body {
     background-color: $purple;
@@ -62,8 +65,6 @@ export default {
     line-height: 1.24;
     @include media-breakpoint-up(md) {
       padding: 10rem 5.8rem 14rem 4.7rem;
-      // font-size: 4rem;
-      // line-height: 1.5;
     }
     @include media-breakpoint-up(xl) {
       padding: 20rem 11.6rem 28rem 9.4rem;
