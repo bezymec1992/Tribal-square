@@ -51,6 +51,10 @@ export default {
   &__close {
     width: 3.2rem;
     height: 3.2rem;
+    float: right;
+    margin-right: 2rem;
+    cursor: pointer;
+    opacity: 70%;
   }
   &__title {
     margin-bottom: 1.6rem;
