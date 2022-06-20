@@ -34,7 +34,7 @@ export default {
 				},
 				{
 					title: "Products",
-					to: "/"
+					to: "/products"
 				},
 				{
 					title: "Labels",

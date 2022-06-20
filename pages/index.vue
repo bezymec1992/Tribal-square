@@ -11,7 +11,6 @@
 								adipiscing elit. Aenean egestas in est ut aliquet
 							</p>
 						</div>
-
 						<Button title="ABOUT US" class="btn-warning" type="nuxt-link" to="/contact">
 							<template #icon>
 								<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +23,7 @@
 				</div>
 			</div>
 		</Intro-section>
+		<Solutions :title="info.title" :text="info.text" :img="info.img" :imgMob="info.imgMob" />
 		<CustomerExperienceSection />
 		<OurPartners />
 		<SolutionSection />
@@ -34,11 +34,25 @@
 <script>
 import OurPartners from "@/components/OurPartners";
 import IntroSection from "@/components/IntroSection";
+import Solutions from "@/components/Solutions";
 import Button from "@/components/Button";
 import SolutionSection from "@/components/SolutionSection";
 import CustomerExperienceSection from "@/components/CustomerExperienceSection";
 import ContactSection from "@/components/ContactSection";
-export default { components: { OurPartners, IntroSection, Button, CustomerExperienceSection, SolutionSection, ContactSection } };
+
+export default {
+	components: { OurPartners, IntroSection, Button, CustomerExperienceSection, SolutionSection, ContactSection, Solutions },
+	data() {
+		return {
+			info: {
+				title: "We provide solutions that help your business grow",
+				text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.",
+				img: "solution-desk.png",
+				imgMob: "solution-mb.png"
+			}
+		};
+	}
+};
 </script>
 
 <style lang="scss" scoped>
