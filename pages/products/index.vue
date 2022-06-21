@@ -16,6 +16,15 @@
 				</div>
 			</div>
 		</Intro-section>
+		<div class="products">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<Card />
+					</div>
+				</div>
+			</div>
+		</div>
 		<CustomerExperienceSection />
 		<ContactSection />
 	</div>
@@ -25,13 +34,15 @@
 import IntroSection from "@/components/IntroSection";
 import ContactSection from "@/components/ContactSection";
 import CustomerExperienceSection from "@/components/CustomerExperienceSection";
+import Card from "@/components/Card";
 
 export default {
 	name: "Products",
 	components: {
 		IntroSection,
 		ContactSection,
-		CustomerExperienceSection
+		CustomerExperienceSection,
+		Card
 	}
 };
 </script>
