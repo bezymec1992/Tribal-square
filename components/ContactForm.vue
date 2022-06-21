@@ -5,9 +5,9 @@
 				<p>You are interested in</p>
 			</div>
 			<div class="radios">
-				<RadioInput :input-value="'Find a partner'" :label="'Find a partner'" v-model="form.type" />
-				<RadioInput :input-value="'Partner with us'" :label="'Partner with us'" v-model="form.type" />
-				<RadioInput :input-value="'Other'" :label="'Other'" v-model="form.type" />
+				<RadioInput v-model="form.type" :input-value="'Find a partner'" :label="'Find a partner'" />
+				<RadioInput v-model="form.type" :input-value="'Partner with us'" :label="'Partner with us'" />
+				<RadioInput v-model="form.type" :input-value="'Other'" :label="'Other'" />
 			</div>
 			<div class="row">
 				<div class="col-md-6">

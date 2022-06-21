@@ -16,11 +16,11 @@
 				</div>
 			</div>
 		</Intro-section>
-		<div class="products">
+		<div class="products-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<Card />
+					<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
+						<Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" />
 					</div>
 				</div>
 			</div>
@@ -35,6 +35,7 @@ import IntroSection from "@/components/IntroSection";
 import ContactSection from "@/components/ContactSection";
 import CustomerExperienceSection from "@/components/CustomerExperienceSection";
 import Card from "@/components/Card";
+import Products from "@/constants/products";
 
 export default {
 	name: "Products",
@@ -43,8 +44,44 @@ export default {
 		ContactSection,
 		CustomerExperienceSection,
 		Card
+	},
+	data() {
+		return {
+			productsList: []
+		};
+	},
+	mounted() {
+		this.productsList = Products;
 	}
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.products-page {
+	.products-section {
+		padding-bottom: 8rem;
+
+		@include media-breakpoint-down(md) {
+			padding-bottom: 6rem;
+		}
+
+		.row {
+			@include media-breakpoint-up(xl) {
+				@include grid-gutter(4rem);
+			}
+		}
+
+		.card {
+			@include media-breakpoint-up(md) {
+				margin-bottom: 4rem;
+			}
+		}
+	}
+
+	.contact-section {
+		@include media-breakpoint-up(md) {
+			padding-top: 13rem;
+		}
+	}
+}
+</style>

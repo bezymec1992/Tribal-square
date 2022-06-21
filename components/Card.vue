@@ -3,11 +3,11 @@
 		<div class="card-header">
 			<div class="d-flex align-items-center">
 				<div class="icon-holder">
-					<img src="@/assets/imgs/img-01.jpg" alt="title" />
+					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
 				</div>
 				<div class="content-holder">
-					<span class="category"> Platform & App </span>
-					<h3 class="title">Knock Knock</h3>
+					<span class="category">{{ category }}</span>
+					<h3 class="title">{{ title }}</h3>
 				</div>
 			</div>
 			<div class="arrow-holder">
@@ -30,6 +30,15 @@
 					</svg>
 				</template>
 			</Button>
+
+			<Button title="ABOUT" class="btn-warning d-none d-lg-inline-flex" type="nuxt-link" to="/contact">
+				<template #icon>
+					<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
+						<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+					</svg>
+				</template>
+			</Button>
 		</div>
 	</div>
 </template>
@@ -41,6 +50,24 @@ export default {
 	name: "Card",
 	components: {
 		Button
+	},
+	props: {
+		category: {
+			type: String,
+			default: "category"
+		},
+		title: {
+			type: String,
+			default: "title"
+		},
+		description: {
+			type: String,
+			default: "description"
+		},
+		img: {
+			type: String,
+			default: "img-01.jpg"
+		}
 	}
 };
 </script>
@@ -54,6 +81,7 @@ export default {
 
 	@include media-breakpoint-down(md) {
 		padding: 2.4rem 2rem;
+		margin-bottom: 2rem;
 	}
 
 	&:hover {
@@ -133,6 +161,10 @@ export default {
 			font-size: 1.6rem;
 		}
 
+		p {
+			margin-bottom: 0;
+		}
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -146,8 +178,36 @@ export default {
 	}
 
 	.card-footer {
+		display: flex;
+		justify-content: space-between;
+
 		.btn-link {
 			padding: 0;
+		}
+	}
+
+	&.style2 {
+		@include media-breakpoint-up(md) {
+			padding-bottom: 2.2rem;
+		}
+
+		.card-header {
+			@include media-breakpoint-up(md) {
+				margin-bottom: 3.7rem;
+			}
+		}
+
+		.text-holder {
+			@include media-breakpoint-up(md) {
+				margin-bottom: 2.1rem;
+				padding-bottom: 3.1rem;
+			}
+		}
+
+		.arrow-holder {
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
 		}
 	}
 }
