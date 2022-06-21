@@ -23,7 +23,8 @@
 				</div>
 			</div>
 		</Intro-section>
-		<Solutions :title="info.title" :text="info.text" :img="info.img" :imgMob="info.imgMob" />
+		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" />
+		<SectionInformers />
 		<CustomerExperienceSection />
 		<OurPartners />
 		<SolutionSection />
@@ -39,9 +40,10 @@ import Button from "@/components/Button";
 import SolutionSection from "@/components/SolutionSection";
 import CustomerExperienceSection from "@/components/CustomerExperienceSection";
 import ContactSection from "@/components/ContactSection";
+import SectionInformers from "@/components/SectionInformers";
 
 export default {
-	components: { OurPartners, IntroSection, Button, CustomerExperienceSection, SolutionSection, ContactSection, Solutions },
+	components: { OurPartners, IntroSection, Button, CustomerExperienceSection, SolutionSection, ContactSection, Solutions, SectionInformers },
 	data() {
 		return {
 			info: {

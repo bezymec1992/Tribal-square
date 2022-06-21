@@ -54,16 +54,19 @@
 				</div>
 			</div>
 		</div>
+		<GoTopBtn />
 	</footer>
 </template>
 
 <script>
 import SocialLinks from "@/components/SocialLinks";
+import GoTopBtn from "@/components/GoTopBtn";
 
 export default {
 	name: "Footer",
 	components: {
-		SocialLinks
+		SocialLinks,
+		GoTopBtn
 	},
 	data() {
 		return {

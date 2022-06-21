@@ -5,7 +5,7 @@
 			<slot name="icon" />
 		</span>
 	</nuxt-link>
-	<a v-else-if="type === 'href'" :href="href" target="_blank" class="btn"
+	<a v-else-if="type === 'link'" :href="href" target="_blank" class="btn"
 		>{{ title }}
 
 		<span v-if="hasIconSlot" class="icon-holder">
@@ -69,6 +69,7 @@ export default {
 	color: var(--text-color);
 	letter-spacing: 0.1rem;
 	background: var(--bg-color);
+	text-transform: uppercase;
 	border: solid 0.1rem var(--bg-color);
 	border-radius: 0;
 
@@ -127,6 +128,7 @@ export default {
 	&.btn-link {
 		color: $black;
 		background: transparent;
+		text-decoration: none;
 
 		&:hover {
 			background: transparent;
