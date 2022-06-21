@@ -1,0 +1,37 @@
+[
+  {
+    "name": "breakpoints",
+    "path": "/breakpoints",
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\breakpoints.vue",
+    "chunkName": "pages/breakpoints",
+    "_name": "_6aae3b9c"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_985c91cc"
+  },
+  {
+    "name": "product",
+    "path": "/product",
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\product.vue",
+    "chunkName": "pages/product",
+    "_name": "_58796069"
+  },
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\products\\\\index.vue",
+    "chunkName": "pages/products/index",
+    "_name": "_9b18c530"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Serhii\\\\Desktop\\\\nta\\\\tribal-square\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_58a4c34c"
+  }
+]
