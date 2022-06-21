@@ -28,12 +28,31 @@ export default {
 
 <style lang="scss" scoped>
     .more__item {
-        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-        padding: 30px 0px;
+        padding: 30px 0;
         width: 550px;
         max-width: 100%;
         transition: ease 0.3s;
         margin: 0 auto;
+        position: relative;
+        @include media-breakpoint-up(md) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            width: 100%;
+            @include media-breakpoint-up(md) {
+                transform: translateX(-50%);
+                left: 50%;
+                width: calc(100% - 50px);
+            }
+        }
+        
         .more__text {
             font-size: 30px;
             line-height: 30px;
@@ -67,17 +86,11 @@ export default {
             }
         }
     }
-        
     .more__item:hover {
         @include media-breakpoint-up(xl) {
             background: #EEF3F5;
             border-radius: 20px;
-            padding-right: 25px;
-            padding-left: 25px;
-            width: 600px;
             cursor: pointer;
         }
-        
-        
     }
 </style>
