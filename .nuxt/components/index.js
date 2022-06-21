@@ -1,4 +1,5 @@
 export { default as ContactForm } from '../..\\components\\ContactForm.vue'
+export { default as Discover } from '../..\\components\\Discover.vue'
 export { default as Footer } from '../..\\components\\Footer.vue'
 export { default as Header } from '../..\\components\\Header.vue'
 export { default as OurPartners } from '../..\\components\\OurPartners.vue'

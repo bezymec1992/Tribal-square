@@ -26,7 +26,6 @@
                             <img src="../assets/imgs/product__idea-desk.png" alt="partners-logo" width="1233" height="628">
 					    </picture>
                 </div>
-                
             </div>
         </div>
 
@@ -78,25 +77,88 @@
                 </div>
             </div>
         </div>
+
+        <div class="additional">
+            <div class="container">
+                <div class="additional__info">
+                    <h2 class="h2 additional__title text-center">
+                        Here should be additional info about the product
+                    </h2>
+                    <p class="additional__text text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. <span class="additional__span">Nulla facilisi. Phasellus at placerat felis. Intege.</span> 
+                    </p>
+                </div>
+            </div>
+            <div class="additional__picture d-flex justify-content-center">
+                <h2 class="h2 additional__picture-title">
+                    Transform your customer experience
+                </h2>
+                <picture>
+                    <source srcset="../assets/imgs/additional-mb.jpg" media="(max-width: 767px)" width="1117" height="600">
+                    <img src="../assets/imgs/additional-desk.jpg" alt="partners-logo" width="1348" height="728">
+				</picture>
+            </div>
+        </div> 
+
+        
+        <div class="more">
+            <div class="container">
+                <div class="more__wrapper d-flex justify-content-around">
+                    <div class="more__title-wrap">
+                        <h2 class="h2 more__title">
+                        Discover more our Products
+                    </h2>
+                    </div>
+                    <div class="more__items">
+                        <div class="card" v-for="card in cards" :key="card.id">
+                            <Discover
+                                :title="card.title"
+                                :text="card.text"
+                                :img="card.img"
+                                />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
+
 <script>
+    import Discover from '@/components/Discover';
+    export default {
+		components: {
+			Discover
+		},
+        data() {
+			return {
+				cards: [
+                    {id: 1, title: 'Platform & App', text:'Knock Knock', img: 'more-1.jpg'},
+                    {id: 2, title: 'App', text:'Coffee App', img: 'more-2.jpg'},
+                    {id: 3, title: 'Platform', text:'HandsRepublic', img: 'more-3.jpg'},
+                    {id: 4, title: 'Platform & App', text:'Knock Knock', img: 'more-1.jpg'},
+                ]
+			}
+		}
+    }
 </script>
+
 <style lang="scss" scoped>
     .idea {
         overflow: hidden;
         .idea__info {
-        .idea__text {
-        width: 527px;
-        max-width: 100%;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
-        @include media-breakpoint-down(md) {
-            font-size: 16px;
-            line-height: 24px;
-            padding-bottom: 40px;
-        }
+            .idea__text {
+                width: 527px;
+                max-width: 100%;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                @include media-breakpoint-down(md) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding-bottom: 40px;
+                }
         }
         .idea__title {
             font-size: 34px;
@@ -187,7 +249,7 @@
         position: relative;
         margin-bottom: 100px;
         @include media-breakpoint-down(xl) {
-            height: 812px;
+            height: 832px;
             .laction__wrapper {
                 flex-direction: column;
                 align-items: center;
@@ -198,6 +260,10 @@
                 .location__info {
                     margin-top: 60px;
                     margin-left: 0;
+                    width: 335px;
+                    .location__title {
+                    padding-bottom: 20px;
+                    }
                 }
             }
         }
@@ -229,5 +295,79 @@
         }
         
     }
-    
+
+    .additional {
+        overflow: hidden;
+        padding-bottom: 120px;
+        .additional__info {
+            max-width: 752px;
+            margin: 0 auto;
+            @include media-breakpoint-down(lg) {
+                max-width: 335px;
+                .additional__span {
+                    display: none;
+                }
+            }
+            .additional__title {
+                padding-bottom: 26px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+            .additional__text {
+                font-size: 22px;
+                line-height: 40px;
+                padding-bottom: 120px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
+        }
+        .additional__picture {
+           position: relative;
+        }
+
+        .additional__picture-title {
+            max-width: 562px;
+            position: absolute;
+            top: 250px;
+            transform: translateX(calc(100% - 562px));
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            @include media-breakpoint-down(lg) {
+                top: 160px;
+                font-size: 28px;
+                max-width: 335px;
+                transform: translateX(calc(100% - 335px));
+            }
+        }
+    }
+
+    .more {
+        padding-bottom: 120px;
+        .more__wrapper {
+            @include media-breakpoint-down(lg) {
+                flex-direction: column;
+                align-items: center;
+            }
+            .more__items {
+                width: 600px;
+                max-width: 100%; 
+            }
+            .more__title-wrap {
+                width: 550px;
+                max-width: 100%;
+                .more__title {
+                    width: 300px;
+                    max-width: 100%;
+                    @include media-breakpoint-down(md) {
+                        width: 211px;
+                    }
+                }
+            }
+        } 
+    }
 </style>

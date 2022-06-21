@@ -2,6 +2,9 @@
   "ContactForm": {
     "description": "Auto imported from components/ContactForm.vue"
   },
+  "Discover": {
+    "description": "Auto imported from components/Discover.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },

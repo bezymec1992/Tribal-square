@@ -3,24 +3,28 @@
     "name": "breakpoints",
     "path": "/breakpoints",
     "component": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\team-squre\\\\tribal-square\\\\pages\\\\breakpoints.vue",
-    "chunkName": "pages/breakpoints"
+    "chunkName": "pages/breakpoints",
+    "_name": "_0caf8e76"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\team-squre\\\\tribal-square\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact"
+    "chunkName": "pages/contact",
+    "_name": "_64d286f4"
   },
   {
     "name": "product",
     "path": "/product",
     "component": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\team-squre\\\\tribal-square\\\\pages\\\\product.vue",
-    "chunkName": "pages/product"
+    "chunkName": "pages/product",
+    "_name": "_097a3043"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\team-squre\\\\tribal-square\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_c1287cb4"
   }
 ]
