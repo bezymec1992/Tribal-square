@@ -128,21 +128,21 @@
               </li>
             </ul>
           </div>
+          <div
+            class="
+              col-12
+              d-none d-md-flex
+              how-does-it-work__visual
+              justify-content-center
+            "
+          >
+            <img
+              class="how-does-it-work__img"
+              src="../assets/images/how-does-it-work-006.svg"
+              alt="image description"
+            />
+          </div>
         </div>
-      </div>
-      <div
-        class="
-          col-12
-          d-none d-md-flex
-          how-does-it-work__visual
-          justify-content-center
-        "
-      >
-        <img
-          class="how-does-it-work__img"
-          src="../assets/images/how-does-it-work-006.svg"
-          alt="image description"
-        />
       </div>
     </div>
   </div>
@@ -189,7 +189,11 @@ export default {
   background-color: $aqua-haze;
   @include media-breakpoint-up(md) {
     padding: 4.4rem 0 15rem;
-    margin-bottom: 25rem;
+    margin-bottom: 10rem;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 4.4rem 7rem 22rem;
+    margin-bottom: 10rem;
   }
   &__wrap {
     position: relative;
@@ -201,6 +205,10 @@ export default {
     margin-bottom: 2.4rem;
     font-size: 2.4rem;
     line-height: 1.24;
+    @include media-breakpoint-up(md) {
+      font-size: 4rem;
+      line-height: 1.24;
+    }
   }
   &__desktop-right {
     flex-direction: row-reverse;
