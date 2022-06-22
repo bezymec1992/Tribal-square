@@ -95,7 +95,7 @@
                 </h2>
                 <picture>
                     <source srcset="../assets/imgs/additional-mb.jpg" media="(max-width: 767px)" width="1117" height="600">
-                    <img src="../assets/imgs/additional-desk.jpg" alt="partners-logo" width="1348" height="728">
+                    <img src="../assets/imgs/aditional-desk.jpg" alt="partners-logo" width="1348" height="728">
 				</picture>
             </div>
         </div> 
@@ -147,6 +147,8 @@
 <style lang="scss" scoped>
     .idea {
         overflow: hidden;
+        max-width: 1220px;
+        margin: 0 auto;
         .idea__info {
             .idea__text {
                 width: 527px;
@@ -168,13 +170,19 @@
             }
         }
     }
-    .idea__picture {
-        @include media-breakpoint-down(md) {
-            position: relative;
-            left: -50px;
+        .idea__picture {
             
+            @include media-breakpoint-down(md) {
+                position: relative;
+                left: -50px;
+            }
         }
-    }
+        .idea__picture img {
+            @include media-breakpoint-up(md) {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 
     .target {
@@ -206,8 +214,10 @@
                 top:0;
                 left:25%;
                 width:50%;
-                border-top: 1px solid rgba(0, 0, 0, 0.4);
                 content:"";
+                @include media-breakpoint-down(lg) {
+                    border-top: 1px solid rgba(0, 0, 0, 0.4);
+                }
             }
             .target__item {
                 width: 346px;
@@ -285,6 +295,11 @@
             .location__title {
                 padding-bottom: 30px;
                 padding-top: 20px;
+                font-size: 34px;
+                @include media-breakpoint-down(md) {
+                    font-size: 24px;
+                }
+                
             }
         
         }
