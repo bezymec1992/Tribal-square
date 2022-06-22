@@ -1,0 +1,34 @@
+[
+	{
+		"title": "Knock Knock",
+		"category": "Platform & App",
+		"img": "img-01.jpg",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"about-link": "/"
+	},
+	{
+		"title": "Coffee App",
+		"category": "App",
+		"img": "img-02.jpg",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"about-link": "/"
+	},
+	{
+		"title": "Digital Valet",
+		"category": "Platform",
+		"img": "img-03.jpg",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"about-link": "/"
+	},
+	{
+		"title": "HandsRepublic",
+		"category": "Platform",
+		"img": "img-04.jpg",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"about-link": "/"
+	}
+]
