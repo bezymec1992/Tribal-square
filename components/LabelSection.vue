@@ -73,76 +73,69 @@
             alt="image description"
           />
         </div>
-        <div class="row">
-          <div class="col-12 d-none d-md-flex justify-content-center">
-            <div class="how-does-it-work__desktop-left justify-content-between">
-              <ul class="how-does-it-work__desktop-list list-unstyled">
-                <li class="how-does-it-work__desktop-item-left">
-                  Create events for desirous
-                  <div class="hr-dashed-img d-flex">
-                    <img
-                      src="../assets/images/how-does-it-work-ellipse-007.svg"
-                      alt="ellipse"
-                    />
-                    <img
-                      src="../assets/images/how-does-it-work-line-left-009.svg"
-                      alt="line"
-                    />
-                  </div>
-                </li>
-                <li class="how-does-it-work__desktop-item-left">
-                  Looking for partner
-                  <div class="hr-dashed-img d-flex">
-                    <img
-                      src="../assets/images/how-does-it-work-ellipse-007.svg"
-                      alt="ellipse"
-                    />
-                    <img
-                      src="../assets/images/how-does-it-work-line-left-009.svg"
-                      alt="line"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div
-              class="
-                how-does-it-work__desktop-right
-                d-none d-md-flex
-                justify-content-between
-              "
-            >
-              <ul class="how-does-it-work__desktop-list list-unstyled">
-                <li class="how-does-it-work__desktop-item-right">
-                  Invest in ideas and companies
 
-                  <div class="hr-dashed-img d-flex">
-                    <img
-                      src="../assets/images/how-does-it-work-line-right-008.svg"
-                      alt="line"
-                    />
-                    <img
-                      src="../assets/images/how-does-it-work-ellipse-007.svg"
-                      alt="ellipse"
-                    />
-                  </div>
-                </li>
-                <li class="how-does-it-work__desktop-item-right">
-                  Create inner meetings
-                  <div class="hr-dashed-img d-flex">
-                    <img
-                      src="../assets/images/how-does-it-work-line-right-008.svg"
-                      alt="line"
-                    />
-                    <img
-                      src="../assets/images/how-does-it-work-ellipse-007.svg"
-                      alt="ellipse"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="col-6 d-flex how-does-it-work__desktop-left">
+          <ul class="how-does-it-work__desktop-list list-unstyled">
+            <li class="how-does-it-work__desktop-item-left">
+              Create events for desirous
+              <div class="hr-dashed-img d-flex">
+                <img
+                  src="../assets/images/how-does-it-work-ellipse-007.svg"
+                  alt="ellipse"
+                />
+                <img
+                  src="../assets/images/how-does-it-work-line-left-009.svg"
+                  alt="line"
+                />
+              </div>
+            </li>
+            <li class="how-does-it-work__desktop-item-left">
+              Looking for partner
+              <div class="hr-dashed-img d-flex">
+                <img
+                  src="../assets/images/how-does-it-work-ellipse-007.svg"
+                  alt="ellipse"
+                />
+                <img
+                  src="../assets/images/how-does-it-work-line-left-009.svg"
+                  alt="line"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="col-6 d-flex how-does-it-work__desktop-right d-none d-md-flex"
+        >
+          <ul class="how-does-it-work__desktop-list list-unstyled">
+            <li class="how-does-it-work__desktop-item-right">
+              Invest in ideas and companies
+
+              <div class="hr-dashed-img d-flex">
+                <img
+                  src="../assets/images/how-does-it-work-line-right-008.svg"
+                  alt="line"
+                />
+                <img
+                  src="../assets/images/how-does-it-work-ellipse-007.svg"
+                  alt="ellipse"
+                />
+              </div>
+            </li>
+            <li class="how-does-it-work__desktop-item-right">
+              Create inner meetings
+              <div class="hr-dashed-img d-flex">
+                <img
+                  src="../assets/images/how-does-it-work-line-right-008.svg"
+                  alt="line"
+                />
+                <img
+                  src="../assets/images/how-does-it-work-ellipse-007.svg"
+                  alt="ellipse"
+                />
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
