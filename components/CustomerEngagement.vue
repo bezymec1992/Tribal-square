@@ -118,7 +118,6 @@
 <script>
 export default {
   name: "CustomerEngagement",
-  data() {},
 };
 </script>
 
