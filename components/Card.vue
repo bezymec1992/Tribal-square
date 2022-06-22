@@ -74,6 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+	margin-bottom: 2.6rem;
 	padding: 4rem;
 	background: $white;
 	border-radius: 1.2rem;
@@ -183,6 +184,12 @@ export default {
 
 		.btn-link {
 			padding: 0;
+		}
+	}
+
+	&.style1 {
+		.btn-warning {
+			display: none !important;
 		}
 	}
 

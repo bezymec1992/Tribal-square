@@ -23,10 +23,9 @@
 							</Button>
 						</div>
 						<div class="row">
-							<div class="col-md-6">
-								<Card />
+							<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
+								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" />
 							</div>
-							<div class="col-md-6"></div>
 						</div>
 					</div>
 				</div>
@@ -38,12 +37,21 @@
 <script>
 import Button from "@/components/Button";
 import Card from "@/components/Card";
+import Products from "@/constants/products";
 
 export default {
 	name: "SectionInformers",
 	components: {
 		Button,
 		Card
+	},
+	data() {
+		return {
+			productsList: []
+		};
+	},
+	mounted() {
+		this.productsList = Products;
 	}
 };
 </script>
@@ -62,6 +70,11 @@ export default {
 		margin: 0 0 6rem 0;
 		padding: 0;
 		list-style: none;
+
+		@include media-breakpoint-up(xl) {
+			position: sticky;
+			top: 1;
+		}
 
 		li {
 			&:not(:last-child) {
