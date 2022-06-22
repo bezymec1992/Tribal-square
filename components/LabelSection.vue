@@ -145,6 +145,56 @@
         </div>
       </div>
     </div>
+
+    <!-- What are we stand for section -->
+
+    <div class="what-are-we-stand-for">
+      <div class="row">
+        <div class="col-12">
+          <div class="what-are-we-stand-for__body text-center">
+            <h3 class="what-are-we-stand-for__title">What are we stand for</h3>
+
+            <p class="what-are-we-stand-for__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta
+              velit.
+            </p>
+          </div>
+          <div class="what-are-we-stand-for__visual d-flex">
+            <img
+              class="what-are-we-stand-for__img d-sm-none"
+              src="../assets/images/what-are-we-stand-for-mob-0011.jpg"
+              alt="image description"
+            />
+          </div>
+          <div
+            class="justify-content-center align-items-center d-none d-sm-flex"
+          >
+            <img
+              class="what-are-we-stand-for__img"
+              src="../assets/images/what-are-we-stand-for-0010.jpg"
+              alt="image description"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="final-block">
+      <div class="container">
+        <div class="final-block__body text-center">
+          <h3 class="final-block__title">Final block with an info</h3>
+          <p class="final-block__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta
+            velit. Nulla facilisi. Phasellus at placerat felis. Intege.
+          </p>
+          <a href="#" class="btn btn-primary final-block__btn text-uppercase"
+            >Visit website</a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -154,6 +204,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+// About the label
+
 .about-the-label {
   padding: 8rem 0 8rem;
   @include media-breakpoint-up(md) {
@@ -184,16 +236,19 @@ export default {
   }
 }
 
+// How does it work
+
 .how-does-it-work {
   padding: 6rem 0 4rem;
   background-color: $aqua-haze;
   @include media-breakpoint-up(md) {
-    padding: 4.4rem 0 15rem;
-    margin-bottom: 10rem;
+    padding: 4rem 0 1rem;
   }
   @include media-breakpoint-up(lg) {
-    padding: 4.4rem 7rem 22rem;
-    margin-bottom: 10rem;
+    padding: 7rem 3.5rem 1rem;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 7rem 7rem 7rem;
   }
   &__wrap {
     position: relative;
@@ -207,7 +262,7 @@ export default {
     line-height: 1.24;
     @include media-breakpoint-up(md) {
       font-size: 4rem;
-      line-height: 1.24;
+      line-height: 1;
     }
   }
   &__desktop-right {
@@ -221,8 +276,8 @@ export default {
     // top: 3rem;
   }
   &__img {
-    // margin-bottom: 2.2rem;
-
+    max-width: 100%;
+    height: auto;
     @include media-breakpoint-up(md) {
       width: 50%;
     }
@@ -230,6 +285,9 @@ export default {
 
   &__item {
     padding-bottom: 1.6rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 8.8rem;
+    }
 
     @include media-breakpoint-up(md) {
       padding: 0 1rem;
@@ -242,16 +300,32 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: self-end;
+    margin-bottom: 8.8rem;
   }
   &__item-text {
     font-size: 1.8rem;
     line-height: 2.22;
-    max-width: 45%;
+
+    @include media-breakpoint-up(md) {
+      max-width: 53%;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 2.6rem;
+      line-height: 1;
+    }
   }
   &__item-text-right {
     font-size: 1.8rem;
     line-height: 2.22;
-    max-width: 45%;
+
+    @include media-breakpoint-up(md) {
+      max-width: 52%;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 58%;
+      font-size: 2.6rem;
+      line-height: 1;
+    }
   }
 }
 .hr-dashed {
@@ -272,8 +346,81 @@ export default {
   display: flex;
   flex-direction: row;
 }
-img {
-  max-width: 100%;
-  height: auto;
+
+// what we are stand for
+
+.what-are-we-stand-for {
+  &__body {
+    padding: 10rem 2rem 3rem;
+    @include media-breakpoint-up(sm) {
+      padding: 11rem 17rem 5rem;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 12rem 34.7rem 8rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    line-height: 1.24;
+    @include media-breakpoint-up(md) {
+      font-size: 4rem;
+      line-height: 1.5;
+    }
+  }
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.66;
+    @include media-breakpoint-up(md) {
+      font-size: 2.2rem;
+      line-height: 1.81;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    @include media-breakpoint-up(md) {
+      padding: 0 5rem 0;
+    }
+  }
+}
+
+// Final block with an info
+
+.final-block {
+  &__body {
+    padding: 8rem 0 10rem;
+    @include media-breakpoint-up(md) {
+      padding: 11rem 17rem 5rem;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 14rem 32.7rem 10.2rem;
+    }
+  }
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    line-height: 1.24;
+    @include media-breakpoint-up(md) {
+      font-size: 4rem;
+      line-height: 1.5;
+    }
+  }
+  &__text {
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+    line-height: 1.66;
+    @include media-breakpoint-up(md) {
+      font-size: 2.2rem;
+      line-height: 1.81;
+    }
+  }
+  &__btn {
+    background-color: $red;
+    color: $white;
+    width: 25.2rem;
+    height: 5.2rem;
+  }
 }
 </style>
