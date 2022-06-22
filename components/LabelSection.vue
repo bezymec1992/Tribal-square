@@ -59,84 +59,90 @@
 
         <!-- How does it work section Desktop-->
 
-        <div
-          class="
-            col-12
-            d-none d-md-flex
-            justify-content-center
-            position-absolute
-          "
-        >
-          <img
-            class="how-does-it-work__img"
-            src="../assets/images/how-does-it-work-006.svg"
-            alt="image description"
-          />
-        </div>
+        <div class="col-12 d-flex how-does-it-work__wrap">
+          <div class="col-6 d-none d-md-flex how-does-it-work__desktop-left">
+            <ul class="how-does-it-work__desktop-list list-unstyled">
+              <li class="how-does-it-work__item">
+                <p class="how-does-it-work__item-text">
+                  Create events for desirous
+                </p>
+                <div class="hr-dashed-img d-flex">
+                  <img
+                    src="../assets/images/how-does-it-work-ellipse-007.svg"
+                    alt="ellipse"
+                  />
+                  <img
+                    src="../assets/images/how-does-it-work-line-left-009.svg"
+                    alt="line"
+                  />
+                </div>
+              </li>
+              <li class="how-does-it-work__item">
+                <p class="how-does-it-work__item-text">Looking for partner</p>
+                <div class="hr-dashed-img d-flex">
+                  <img
+                    src="../assets/images/how-does-it-work-ellipse-007.svg"
+                    alt="ellipse"
+                  />
+                  <img
+                    src="../assets/images/how-does-it-work-line-left-009.svg"
+                    alt="line"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
 
-        <div class="col-6 d-flex how-does-it-work__desktop-left">
-          <ul class="how-does-it-work__desktop-list list-unstyled">
-            <li class="how-does-it-work__desktop-item-left">
-              Create events for desirous
-              <div class="hr-dashed-img d-flex">
-                <img
-                  src="../assets/images/how-does-it-work-ellipse-007.svg"
-                  alt="ellipse"
-                />
-                <img
-                  src="../assets/images/how-does-it-work-line-left-009.svg"
-                  alt="line"
-                />
-              </div>
-            </li>
-            <li class="how-does-it-work__desktop-item-left">
-              Looking for partner
-              <div class="hr-dashed-img d-flex">
-                <img
-                  src="../assets/images/how-does-it-work-ellipse-007.svg"
-                  alt="ellipse"
-                />
-                <img
-                  src="../assets/images/how-does-it-work-line-left-009.svg"
-                  alt="line"
-                />
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="col-6 d-flex how-does-it-work__desktop-right d-none d-md-flex"
-        >
-          <ul class="how-does-it-work__desktop-list list-unstyled">
-            <li class="how-does-it-work__desktop-item-right">
-              Invest in ideas and companies
+          <div class="col-6 d-none d-md-flex how-does-it-work__desktop-right">
+            <ul class="how-does-it-work__desktop-list-right list-unstyled">
+              <li class="how-does-it-work__item how-does-it-work__item-right">
+                <p class="how-does-it-work__item-text-right">
+                  Invest in ideas and companies
+                </p>
 
-              <div class="hr-dashed-img d-flex">
-                <img
-                  src="../assets/images/how-does-it-work-line-right-008.svg"
-                  alt="line"
-                />
-                <img
-                  src="../assets/images/how-does-it-work-ellipse-007.svg"
-                  alt="ellipse"
-                />
-              </div>
-            </li>
-            <li class="how-does-it-work__desktop-item-right">
-              Create inner meetings
-              <div class="hr-dashed-img d-flex">
-                <img
-                  src="../assets/images/how-does-it-work-line-right-008.svg"
-                  alt="line"
-                />
-                <img
-                  src="../assets/images/how-does-it-work-ellipse-007.svg"
-                  alt="ellipse"
-                />
-              </div>
-            </li>
-          </ul>
+                <div class="hr-dashed-img d-flex">
+                  <img
+                    src="../assets/images/how-does-it-work-line-right-008.svg"
+                    alt="line"
+                  />
+                  <img
+                    src="../assets/images/how-does-it-work-ellipse-007.svg"
+                    alt="ellipse"
+                  />
+                </div>
+              </li>
+              <li class="how-does-it-work__item how-does-it-work__item-right">
+                <p class="how-does-it-work__item-text-right">
+                  Create inner meetings
+                </p>
+                <div class="hr-dashed-img d-flex">
+                  <img
+                    src="../assets/images/how-does-it-work-line-right-008.svg"
+                    alt="line"
+                  />
+                  <img
+                    src="../assets/images/how-does-it-work-ellipse-007.svg"
+                    alt="ellipse"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div
+        class="
+          col-12
+          d-none d-md-flex
+          how-does-it-work__visual
+          justify-content-center
+        "
+      >
+        <img
+          class="how-does-it-work__img"
+          src="../assets/images/how-does-it-work-006.svg"
+          alt="image description"
+        />
       </div>
     </div>
   </div>
@@ -183,27 +189,61 @@ export default {
   background-color: $aqua-haze;
   @include media-breakpoint-up(md) {
     padding: 4.4rem 0 15rem;
-    margin-bottom: 10rem;
+    margin-bottom: 25rem;
+  }
+  &__wrap {
+    position: relative;
+    @include media-breakpoint-up(md) {
+      padding: 0 4rem;
+    }
   }
   &__title {
     margin-bottom: 2.4rem;
     font-size: 2.4rem;
     line-height: 1.24;
   }
+  &__desktop-right {
+    flex-direction: row-reverse;
+  }
+  &__visual {
+    min-width: 70rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    // top: 3rem;
+  }
   &__img {
-    margin-bottom: 2.2rem;
+    // margin-bottom: 2.2rem;
 
     @include media-breakpoint-up(md) {
+      width: 50%;
     }
   }
 
   &__item {
-    font-size: 1.8rem;
-    line-height: 2.22;
     padding-bottom: 1.6rem;
 
     @include media-breakpoint-up(md) {
+      padding: 0 1rem;
+      position: relative;
     }
+  }
+  &__item-right {
+    text-align: right;
+    justify-content: right;
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+  }
+  &__item-text {
+    font-size: 1.8rem;
+    line-height: 2.22;
+    max-width: 45%;
+  }
+  &__item-text-right {
+    font-size: 1.8rem;
+    line-height: 2.22;
+    max-width: 45%;
   }
 }
 .hr-dashed {
@@ -222,12 +262,10 @@ export default {
 }
 .hr-dashed-img {
   display: flex;
-  font-display: row;
+  flex-direction: row;
 }
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: top;
-  display: inline-block;
 }
 </style>
