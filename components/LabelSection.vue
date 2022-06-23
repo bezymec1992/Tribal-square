@@ -160,9 +160,9 @@
               velit.
             </p>
           </div>
-          <div class="what-are-we-stand-for__visual d-flex">
+          <div class="what-are-we-stand-for__visual d-flex d-sm-none">
             <img
-              class="what-are-we-stand-for__img d-sm-none"
+              class="what-are-we-stand-for__img"
               src="../assets/images/what-are-we-stand-for-mob-0011.jpg"
               alt="image description"
             />
@@ -180,6 +180,8 @@
       </div>
     </div>
 
+    <!-- Final block -->
+
     <div class="final-block">
       <div class="container">
         <div class="final-block__body text-center">
@@ -192,6 +194,54 @@
           <a href="#" class="btn btn-primary final-block__btn text-uppercase"
             >Visit website</a
           >
+        </div>
+      </div>
+    </div>
+
+    <!-- Tribal hands -->
+
+    <div class="tribal-hands">
+      <div class="container">
+        <div class="row flex-md-row-reverse">
+          <div class="col-12 col-md-6">
+            <div class="tribal-hands__body">
+              <p class="ctribal-hands__label text-uppercase">Next label</p>
+              <h3 class="tribal-hands__title">TribalHands</h3>
+
+              <p class="tribal-hands__text">
+                This is a place of a short description of the website and about
+                what we do there.
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              col-12 col-md-6
+              justify-content-center
+              align-items-center
+              d-flex d-md-none
+            "
+          >
+            <img
+              class="solution__img"
+              src="../assets/images/solution-001.svg"
+              alt="image description"
+            />
+          </div>
+          <div
+            class="
+              col-12 col-md-6
+              justify-content-center
+              align-items-center
+              d-none d-md-flex
+            "
+          >
+            <img
+              class="solution__img"
+              src="../assets/images/solution-001.svg"
+              alt="image description"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -423,4 +473,6 @@ export default {
     height: 5.2rem;
   }
 }
+
+// Tribal Hands
 </style>
