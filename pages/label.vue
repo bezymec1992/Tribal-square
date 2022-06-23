@@ -180,9 +180,9 @@
       </div>
     </div>
 
-    <!-- Final block -->
+    <!-- Final block section-->
 
-    <div class="final-block">
+    <div class="final-block__section">
       <div class="container">
         <div class="final-block__body text-center">
           <h3 class="final-block__title">Final block with an info</h3>
@@ -195,11 +195,11 @@
       </div>
     </div>
 
-    <!-- Tribal hands -->
+    <!-- Tribal hands section-->
 
-    <div class="container">
-      <div class="tribal-hands">
-        <div class="row flex-md-row-reverse tribal-hands__wrap">
+    <div class="tribal-hands__section">
+      <div class="container">
+        <div class="row flex-md-row-reverse tribal-hands__wrapper">
           <div class="col-12 col-md-6">
             <div class="tribal-hands__body">
               <p class="tribal-hands__label text-uppercase">Next label</p>
@@ -210,20 +210,14 @@
               </p>
             </div>
           </div>
-          <div class="col-12 d-flex d-md-none">
-            <img
-              class="tribal-hands__img"
-              src="../assets/images/tribal-hands-mob-0012.svg"
-              alt="image description"
-            />
-          </div>
-
-          <div class="col-md-6 d-md-flex d-none">
-            <img
-              class="tribal-hands__img"
-              src="../assets/images/tribal-hands-0013.svg"
-              alt="image description"
-            />
+          <div class="col-12 col-md-6 px-0">
+            <div class="img-holder">
+              <img
+                class="tribal-hands__img"
+                src="../assets/images/tribal-hands-0013.svg"
+                alt="image description"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -423,13 +417,16 @@ export default {};
 
 .final-block {
   &__body {
+    max-width: 55rem;
+    margin: auto;
     padding: 8rem 0 10rem;
-    @include media-breakpoint-up(md) {
-      padding: 11rem 17rem 5rem;
-    }
-    @include media-breakpoint-up(lg) {
-      padding: 14rem 32.6rem 7rem;
-    }
+
+    // @include media-breakpoint-up(md) {
+    //   padding: 11rem 17rem 5rem;
+    // }
+    // @include media-breakpoint-up(lg) {
+    //   padding: 14rem 32.6rem 7rem;
+    // }
   }
   &__title {
     margin-bottom: 2rem;
@@ -454,15 +451,14 @@ export default {};
 // Tribal Hands
 
 .tribal-hands {
-  padding-bottom: 12rem;
-  @include media-breakpoint-up(xl) {
-    padding: 13rem 4rem;
+  &__section {
+    margin-bottom: 12rem;
   }
-  @include media-breakpoint-up(xxl) {
-    padding: 7rem 13rem 14rem;
-  }
-  &__wrap {
+
+  &__wrapper {
     background-color: $aqua-haze;
+    margin: auto;
+    max-width: 118rem;
   }
 
   &__body {
@@ -479,7 +475,6 @@ export default {};
     margin-bottom: 2rem;
     font-size: 1.6rem;
     line-height: 1.5;
-    color: $black;
     opacity: 40%;
     @include media-breakpoint-up(xl) {
       margin-bottom: 3rem;
@@ -507,15 +502,28 @@ export default {};
     @include media-breakpoint-up(xl) {
       font-size: 2rem;
       line-height: 1.6;
-      // margin-bottom: 18.6;
     }
   }
-
-  &__img {
+}
+.img-holder {
+  position: relative;
+  padding-top: 98.7%;
+  @include media-breakpoint-up(sm) {
+    padding-top: 70%;
+  }
+  @include media-breakpoint-up(md) {
     width: 100%;
-    height: auto;
-    @include media-breakpoint-up(xl) {
-    }
+    height: 100%;
+    padding-top: unset;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 </style>
