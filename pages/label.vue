@@ -25,122 +25,122 @@
     </div>
 
     <!-- How does it work section -->
+    <div class="container">
+      <div class="how-does-it-work">
+        <h3 class="how-does-it-work__title text-center">How does it work</h3>
+        <div class="row">
+          <!-- How does it work section mobile-->
 
-    <div class="how-does-it-work">
-      <h3 class="how-does-it-work__title text-center">How does it work</h3>
-
-      <div class="row">
-        <!-- How does it work section mobile-->
-
-        <div class="col-12 col-md-6 d-md-none d-flex justify-content-center">
-          <img
-            class="how-does-it-work__desktop-img"
-            src="../assets/images/how-does-it-work-006.svg"
-            alt="image description"
-          />
-        </div>
-        <div class="col-12 col-md-6 d-md-none text-center">
-          <ul class="how-does-it-work__list list-unstyled">
-            <li class="how-does-it-work__item">
-              Create events for desirous
-              <div class="hr-dashed"></div>
-            </li>
-            <li class="how-does-it-work__item">
-              Looking for partner
-              <div class="hr-dashed"></div>
-            </li>
-            <li class="how-does-it-work__item">
-              Invest in ideas and companies
-              <div class="hr-dashed"></div>
-            </li>
-            <li class="how-does-it-work__item">Create inner meeting</li>
-          </ul>
-        </div>
-
-        <!-- How does it work section Desktop-->
-
-        <div class="col-12 d-flex how-does-it-work__wrap">
-          <div class="col-6 d-none d-md-flex how-does-it-work__desktop-left">
-            <ul class="how-does-it-work__desktop-list list-unstyled">
-              <li class="how-does-it-work__item">
-                <p class="how-does-it-work__item-text">
-                  Create events for desirous
-                </p>
-                <div class="hr-dashed-img d-flex">
-                  <img
-                    src="../assets/images/how-does-it-work-ellipse-007.svg"
-                    alt="ellipse"
-                  />
-                  <img
-                    src="../assets/images/how-does-it-work-line-left-009.svg"
-                    alt="line"
-                  />
-                </div>
-              </li>
-              <li class="how-does-it-work__item">
-                <p class="how-does-it-work__item-text">Looking for partner</p>
-                <div class="hr-dashed-img d-flex">
-                  <img
-                    src="../assets/images/how-does-it-work-ellipse-007.svg"
-                    alt="ellipse"
-                  />
-                  <img
-                    src="../assets/images/how-does-it-work-line-left-009.svg"
-                    alt="line"
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-6 d-none d-md-flex how-does-it-work__desktop-right">
-            <ul class="how-does-it-work__desktop-list-right list-unstyled">
-              <li class="how-does-it-work__item how-does-it-work__item-right">
-                <p class="how-does-it-work__item-text-right">
-                  Invest in ideas and companies
-                </p>
-
-                <div class="hr-dashed-img d-flex">
-                  <img
-                    src="../assets/images/how-does-it-work-line-right-008.svg"
-                    alt="line"
-                  />
-                  <img
-                    src="../assets/images/how-does-it-work-ellipse-007.svg"
-                    alt="ellipse"
-                  />
-                </div>
-              </li>
-              <li class="how-does-it-work__item how-does-it-work__item-right">
-                <p class="how-does-it-work__item-text-right">
-                  Create inner meetings
-                </p>
-                <div class="hr-dashed-img d-flex">
-                  <img
-                    src="../assets/images/how-does-it-work-line-right-008.svg"
-                    alt="line"
-                  />
-                  <img
-                    src="../assets/images/how-does-it-work-ellipse-007.svg"
-                    alt="ellipse"
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="
-              col-12
-              d-none d-md-flex
-              how-does-it-work__visual
-              justify-content-center
-            "
-          >
+          <div class="col-12 col-md-6 d-md-none d-flex justify-content-center">
             <img
-              class="how-does-it-work__img"
+              class="how-does-it-work__desktop-img"
               src="../assets/images/how-does-it-work-006.svg"
               alt="image description"
             />
+          </div>
+          <div class="col-12 col-md-6 d-md-none text-center">
+            <ul class="how-does-it-work__list list-unstyled">
+              <li class="how-does-it-work__item">
+                Create events for desirous
+                <div class="hr-dashed"></div>
+              </li>
+              <li class="how-does-it-work__item">
+                Looking for partner
+                <div class="hr-dashed"></div>
+              </li>
+              <li class="how-does-it-work__item">
+                Invest in ideas and companies
+                <div class="hr-dashed"></div>
+              </li>
+              <li class="how-does-it-work__item">Create inner meeting</li>
+            </ul>
+          </div>
+
+          <!-- How does it work section Desktop-->
+
+          <div class="col-12 d-flex how-does-it-work__wrap">
+            <div class="col-6 d-none d-md-flex how-does-it-work__desktop-left">
+              <ul class="how-does-it-work__desktop-list list-unstyled">
+                <li class="how-does-it-work__item">
+                  <p class="how-does-it-work__item-text">
+                    Create events for desirous
+                  </p>
+                  <div class="hr-dashed-img d-flex">
+                    <img
+                      src="../assets/images/how-does-it-work-ellipse-007.svg"
+                      alt="ellipse"
+                    />
+                    <img
+                      src="../assets/images/how-does-it-work-line-left-009.svg"
+                      alt="line"
+                    />
+                  </div>
+                </li>
+                <li class="how-does-it-work__item">
+                  <p class="how-does-it-work__item-text">Looking for partner</p>
+                  <div class="hr-dashed-img d-flex">
+                    <img
+                      src="../assets/images/how-does-it-work-ellipse-007.svg"
+                      alt="ellipse"
+                    />
+                    <img
+                      src="../assets/images/how-does-it-work-line-left-009.svg"
+                      alt="line"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 d-none d-md-flex how-does-it-work__desktop-right">
+              <ul class="how-does-it-work__desktop-list-right list-unstyled">
+                <li class="how-does-it-work__item how-does-it-work__item-right">
+                  <p class="how-does-it-work__item-text-right">
+                    Invest in ideas and companies
+                  </p>
+
+                  <div class="hr-dashed-img d-flex">
+                    <img
+                      src="../assets/images/how-does-it-work-line-right-008.svg"
+                      alt="line"
+                    />
+                    <img
+                      src="../assets/images/how-does-it-work-ellipse-007.svg"
+                      alt="ellipse"
+                    />
+                  </div>
+                </li>
+                <li class="how-does-it-work__item how-does-it-work__item-right">
+                  <p class="how-does-it-work__item-text-right">
+                    Create inner meetings
+                  </p>
+                  <div class="hr-dashed-img d-flex">
+                    <img
+                      src="../assets/images/how-does-it-work-line-right-008.svg"
+                      alt="line"
+                    />
+                    <img
+                      src="../assets/images/how-does-it-work-ellipse-007.svg"
+                      alt="ellipse"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="
+                col-12
+                d-none d-md-flex
+                how-does-it-work__visual
+                justify-content-center
+              "
+            >
+              <img
+                class="how-does-it-work__img"
+                src="../assets/images/how-does-it-work-006.svg"
+                alt="image description"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -191,54 +191,37 @@
             egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta
             velit. Nulla facilisi. Phasellus at placerat felis. Intege.
           </p>
-          <a href="#" class="btn btn-primary final-block__btn text-uppercase"
-            >Visit website</a
-          >
         </div>
       </div>
     </div>
 
     <!-- Tribal hands -->
 
-    <div class="tribal-hands">
-      <div class="container">
-        <div class="row flex-md-row-reverse">
+    <div class="container">
+      <div class="tribal-hands">
+        <div class="row flex-md-row-reverse tribal-hands__wrap">
           <div class="col-12 col-md-6">
             <div class="tribal-hands__body">
-              <p class="ctribal-hands__label text-uppercase">Next label</p>
+              <p class="tribal-hands__label text-uppercase">Next label</p>
               <h3 class="tribal-hands__title">TribalHands</h3>
-
               <p class="tribal-hands__text">
                 This is a place of a short description of the website and about
                 what we do there.
               </p>
             </div>
           </div>
-          <div
-            class="
-              col-12 col-md-6
-              justify-content-center
-              align-items-center
-              d-flex d-md-none
-            "
-          >
+          <div class="col-12 d-flex d-md-none">
             <img
-              class="solution__img"
-              src="../assets/images/solution-001.svg"
+              class="tribal-hands__img"
+              src="../assets/images/tribal-hands-mob-0012.svg"
               alt="image description"
             />
           </div>
-          <div
-            class="
-              col-12 col-md-6
-              justify-content-center
-              align-items-center
-              d-none d-md-flex
-            "
-          >
+
+          <div class="col-md-6 d-md-flex d-none">
             <img
-              class="solution__img"
-              src="../assets/images/solution-001.svg"
+              class="tribal-hands__img"
+              src="../assets/images/tribal-hands-0013.svg"
               alt="image description"
             />
           </div>
@@ -249,9 +232,7 @@
 </template>
 
 <script>
-export default {
-  name: "LabelSection",
-};
+export default {};
 </script>
 <style lang="scss" scoped>
 // About the label
@@ -298,7 +279,7 @@ export default {
     padding: 7rem 3.5rem 1rem;
   }
   @include media-breakpoint-up(xl) {
-    padding: 7rem 7rem 7rem;
+    padding: 7rem 7.3rem 1rem;
   }
   &__wrap {
     position: relative;
@@ -332,7 +313,9 @@ export default {
       width: 50%;
     }
   }
-
+  &__desktop-img {
+    width: 100%;
+  }
   &__item {
     padding-bottom: 1.6rem;
     @include media-breakpoint-up(md) {
@@ -445,7 +428,7 @@ export default {
       padding: 11rem 17rem 5rem;
     }
     @include media-breakpoint-up(lg) {
-      padding: 14rem 32.7rem 10.2rem;
+      padding: 14rem 32.6rem 7rem;
     }
   }
   &__title {
@@ -466,13 +449,73 @@ export default {
       line-height: 1.81;
     }
   }
-  &__btn {
-    background-color: $red;
-    color: $white;
-    width: 25.2rem;
-    height: 5.2rem;
-  }
 }
 
 // Tribal Hands
+
+.tribal-hands {
+  padding-bottom: 12rem;
+  @include media-breakpoint-up(xl) {
+    padding: 13rem 4rem;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding: 7rem 13rem 14rem;
+  }
+  &__wrap {
+    background-color: $aqua-haze;
+  }
+
+  &__body {
+    padding: 5rem 2rem 6.7rem;
+    @include media-breakpoint-up(md) {
+      padding: 2rem 2rem 2.7rem;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 8.5rem 7rem 8.6rem;
+    }
+  }
+
+  &__label {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: $black;
+    opacity: 40%;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 3rem;
+      font-size: 1.8rem;
+      line-height: 1.33;
+    }
+  }
+  &__title {
+    margin-bottom: 2.4rem;
+    font-size: 2.8rem;
+    line-height: 1.43;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 2.7rem;
+      font-size: 4rem;
+      line-height: 1.5;
+    }
+  }
+  &__text {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    line-height: 1.62;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 2rem;
+      line-height: 1.6;
+      // margin-bottom: 18.6;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    @include media-breakpoint-up(xl) {
+    }
+  }
+}
 </style>

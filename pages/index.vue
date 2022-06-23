@@ -5,8 +5,6 @@
       <solution-section />
       <customer-engagement />
       <privacy-policy-cookies />
-      <!-- <privacy-cookies /> -->
-      <label-section />
     </div>
   </div>
 </template>
@@ -16,9 +14,6 @@ import CustomerExperienceSection from "~/components/CustomerExperienceSection.vu
 import CustomerEngagement from "~/components/CustomerEngagement.vue";
 import SolutionSection from "~/components/SolutionSection.vue";
 import PrivacyPolicyCookies from "~/components/PrivacyPolicyCookies.vue";
-import LabelSection from "~/components/LabelSection.vue";
-
-// import PrivacyCookies from "~/components/PrivacyCookies.vue";
 
 export default {
   components: {
@@ -26,8 +21,6 @@ export default {
     SolutionSection,
     CustomerEngagement,
     PrivacyPolicyCookies,
-    LabelSection,
-    // PrivacyCookies,
   },
   data() {
     return {
