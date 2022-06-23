@@ -66,6 +66,7 @@ export default {
 	align-items: center;
 	padding: 1.6rem 4.35rem;
 	font-size: 2.2rem;
+	line-height: 1;
 	color: var(--text-color);
 	letter-spacing: 0.1rem;
 	background: var(--bg-color);
