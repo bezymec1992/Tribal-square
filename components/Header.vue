@@ -214,6 +214,7 @@ export default {
 	padding-top: 2.4rem;
 	padding-bottom: 2.4rem;
 	background: $white;
+	border-bottom: solid 0.1rem rgba($black, 0.2);
 
 	@include media-breakpoint-down(md) {
 		padding-top: 2rem;
@@ -255,7 +256,7 @@ export default {
 			pointer-events: none;
 			z-index: 99;
 			overflow: auto;
-			border-top: solid 0.1rem rgba($black, 0.2);
+			// border-top: solid 0.1rem rgba($black, 0.2);
 		}
 
 		@include media-breakpoint-down(md) {
