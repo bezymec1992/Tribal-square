@@ -2,23 +2,29 @@
   <div>
     <!-- About the label section -->
 
-    <div class="about-the-label">
+    <div class="about-the-label__section">
       <div class="container">
-        <h3 class="about-the-label__title h3 text-left">About the label</h3>
-        <div class="row">
-          <div class="col-12 col-md-6 d-flex">
-            <p class="about-the-label__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta
-              velit.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 d-flex">
-            <p class="about-the-label__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta
-              velit.
-            </p>
+        <div class="about-the-label__wrapper">
+          <h3 class="about-the-label__title h3 text-left">About the label</h3>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="about-the-label__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean egestas in est ut aliquet. Pellentesque ac blandit leo,
+                  nec porta velit.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="about-the-label__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean egestas in est ut aliquet. Pellentesque ac blandit leo,
+                  nec porta velit.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -227,12 +233,18 @@ export default {};
 // About the label section
 
 .about-the-label {
-  padding: 8rem 0 8rem;
-  @include media-breakpoint-up(md) {
-    padding: 10rem 4.5rem 10rem;
-  }
-  @include media-breakpoint-up(lg) {
-    padding: 12rem 9.5rem 12rem;
+  &__wrapper {
+    padding: 8rem 0;
+    // margin: auto;
+    @include media-breakpoint-up(md) {
+      padding: 8rem 3rem;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 8rem 7rem;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 12rem 13rem;
+    }
   }
 
   &__title {
@@ -247,12 +259,17 @@ export default {};
   }
   &__text {
     margin-bottom: 2rem;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    @include media-breakpoint-up(md) {
-      font-size: 1.8rem;
-      line-height: 1.78;
+    max-width: 51.8rem;
+    p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.8rem;
+        line-height: 1.78;
+      }
     }
+    margin-bottom: 2rem;
   }
 }
 
