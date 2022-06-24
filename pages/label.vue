@@ -373,7 +373,7 @@ export default {};
 
 .what-are-we-stand-for {
   &__body {
-    max-width: 55rem;
+    max-width: 75.2rem;
     margin: auto;
     padding-top: 8rem;
     @include media-breakpoint-up(lg) {
