@@ -434,7 +434,10 @@ export default {};
   &__body {
     max-width: 55rem;
     margin: auto;
-    padding: 8rem 0 10rem;
+    padding: 8rem 0 19.2rem;
+    @include media-breakpoint-up(md) {
+      padding: 14rem 0 24rem;
+    }
   }
   &__title {
     margin-bottom: 2rem;
