@@ -130,9 +130,12 @@ export default {};
     font-size: 2.8rem;
     line-height: 1.42;
     @include media-breakpoint-up(lg) {
-      text-align: center;
+      max-width: 85.4rem;
+      margin: auto;
       font-size: 4rem;
       line-height: 1.5;
+      margin-bottom: 10rem;
+      margin-top: 10rem;
     }
   }
   &__body {
