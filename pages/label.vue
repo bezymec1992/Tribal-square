@@ -229,7 +229,7 @@
 export default {};
 </script>
 <style lang="scss" scoped>
-// About the label
+// About the label section
 
 .about-the-label {
   padding: 8rem 0 8rem;
@@ -261,7 +261,7 @@ export default {};
   }
 }
 
-// How does it work
+// How does it work section
 
 .how-does-it-work {
   padding: 6rem 0 4rem;
@@ -374,7 +374,7 @@ export default {};
   flex-direction: row;
 }
 
-// what we are stand for
+// what we are stand for section
 
 .what-are-we-stand-for {
   &__body {
@@ -413,7 +413,7 @@ export default {};
   }
 }
 
-// Final block with an info
+// Final block with an info section
 
 .final-block {
   &__body {

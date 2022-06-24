@@ -116,9 +116,7 @@
 </template>
 
 <script>
-export default {
-  name: "CustomerEngagement",
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
