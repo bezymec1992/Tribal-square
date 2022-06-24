@@ -31,8 +31,8 @@
     </div>
 
     <!-- How does it work section -->
-    <div class="container">
-      <div class="how-does-it-work">
+    <div class="how-does-it-work__section">
+      <div class="container">
         <h3 class="how-does-it-work__title text-center">How does it work</h3>
         <div class="row">
           <!-- How does it work section mobile-->
