@@ -147,34 +147,29 @@
     </div>
 
     <!-- What are we stand for section -->
-
-    <div class="what-are-we-stand-for">
-      <div class="row">
-        <div class="col-12">
-          <div class="what-are-we-stand-for__body text-center">
-            <h3 class="what-are-we-stand-for__title">What are we stand for</h3>
-
-            <p class="what-are-we-stand-for__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta
-              velit.
-            </p>
+    <div class="what-are-we-stand-for__section">
+      <div class="container">
+        <div class="row what-are-we-stand-for__wrapper text-center">
+          <div class="col-12">
+            <div class="what-are-we-stand-for__body">
+              <h3 class="what-are-we-stand-for__title">
+                What are we stand for
+              </h3>
+              <p class="what-are-we-stand-for__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                egestas in est ut aliquet. Pellentesque ac blandit leo, nec
+                porta velit.
+              </p>
+            </div>
           </div>
-          <div class="what-are-we-stand-for__visual d-flex d-sm-none">
-            <img
-              class="what-are-we-stand-for__img"
-              src="../assets/images/what-are-we-stand-for-mob-0011.jpg"
-              alt="image description"
-            />
-          </div>
-          <div
-            class="justify-content-center align-items-center d-none d-sm-flex"
-          >
-            <img
-              class="what-are-we-stand-for__img"
-              src="../assets/images/what-are-we-stand-for-0010.jpg"
-              alt="image description"
-            />
+          <div class="col-12 px-0">
+            <div class="what-are-we-stand-for__img-holder">
+              <img
+                class="what-are-we-stand-for__img"
+                src="../assets/images/what-are-we-stand-for-0010.jpg"
+                alt="image description"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -211,7 +206,7 @@
             </div>
           </div>
           <div class="col-12 col-md-6 px-0">
-            <div class="img-holder">
+            <div class="tribal-hands__img-holder">
               <img
                 class="tribal-hands__img"
                 src="../assets/images/tribal-hands-0013.svg"
@@ -374,16 +369,15 @@ export default {};
   flex-direction: row;
 }
 
-// what we are stand for section
+// What we are stand for section
 
 .what-are-we-stand-for {
   &__body {
-    padding: 10rem 2rem 3rem;
-    @include media-breakpoint-up(sm) {
-      padding: 11rem 17rem 5rem;
-    }
+    max-width: 55rem;
+    margin: auto;
+    padding-top: 8rem;
     @include media-breakpoint-up(lg) {
-      padding: 12rem 34.7rem 8rem;
+      padding-top: 22.4rem;
     }
   }
 
@@ -397,18 +391,39 @@ export default {};
     }
   }
   &__text {
+    margin-bottom: 4rem;
     font-size: 1.8rem;
     line-height: 1.66;
     @include media-breakpoint-up(md) {
+      margin-bottom: 8rem;
       font-size: 2.2rem;
       line-height: 1.81;
     }
   }
-  &__img {
-    width: 100%;
-    height: auto;
+  &__img-holder {
+    position: relative;
+    padding-top: 98.7%;
+    @include media-breakpoint-up(sm) {
+      padding-top: 70%;
+    }
     @include media-breakpoint-up(md) {
-      padding: 0 5rem 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 80%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      height: 100%;
+      padding-top: 58%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -420,13 +435,6 @@ export default {};
     max-width: 55rem;
     margin: auto;
     padding: 8rem 0 10rem;
-
-    // @include media-breakpoint-up(md) {
-    //   padding: 11rem 17rem 5rem;
-    // }
-    // @include media-breakpoint-up(lg) {
-    //   padding: 14rem 32.6rem 7rem;
-    // }
   }
   &__title {
     margin-bottom: 2rem;
@@ -504,26 +512,26 @@ export default {};
       line-height: 1.6;
     }
   }
-}
-.img-holder {
-  position: relative;
-  padding-top: 98.7%;
-  @include media-breakpoint-up(sm) {
-    padding-top: 70%;
-  }
-  @include media-breakpoint-up(md) {
-    width: 100%;
-    height: 100%;
-    padding-top: unset;
-  }
+  &__img-holder {
+    position: relative;
+    padding-top: 98.7%;
+    @include media-breakpoint-up(sm) {
+      padding-top: 70%;
+    }
+    @include media-breakpoint-up(md) {
+      width: 100%;
+      height: 100%;
+      padding-top: unset;
+    }
 
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 </style>
