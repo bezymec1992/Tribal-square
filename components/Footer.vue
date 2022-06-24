@@ -11,7 +11,7 @@
 					<a href="mailto:hello@tribalsquare.com" class="mail-link">hello@tribalsquare.com</a>
 					<ul class="menu style-1 d-none d-xl-flex">
 						<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
-						<li><nuxt-link to="/">Privacy Policy</nuxt-link></li>
+						<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
 					</ul>
 				</div>
 				<div class="col-xl-7">
@@ -49,7 +49,7 @@
 				<div class="col-12">
 					<ul class="menu style-1 d-xl-none">
 						<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
-						<li><nuxt-link to="/">Privacy Policy</nuxt-link></li>
+						<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
 					</ul>
 				</div>
 			</div>

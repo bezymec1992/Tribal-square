@@ -26,6 +26,10 @@ body {
 			overflow-y: scroll;
 		}
 	}
+
+	&.bg-white {
+		background: $white;
+	}
 }
 
 a {
