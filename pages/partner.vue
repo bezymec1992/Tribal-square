@@ -121,15 +121,11 @@ export default {};
 
 <style lang="scss" scoped>
 .customer-ingagement {
-  // padding: 8rem 0 10rem;
-  // @include media-breakpoint-up(lg) {
-  //   padding: 10rem 0 15rem;
-  // }
   &__block-title {
     margin-bottom: 3.5rem;
     font-size: 2.8rem;
     line-height: 1.42;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       max-width: 85.4rem;
       margin: auto;
       font-size: 4rem;
