@@ -10,8 +10,8 @@
 				</p>
 			</div>
 		</div>
-		<div class="solution__picture d-flex justify-content-center">
-			<picture>
+		<div class="solution__picture-wrap">
+			<picture class="solution__picture d-flex justify-content-center">
 				<source :srcset="require('@/assets/imgs/' + imgMob)" media="(max-width: 767px)" width="824" height="400" />
 				<img :src="require('@/assets/imgs/' + img)" :alt="title" width="1340" height="650" />
 			</picture>
@@ -76,10 +76,12 @@ export default {
 			}
 		}
 	}
+	
 	.solution__picture {
 		width: 1340px;
 		max-width: 100%;
 		margin: 0 auto;
+		
 	}
 
 	&.style-2{
@@ -96,6 +98,13 @@ export default {
 				top:0
 				
 			}
+		}
+	}
+	&.style-3{
+		background-color: white;
+		padding-bottom: 0;
+		.solution__picture-wrap {
+			background: linear-gradient(white 52%, #EEF3F5 50%);
 		}
 	}
 }

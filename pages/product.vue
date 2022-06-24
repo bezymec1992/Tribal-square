@@ -1,37 +1,38 @@
 <template>
 	<div class="product-page">
-		<Intro-section>
-			<div class="container">
-				<div class="row align-items-md-center">
-					<div class="col-lg-6">
-						<h1 class="h1">Digital Valet</h1>
-						<div class="text-holder">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac	
-							</p>
+		<div class="product__main">
+			<Intro-section class="intro-section">
+				<div class="container">
+					<div class="row align-items-md-center">
+						<div class="col-lg-7">
+							<h1 class="h1">Digital Valet</h1>
+							<div class="text-holder">
+								<p class="product__main-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac	
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-5 d-md-flex justify-content-end">
+							<Button title="FIND A PATNER" class="btn-warning" type="nuxt-link" to="/contact">
+								<template #icon>
+									<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
+										<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+									</svg>
+								</template>
+							</Button>
 						</div>
 					</div>
-					<div class="col-lg-6 d-md-flex justify-content-end">
-						<Button title="FIND A PATNER" class="btn-warning" type="nuxt-link" to="/contact">
-							<template #icon>
-								<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-									<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-								</svg>
-							</template>
-						</Button>
-							
-					</div>
 				</div>
-				<div class="product__main-picture d-flex justify-content-center">
-					<picture>
+			</Intro-section>
+			<div class="product__main-picture d-flex justify-content-center">
+				<picture>
 					<source srcset="../assets/imgs/product-main-mb.jpg" media="(max-width: 767px)" width="802" height="370" />
 					<img src="../assets/imgs/product-main.jpg" alt="partners-logo" width="1300" height="600" />
 				</picture>
-				</div>
 			</div>
-		</Intro-section>
-
+		</div>
+		
 		<div class="idea">
 			<div class="container">
 				<div class="idea__info row d-flex justify-content-between">
@@ -151,6 +152,33 @@ export default {
 .product-page {
 	background: $white;
 	overflow: hidden;
+	.product__main-text {
+		max-width: 73.5rem;
+		@include media-breakpoint-down(sm) {
+			max-width: 33.5rem;
+		}
+	}
+	.product__main-picture {
+		background: linear-gradient(#EEF3F5 50%, white 50%);
+		padding-bottom: 10rem;
+	}
+	.intro-section {
+		background-color: #EEF3F5;
+		padding-bottom: 6rem;
+		@include media-breakpoint-down(md) {
+			padding-bottom: 0;
+			.text-holder {
+				margin-bottom: 0;
+			}
+		}
+
+	} 
+	.btn-warning {
+		@include media-breakpoint-down(sm) {
+			position: relative;
+			bottom: -3rem;
+		}
+	}
 
 	.idea {
 		overflow: hidden;
