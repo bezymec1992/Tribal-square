@@ -81,5 +81,21 @@ export default {
 		max-width: 100%;
 		margin: 0 auto;
 	}
+
+	&.style-2 {
+		.solution__picture {
+			@include media-breakpoint-down(md) {
+				position: relative;
+				height: 400px;
+			}
+		}
+		.solution__picture img {
+			@include media-breakpoint-down(md) {
+				position: absolute;
+				right: -70px;
+				top: 0;
+			}
+		}
+	}
 }
 </style>

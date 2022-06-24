@@ -18,7 +18,7 @@
 							<nuxt-link to="/">Home</nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/">About</nuxt-link>
+							<nuxt-link to="/about">About</nuxt-link>
 						</li>
 						<li class="accordion">
 							<span class="accordion-title"
@@ -121,7 +121,7 @@ export default {
 			menu: [
 				{
 					title: "About",
-					to: "/"
+					to: "/about"
 				},
 				{
 					title: "Products",

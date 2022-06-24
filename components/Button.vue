@@ -71,7 +71,7 @@ export default {
 	letter-spacing: 0.1rem;
 	background: $purple;
 	text-transform: uppercase;
-	border: solid 0.1rem transparent;
+	border: solid 0.1rem $purple;
 	border-radius: 0;
 
 	@include media-breakpoint-down(md) {
@@ -115,6 +115,7 @@ export default {
 	&.btn-warning {
 		color: $black;
 		background: $candlelight;
+		border-color: $candlelight;
 
 		&:hover {
 			background: lighten($candlelight, 10);
@@ -125,6 +126,7 @@ export default {
 		color: $black;
 		background: transparent;
 		text-decoration: none;
+		border-color: transparent;
 
 		&:hover {
 			background: transparent;
