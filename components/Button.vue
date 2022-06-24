@@ -67,21 +67,16 @@ export default {
 	padding: 1.6rem 4.35rem;
 	font-size: 2.2rem;
 	line-height: 1;
-	color: var(--text-color);
+	color: $white;
 	letter-spacing: 0.1rem;
-	background: var(--bg-color);
+	background: $purple;
 	text-transform: uppercase;
-	border: solid 0.1rem var(--bg-color);
+	border: solid 0.1rem transparent;
 	border-radius: 0;
 
 	@include media-breakpoint-down(md) {
 		padding: 1.55rem 4.2rem;
 		font-size: 1.8rem;
-	}
-
-	&:hover {
-		color: var(--text-hover-color);
-		background: var(--bg-hoverColor);
 	}
 
 	&:focus {
@@ -109,7 +104,7 @@ export default {
 	&.btn-outline-primary {
 		color: $black;
 		background: transparent;
-		border-color: $purple;
+		border: solid 0.1rem $purple;
 
 		&:hover {
 			color: $white;
