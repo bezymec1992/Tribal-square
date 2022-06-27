@@ -102,6 +102,7 @@
 				</div>
 			</div>
 		</div>
+		<ContactSection />
 	</div>
 </template>
 
@@ -109,11 +110,14 @@
 import Solutions from "@/components/Solutions";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
+import ContactSection from "@/components/ContactSection";
+
 export default {
 	components: {
 		Solutions,
 		Card,
-		Button
+		Button,
+		ContactSection
 	},
 	data() {
 		return {
@@ -280,7 +284,7 @@ export default {
 	position: relative;
 	padding-top: 14.2rem;
 	padding-bottom: 14rem;
-	border-bottom: 1px solid gray;
+
 	@include media-breakpoint-down(md) {
 		padding-top: 8rem;
 		padding-bottom: 23rem;

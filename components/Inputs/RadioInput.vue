@@ -60,7 +60,7 @@ export default {
 			background-color: transparent;
 			pointer-events: none;
 			border-radius: 50%;
-			border: solid 1px $black;
+			border: solid 1px rgba($black, 0.4);
 			user-select: none;
 
 			&::before {

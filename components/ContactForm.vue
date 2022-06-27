@@ -24,10 +24,29 @@
 					</Input>
 				</div>
 			</div>
-
 			<Input v-model="form.message" placeholder="Type your message" label="Your message" input-type="textarea" :error-showing="$v.form.message.$error" />
 			<Button type="button" title="Send" class="btn-primary" @click="submitForm" />
 		</form>
+		<modal ref="modal">
+			<template #modal-body>
+				<div class="modal-request">
+					<h3 class="h2 text-center">PROCESSING</h3>
+					<div class="text-holder text-center" :class="request.status">
+						<span v-if="request.loading" class="loading-dots"></span>
+						<p v-else>
+							<template v-if="request.status === 'success'">
+								Request from <strong>{{ form.email }}</strong>
+								<span class="green">{{ request.message }}</span>
+							</template>
+
+							<template v-else>
+								{{ request.message }}
+							</template>
+						</p>
+					</div>
+				</div>
+			</template>
+		</modal>
 	</div>
 </template>
 
@@ -53,6 +72,11 @@ export default {
 				email: "",
 				message: "",
 				type: ""
+			},
+			request: {
+				loading: true,
+				status: "",
+				message: ""
 			}
 		};
 	},
@@ -81,12 +105,39 @@ export default {
 			if (this.$v.form.$invalid) {
 				return console.log("some erorr");
 			} else {
-				// console.log("all good");
-				this.$v.$reset();
-				this.form.name = "";
-				this.form.email = "";
-				this.form.message = "";
+				console.log("form success");
+				this.requestDataSet("success", "has been sent");
+				this.openModal();
+
+				setTimeout(() => {
+					this.request.loading = false;
+				}, 2000);
+
+				setTimeout(() => {
+					this.closeModal();
+					this.clearForm();
+				}, 5000);
 			}
+		},
+
+		clearForm() {
+			this.$v.$reset();
+
+			this.form.name = "";
+			this.form.email = "";
+			this.form.message = "";
+			this.form.type = "";
+		},
+		requestDataSet(status, message) {
+			this.request.status = status;
+			this.request.message = message;
+		},
+
+		openModal() {
+			this.$refs.modal.handleOpen();
+		},
+		closeModal() {
+			this.$refs.modal.handleClose();
 		}
 	}
 };
@@ -115,6 +166,7 @@ export default {
 
 	.radios {
 		display: flex;
+		flex-wrap: wrap;
 		margin-bottom: 2.7rem;
 
 		@include media-breakpoint-down(md) {

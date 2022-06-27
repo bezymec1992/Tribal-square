@@ -25,7 +25,7 @@
 		</Intro-section>
 		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" class="style-3" />
 		<InformersSection />
-		<SectionInformers />
+
 		<CustomerExperienceSection />
 		<OurPartners />
 		<SolutionSection />

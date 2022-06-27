@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-xl-5">
 					<strong class="logo">LOGO</strong>
-					<SocialLinks color="white" hover-color="#ffdb1c" />
+					<SocialLinks color="white" hover-color="#000000" hover-background="#FFDB1C" />
 					<div class="text-holder">
 						<p>Feel free to contact us at</p>
 					</div>

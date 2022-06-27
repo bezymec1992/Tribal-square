@@ -43,8 +43,11 @@ export default {
 			type: String,
 			default: "black"
 		},
-
 		hoverColor: {
+			type: String,
+			default: "black"
+		},
+		hoverBackground: {
 			type: String,
 			default: "black"
 		}
@@ -54,7 +57,8 @@ export default {
 		return {
 			style: {
 				"--color": this.color,
-				"--hovercolor": this.hoverColor
+				"--hovercolor": this.hoverColor,
+				"--hoverbackground": this.hoverBackground
 			}
 		};
 	}
@@ -85,6 +89,8 @@ export default {
 
 			&:hover {
 				color: var(--hovercolor);
+				background: var(--hoverbackground);
+				border-color: var(--hoverbackground);
 			}
 		}
 	}

@@ -42,7 +42,7 @@
 					<div class="products-informer" anchor-section="section-2">
 						<div class="header d-flex align-items-center justify-content-between">
 							<h3 class="h2">Labels Overview</h3>
-							<Button title="WEBSITE" class="btn-link d-none d-sm-inline-flex" type="link" to="/">
+							<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
 								<template #icon>
 									<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />

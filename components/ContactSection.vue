@@ -1,7 +1,7 @@
 <template>
 	<div class="contact-section">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-md-end">
 				<div class="col-lg-5">
 					<h2 class="h2">
 						Ready to start <br />
@@ -58,6 +58,10 @@ export default {
 	.text-holder {
 		font-size: 1.8rem;
 		line-height: 1.66;
+
+		@include media-breakpoint-up(md) {
+			padding-bottom: 8rem;
+		}
 	}
 
 	.contact-form {

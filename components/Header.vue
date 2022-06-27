@@ -84,16 +84,16 @@
 							<nuxt-link to="/">For partners</nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/">Contact</nuxt-link>
+							<nuxt-link to="/contact">Contact</nuxt-link>
 						</li>
 					</ul>
 					<div class="bottom">
-						<SocialLinks />
+						<SocialLinks hover-color="#000000" hover-background="#FFDB1C" />
 						<ul class="bottom-menu">
 							<li>
 								<nuxt-link to="/">Terms & Conditions</nuxt-link>
 							</li>
-							<li><nuxt-link to="/">Privacy Policy</nuxt-link></li>
+							<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
 						</ul>
 					</div>
 				</div>
@@ -137,7 +137,7 @@ export default {
 				},
 				{
 					title: "Contact",
-					to: "/"
+					to: "/contact"
 				}
 			]
 		};
