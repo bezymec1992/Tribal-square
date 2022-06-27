@@ -4,26 +4,24 @@
 
     <div class="about-the-label__section">
       <div class="container">
-        <div class="about-the-label__wrapper">
-          <h3 class="about-the-label__title h3 text-left">About the label</h3>
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <div class="about-the-label__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean egestas in est ut aliquet. Pellentesque ac blandit leo,
-                  nec porta velit.
-                </p>
-              </div>
+        <h3 class="about-the-label__title h3 text-left">About the label</h3>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="about-the-label__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                egestas in est ut aliquet. Pellentesque ac blandit leo, nec
+                porta velit.
+              </p>
             </div>
-            <div class="col-12 col-md-6">
-              <div class="about-the-label__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean egestas in est ut aliquet. Pellentesque ac blandit leo,
-                  nec porta velit.
-                </p>
-              </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="about-the-label__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                egestas in est ut aliquet. Pellentesque ac blandit leo, nec
+                porta velit.
+              </p>
             </div>
           </div>
         </div>
@@ -233,9 +231,9 @@ export default {};
 // About the label section
 
 .about-the-label {
-  &__wrapper {
+  &__section {
     padding: 8rem 0;
-    // margin: auto;
+
     @include media-breakpoint-up(md) {
       padding: 8rem 3rem;
     }
@@ -260,33 +258,41 @@ export default {};
   &__text {
     margin-bottom: 2rem;
     max-width: 51.8rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-up(md) {
+    }
+
     p {
       font-size: 1.6rem;
       line-height: 1.5;
-
       @include media-breakpoint-up(md) {
         font-size: 1.8rem;
         line-height: 1.78;
       }
     }
-    margin-bottom: 2rem;
   }
 }
 
 // How does it work section
 
 .how-does-it-work {
-  padding: 6rem 0 4rem;
-  background-color: $aqua-haze;
-  @include media-breakpoint-up(md) {
-    padding: 4rem 0 1rem;
+  &__section {
+    background-color: $aqua-haze;
+    padding: 6rem 0 4rem;
+
+    @include media-breakpoint-up(md) {
+      padding: 4rem 0 1rem;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 7rem 3.5rem 1rem;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 7rem 7.3rem 6rem;
+    }
   }
-  @include media-breakpoint-up(lg) {
-    padding: 7rem 3.5rem 1rem;
-  }
-  @include media-breakpoint-up(xl) {
-    padding: 7rem 7.3rem 1rem;
-  }
+
   &__wrap {
     position: relative;
     @include media-breakpoint-up(md) {
@@ -451,9 +457,9 @@ export default {};
   &__body {
     max-width: 55rem;
     margin: auto;
-    padding: 8rem 0 19.2rem;
-    @include media-breakpoint-up(md) {
-      padding: 14rem 0 24rem;
+    padding: 10rem 0 4rem;
+    @include media-breakpoint-up(xxl) {
+      padding: 14rem 0;
     }
   }
   &__title {

@@ -68,7 +68,6 @@ export default {
 	&__title {
 		font-size: 2.4rem;
 		line-height: 1.08;
-
 		color: $black;
 
 		@include media-breakpoint-up(md) {
