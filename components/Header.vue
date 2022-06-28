@@ -8,16 +8,16 @@
 			<nav class="main-nav">
 				<ul class="main-menu d-none d-lg-flex">
 					<li v-for="(item, index) in menu" :key="index">
-						<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
+						<nuxt-link :to="item.to" exact-active-class="active">{{ item.title }}</nuxt-link>
 					</li>
 				</ul>
 
 				<div class="mobile-content d-lg-none">
 					<ul class="mobile-menu">
-						<li>
+						<li @click="menuClose">
 							<nuxt-link to="/">Home</nuxt-link>
 						</li>
-						<li>
+						<li @click="menuClose">
 							<nuxt-link to="/about">About</nuxt-link>
 						</li>
 						<li class="accordion">
@@ -32,19 +32,19 @@
 							</span>
 							<div class="accordion-content">
 								<ul class="inner-menu">
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">All products overview</nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">Knock Knock</nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">Coffee App</nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">Digital Valet </nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">HandsRepublic</nuxt-link>
 									</li>
 								</ul>
@@ -62,38 +62,38 @@
 							</span>
 							<div class="accordion-content">
 								<ul class="inner-menu">
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">All labels overview</nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">TribalHands</nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">Digital Chiefs</nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">Powwows</nuxt-link>
 									</li>
-									<li>
+									<li @click="menuClose">
 										<nuxt-link to="/">Tribal Cyber</nuxt-link>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li>
+						<li @click="menuClose">
 							<nuxt-link to="/">For partners</nuxt-link>
 						</li>
-						<li>
+						<li @click="menuClose">
 							<nuxt-link to="/contact">Contact</nuxt-link>
 						</li>
 					</ul>
 					<div class="bottom">
 						<SocialLinks hover-color="#000000" hover-background="#FFDB1C" />
 						<ul class="bottom-menu">
-							<li>
+							<li @click="menuClose">
 								<nuxt-link to="/">Terms & Conditions</nuxt-link>
 							</li>
-							<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
+							<li @click="menuClose"><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
 						</ul>
 					</div>
 				</div>
@@ -133,7 +133,7 @@ export default {
 				},
 				{
 					title: "For partners",
-					to: "/"
+					to: "/partner"
 				},
 				{
 					title: "Contact",
@@ -156,6 +156,10 @@ export default {
 			} else {
 				document.body.classList.remove("menu-opened");
 			}
+		},
+		menuClose() {
+			this.menuOpen = false;
+			document.body.classList.remove("menu-opened");
 		},
 		initAccordions() {
 			const accordions = document.querySelectorAll(".accordion");
@@ -285,6 +289,38 @@ export default {
 			li {
 				&:not(:last-child) {
 					margin-right: 4rem;
+				}
+			}
+
+			a {
+				position: relative;
+				display: inline-block;
+
+				&:after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					transform: scaleX(0);
+					height: 0;
+					bottom: -0.3rem;
+					left: 0;
+					border-bottom: 0.2rem solid;
+					transform-origin: bottom right;
+					transition: transform 0.25s ease-out;
+				}
+
+				&:hover {
+					&:after {
+						transform: scaleX(1);
+						transform-origin: bottom left;
+					}
+				}
+
+				&.active {
+					&:after {
+						transform: scaleX(1);
+						transform-origin: bottom left;
+					}
 				}
 			}
 		}

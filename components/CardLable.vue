@@ -3,28 +3,30 @@
 		<div class="row">
 			<div class="col-md-7">
 				<div class="content-holder">
-					<h3>Tribal Cyber</h3>
+					<div class="svg-title">
+						<img :src="require(`@/assets/imgs/${svgTitle}`)" :alt="title" class="svg-html" />
+					</div>
 					<div class="text-holder">
-						<p>This is a place of a short description of the website and about what we do there.</p>
+						<p>{{ description }}</p>
 					</div>
 					<div class="row">
 						<div class="col-6">
 							<ul>
 								<li>TYPE</li>
-								<li>Website</li>
+								<li>{{ type }}</li>
 							</ul>
 						</div>
 						<div class="col-6">
 							<ul>
 								<li>TOPIC</li>
-								<li>Cyber Security</li>
+								<li>{{ topic }}</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-5 d-flex align-items-end justify-content-between justify-content-md-end align-items-md-start">
-				<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
+				<Button title="WEBSITE" class="btn-link" type="link" :to="websiteLink">
 					<template #icon>
 						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -33,7 +35,7 @@
 					</template>
 				</Button>
 				<div class="img-holder">
-					<img src="@/assets/imgs/img-05.png" alt="img of project" />
+					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
 				</div>
 			</div>
 		</div>
@@ -48,10 +50,37 @@ export default {
 			type: String,
 			default: "black"
 		},
-
 		backgroundColor: {
 			type: String,
 			default: "white"
+		},
+		websiteLink: {
+			type: String,
+			default: "/"
+		},
+		title: {
+			type: String,
+			default: "Title of project"
+		},
+		svgTitle: {
+			type: String,
+			default: "tribal-cyber.svg"
+		},
+		img: {
+			type: String,
+			default: "img-05.png"
+		},
+		description: {
+			type: String,
+			default: "This is a place of a short description of the website and about what we do there."
+		},
+		type: {
+			type: String,
+			default: "type"
+		},
+		topic: {
+			type: String,
+			default: "topic"
 		}
 	},
 	data() {
@@ -61,9 +90,54 @@ export default {
 				"--background-color": this.backgroundColor
 			}
 		};
+	},
+	mounted() {
+		const imgs = document.querySelectorAll(".svg-html");
+
+		imgs.forEach((element) => {
+			this.replaseInlineSvg(element);
+		});
+	},
+	methods: {
+		replaseInlineSvg(el) {
+			const imgID = el.getAttribute("id");
+			const imgClass = el.getAttribute("class");
+			const imgURL = el.getAttribute("src");
+
+			fetch(imgURL)
+				.then((data) => data.text())
+				.then((response) => {
+					const parser = new DOMParser();
+					const xmlDoc = parser.parseFromString(response, "text/html");
+					const svg = xmlDoc.querySelector("svg");
+
+					if (typeof imgID !== "undefined") {
+						svg.setAttribute("id", imgID);
+					}
+
+					if (typeof imgClass !== "undefined") {
+						svg.setAttribute("class", imgClass + " replaced-svg");
+					}
+
+					svg.removeAttribute("xmlns:a");
+
+					if (el.parentNode) {
+						el.parentNode.replaceChild(svg, el);
+					}
+				});
+		}
 	}
 };
 </script>
+
+<style lang="scss">
+.svg-title {
+	svg {
+		width: 100%;
+		height: auto;
+	}
+}
+</style>
 
 <style lang="scss" scoped>
 .label-card {
@@ -71,19 +145,20 @@ export default {
 	color: var(--color);
 	background: var(--background-color);
 	transition: $transition;
+	overflow: hidden;
 
 	.content-holder {
 		position: relative;
 		z-index: 1;
 	}
 
-	h3 {
+	.svg-title {
+		max-width: 23.5rem;
 		margin-bottom: 2.4rem;
-		font-size: 4rem;
 
 		@include media-breakpoint-down(md) {
+			max-width: 18rem;
 			margin-bottom: 2rem;
-			font-size: 2rem;
 		}
 	}
 

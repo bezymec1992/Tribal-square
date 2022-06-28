@@ -58,6 +58,13 @@ export default {
 
 <style lang="scss" scoped>
 .products-page {
+	.intro-section {
+		@include media-breakpoint-down(md) {
+			padding-top: 11rem;
+			padding-bottom: 4rem;
+		}
+	}
+
 	.products-section {
 		padding-bottom: 8rem;
 

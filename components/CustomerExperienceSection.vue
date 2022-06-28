@@ -13,7 +13,7 @@
 							Transform your <br />
 							customer experience
 						</h2>
-						<Button title="ABOUT US" class="btn-warning" type="nuxt-link" to="/contact">
+						<Button title="ABOUT US" class="btn-warning" type="nuxt-link" to="/about">
 							<template #icon>
 								<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -53,8 +53,8 @@ export default {
 
 	&__visual {
 		height: 100%;
-		background-color: $mauve;
 	}
+
 	&__img {
 		width: 100%;
 		height: 100%;

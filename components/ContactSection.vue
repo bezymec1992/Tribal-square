@@ -37,6 +37,7 @@ export default {
 .contact-section {
 	padding-top: 6rem;
 	padding-bottom: 10.8rem;
+	background: $aqua-haze;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 6rem;

@@ -51,14 +51,28 @@
 				</div>
 				<div class="healp__title-wrapp2 d-flex justify-content-between">
 					<h2 class="h2">Discover our Products</h2>
-					<a href="#" class="healp__arrow d-flex align-items-center">
-						VIEW ALL
-						<img src="@/assets/imgs/arrow-see-all.svg" alt="arrow" width="15" height="15" />
-					</a>
+					<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/products">
+						<template #icon>
+							<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
+								<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+							</svg>
+						</template>
+					</Button>
 				</div>
-				<div class="healp__cards d-flex flex-column flex-xl-row align-items-center">
-					<div v-for="card in cards" :key="card.id" class="card-wrap">
+				<div class="row">
+					<div v-for="card in cards" :key="card.id" class="col-md-6">
 						<Card :title="card.title" :category="card.category" :img="card.img" />
+					</div>
+					<div class="col-12 d-flex justify-content-center">
+						<Button title="VIEW ALL" class="btn-link d-md-none" type="nuxt-link" to="/products">
+							<template #icon>
+								<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
+									<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+								</svg>
+							</template>
+						</Button>
 					</div>
 				</div>
 			</div>
@@ -138,10 +152,10 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-	overflow: hidden;
-	margin-top: 2.7rem;
+	padding-top: 2.7rem;
+
 	@include media-breakpoint-down(lg) {
-		margin-top: 11rem;
+		padding-top: 11rem;
 	}
 	.main__title {
 		max-width: 73.1rem;
@@ -249,32 +263,18 @@ export default {
 			}
 		}
 	}
-	.healp__arrow img {
-		margin-left: 2.1rem;
-	}
-	.healp__arrow {
-		font-size: 2.4rem;
-		width: 14.7rem;
-		@include media-breakpoint-down(md) {
-			position: absolute;
-			bottom: 5rem;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-	}
+
 	.healp__title-wrapp2 {
 		margin-bottom: 3.2rem;
-	}
-	.card-wrap {
-		max-width: 63rem;
-		&:first-child {
-			margin-right: 4rem;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 2.4rem;
 		}
-		@include media-breakpoint-down(xl) {
-			margin-bottom: 2rem;
-			&:first-child {
-				margin-right: 0;
-			}
+	}
+
+	.row {
+		@include media-breakpoint-up(lg) {
+			@include grid-gutter(4rem);
 		}
 	}
 }

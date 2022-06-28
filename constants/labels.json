@@ -1,0 +1,20 @@
+[
+	{
+		"title": "Tribal cyber",
+		"svgTitle": "tribal-cyber.svg",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"type": "Website",
+		"topic": "Cyber Security",
+		"websiteLink": "/",
+		"img": "img-05.png"
+	},
+	{
+		"title": "powwows",
+		"svgTitle": "powwows.svg",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"type": "Website",
+		"topic": "Cyber Security",
+		"websiteLink": "/",
+		"img": "img-06.png"
+	}
+]

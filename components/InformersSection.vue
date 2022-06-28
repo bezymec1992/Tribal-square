@@ -26,7 +26,7 @@
 							<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
 								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" />
 							</div>
-							<div class="col-12 d-flex justify-content-center d-md-none">
+							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
 								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
 									<template #icon>
 										<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@
 					<div class="products-informer" anchor-section="section-2">
 						<div class="header d-flex align-items-center justify-content-between">
 							<h3 class="h2">Labels Overview</h3>
-							<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
+							<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/products">
 								<template #icon>
 									<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -52,13 +52,16 @@
 							</Button>
 						</div>
 						<div class="row">
-							<!-- <div v-for="(item, index) in productsList" :key="index" class="col-md-6">
-								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" />
-							</div> -->
 							<div class="col-12">
-								<CardLable class="style1" />
+								<div v-for="(item, index) in labelsList" :key="index" class="col-12">
+									<CardLable class="style1" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img">
+										<template #svg-title>
+											{{ svgTitle }}
+										</template>
+									</CardLable>
+								</div>
 							</div>
-							<div class="col-12 d-flex justify-content-center d-md-none">
+							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
 								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
 									<template #icon>
 										<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,6 +86,7 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Products from "@/constants/products";
+import Labels from "@/constants/Labels";
 import CardLable from "@/components/CardLable";
 import TxtBlock from "@/components/TxtBlock";
 
@@ -96,11 +100,14 @@ export default {
 	},
 	data() {
 		return {
-			productsList: []
+			productsList: [],
+			labelsList: []
 		};
 	},
 	mounted() {
 		this.productsList = Products;
+		this.labelsList = Labels;
+
 		window.addEventListener("scroll", this.handleScroll);
 		this.handleScroll();
 		this.scrollTo();
@@ -232,9 +239,17 @@ export default {
 	}
 
 	.txt-block {
+		@include media-breakpoint-down(md) {
+			padding-top: 2rem;
+		}
+
 		@include media-breakpoint-up(md) {
 			max-width: 75rem;
 		}
+	}
+
+	.col-w-btn {
+		padding-top: 2rem;
 	}
 }
 </style>

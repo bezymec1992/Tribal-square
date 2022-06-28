@@ -25,7 +25,6 @@
 		</Intro-section>
 		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" class="style-3" />
 		<InformersSection />
-
 		<CustomerExperienceSection />
 		<OurPartners />
 		<SolutionSection />
@@ -63,6 +62,12 @@ export default {
 	.intro-section {
 		color: $white;
 		background: $purple;
+	}
+
+	.our-partners {
+		@include media-breakpoint-down(md) {
+			padding-bottom: 2rem;
+		}
 	}
 }
 </style>

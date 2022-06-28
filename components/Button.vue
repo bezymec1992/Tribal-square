@@ -123,6 +123,7 @@ export default {
 	}
 
 	&.btn-link {
+		padding: 0;
 		color: $black;
 		background: transparent;
 		text-decoration: none;

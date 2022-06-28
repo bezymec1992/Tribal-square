@@ -91,7 +91,6 @@ export default {
 		font-size: 1.4rem;
 		line-height: 1.85;
 		margin-bottom: 3.4rem;
-		color: &black;
 
 		@include media-breakpoint-up(md) {
 			font-size: 2rem;

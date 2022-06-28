@@ -1,7 +1,7 @@
 <template>
 	<div class="our-partners">
 		<div class="our-parnters">
-			<div class="container">
+			<div v-if="peopleIsShow" class="container">
 				<h2 class="our-partners__title h2">Our partners</h2>
 				<div class="our-partners__people row justify-content-sm-center">
 					<div class="partners__people col-sm-auto col-xl-3">
@@ -66,7 +66,13 @@
 
 <script>
 export default {
-	name: "OurPartners"
+	name: "OurPartners",
+	props: {
+		peopleIsShow: {
+			type: Boolean,
+			default: true
+		}
+	}
 };
 </script>
 

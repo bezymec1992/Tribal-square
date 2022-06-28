@@ -38,6 +38,11 @@ export default {
 		line-height: 1.8;
 		cursor: pointer;
 
+		@include media-breakpoint-down(md) {
+			font-size: 1.6rem;
+			line-height: 1.6;
+		}
+
 		input {
 			position: absolute;
 			opacity: 0;
@@ -62,6 +67,12 @@ export default {
 			border-radius: 50%;
 			border: solid 1px rgba($black, 0.4);
 			user-select: none;
+
+			@include media-breakpoint-down(md) {
+				min-width: 2.6rem;
+				width: 2.6rem;
+				height: 2.6rem;
+			}
 
 			&::before {
 				content: "";

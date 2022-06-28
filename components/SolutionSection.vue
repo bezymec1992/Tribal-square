@@ -35,6 +35,10 @@ export default {
 		padding-bottom: 17.4rem;
 	}
 
+	.container {
+		max-width: 129.6rem;
+	}
+
 	&__title {
 		font-size: 2.8rem;
 		line-height: 1.42;

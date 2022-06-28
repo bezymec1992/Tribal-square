@@ -170,7 +170,7 @@ export default {
 		margin-bottom: 2.7rem;
 
 		@include media-breakpoint-down(md) {
-			margin-bottom: 0.7rem;
+			margin-bottom: 2.1rem;
 			flex-wrap: wrap;
 		}
 

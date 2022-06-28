@@ -65,5 +65,25 @@ export default {
 			}
 		}
 	}
+
+	&.style-center {
+		.h2 {
+			@include media-breakpoint-up(md) {
+				text-align: center;
+			}
+		}
+
+		.text-holder {
+			@include media-breakpoint-up(md) {
+				text-align: center;
+			}
+		}
+
+		.row {
+			@include media-breakpoint-up(md) {
+				justify-content: center;
+			}
+		}
+	}
 }
 </style>
