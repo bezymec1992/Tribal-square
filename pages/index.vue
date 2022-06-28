@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</Intro-section>
-		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" class="style-3" />
+		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" :button="true" class="style-3" />
 		<InformersSection />
 		<CustomerExperienceSection />
 		<OurPartners />

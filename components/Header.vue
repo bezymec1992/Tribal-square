@@ -15,10 +15,10 @@
 				<div class="mobile-content d-lg-none">
 					<ul class="mobile-menu">
 						<li @click="menuClose">
-							<nuxt-link to="/">Home</nuxt-link>
+							<nuxt-link to="/" exact-active-class="active">Home</nuxt-link>
 						</li>
 						<li @click="menuClose">
-							<nuxt-link to="/about">About</nuxt-link>
+							<nuxt-link to="/about" exact-active-class="active">About</nuxt-link>
 						</li>
 						<li class="accordion">
 							<span class="accordion-title"
@@ -81,10 +81,10 @@
 							</div>
 						</li>
 						<li @click="menuClose">
-							<nuxt-link to="/">For partners</nuxt-link>
+							<nuxt-link to="/" exact-active-class="active">For partners</nuxt-link>
 						</li>
 						<li @click="menuClose">
-							<nuxt-link to="/contact">Contact</nuxt-link>
+							<nuxt-link to="/contact" exact-active-class="active">Contact</nuxt-link>
 						</li>
 					</ul>
 					<div class="bottom">
@@ -127,10 +127,10 @@ export default {
 					title: "Products",
 					to: "/products"
 				},
-				{
-					title: "Labels",
-					to: "/"
-				},
+				// {
+				// 	title: "Labels",
+				// 	to: "#"
+				// },
 				{
 					title: "For partners",
 					to: "/partner"
@@ -358,6 +358,12 @@ export default {
 				> a {
 					display: flex;
 					padding: 1rem 0;
+				}
+			}
+
+			a {
+				&.active {
+					font-weight: 700;
 				}
 			}
 

@@ -12,7 +12,7 @@
 		</div>
 		<div class="solution__picture-wrap">
 			<div class="solution__picture d-flex justify-content-center">
-				<Button title="OUR LABLES" class="btn-primary" type="button">
+				<Button v-if="button" title="OUR LABLES" class="btn-primary" type="button">
 					<template #icon>
 						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -48,6 +48,10 @@ export default {
 		imgMob: {
 			type: String,
 			default: ""
+		},
+		button: {
+			type: Boolean,
+			default: false
 		}
 	}
 };
