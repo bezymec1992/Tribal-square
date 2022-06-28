@@ -2,7 +2,7 @@
 	<div class="contact-page">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-lg-6">
 					<div class="contact-page__body">
 						<h1 class="contact-page__title">Get in touch</h1>
 						<p class="contact-page__text">Feel free to contact us at</p>
@@ -11,7 +11,7 @@
 						<SocialLinks color="white" hover-color="#000000" hover-background="#FFDB1C" />
 					</div>
 				</div>
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-lg-6">
 					<div class="contact-page__wrapper">
 						<div class="contact-page__wrapper-body">
 							<h2 class="contact-page__wrapper-title">Use the form for easy start</h2>
