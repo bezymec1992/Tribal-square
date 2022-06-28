@@ -4,14 +4,9 @@
 		<div class="text-holder">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.</p>
 		</div>
-
-		<div class="row">
-			<div class="col-12 col-sm-auto">
-				<Button title="FIND A PATNER" class="btn-primary" type="button" />
-			</div>
-			<div class="col-12 col-sm-auto">
-				<Button title="FIND A PATNER" class="btn-outline-primary" type="button" />
-			</div>
+		<div class="buttons">
+			<Button title="FIND A PATNER" class="btn-primary" type="button" />
+			<Button title="PARTNER WITH US" class="btn-outline-primary" type="button" />
 		</div>
 	</div>
 </template>
@@ -56,11 +51,27 @@ export default {
 		}
 	}
 
-	div[class^="col-"] {
-		&:first-child {
-			.btn {
-				@include media-breakpoint-down(md) {
+	.buttons {
+		@include media-breakpoint-up(sm) {
+			display: flex;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding-top: 4rem;
+		}
+
+		.btn {
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
+
+			&:first-child {
+				@include media-breakpoint-down(sm) {
 					margin-bottom: 2.4rem;
+				}
+
+				@include media-breakpoint-up(sm) {
+					margin-right: 2.6rem;
 				}
 			}
 		}
@@ -79,7 +90,7 @@ export default {
 			}
 		}
 
-		.row {
+		.buttons {
 			@include media-breakpoint-up(md) {
 				justify-content: center;
 			}

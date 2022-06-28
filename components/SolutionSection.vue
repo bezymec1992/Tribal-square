@@ -1,17 +1,17 @@
 <template>
-	<div>
-		<div class="solution">
-			<div class="container">
-				<div class="row flex-md-row-reverse">
-					<div class="col-12 col-md-6 justify-content-center align-items-center d-flex">
-						<img class="solution__img" src="@/assets/imgs/solution-001.png" alt="image description" />
+	<div class="solution">
+		<div class="container">
+			<div class="row flex-md-row-reverse">
+				<div class="col-12 col-md-6 justify-content-center align-items-center d-flex">
+					<div class="img-holder">
+						<img src="@/assets/imgs/solution-001.png" class="solution__img" alt="image description" />
 					</div>
-					<div class="col-12 col-md-6">
-						<div class="solution__body">
-							<h4 class="solution__title">We provide solutions that help your business grow</h4>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="solution__body">
+						<h4 class="solution__title">We provide solutions that help your business grow</h4>
 
-							<p class="solution__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.</p>
-						</div>
+						<p class="solution__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.</p>
 					</div>
 				</div>
 			</div>
@@ -30,6 +30,11 @@ export default {
 .solution {
 	background-color: $white;
 	padding: 3.8rem 0 8rem;
+
+	@include media-breakpoint-down(md) {
+		overflow: hidden;
+	}
+
 	@include media-breakpoint-up(lg) {
 		padding-top: 16.6rem;
 		padding-bottom: 17.4rem;
@@ -61,11 +66,19 @@ export default {
 	&__img {
 		margin-bottom: 2.6rem;
 	}
-}
-img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: top;
-	display: inline-block;
+
+	.img-holder {
+		@include media-breakpoint-down(md) {
+			margin-left: -4rem;
+			margin-right: -3rem;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: top;
+		display: inline-block;
+	}
 }
 </style>

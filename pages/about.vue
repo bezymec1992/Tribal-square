@@ -62,7 +62,7 @@
 				</div>
 				<div class="row">
 					<div v-for="card in cards" :key="card.id" class="col-md-6">
-						<Card :title="card.title" :category="card.category" :img="card.img" />
+						<Card :title="card.title" :category="card.category" :img="card.img" class="style2" />
 					</div>
 					<div class="col-12 d-flex justify-content-center">
 						<Button title="VIEW ALL" class="btn-link d-md-none" type="nuxt-link" to="/products">
@@ -84,11 +84,9 @@
 					<div class="toghether__info">
 						<h2 class="h2">Better together</h2>
 						<p class="toghether__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet</p>
-						<div class="bottons d-flex justify-content-between flex-column flex-md-row">
-							<div class="botton">
-								<Button title="FIND A PATNER" class="btn-primary" />
-								<Button title="PARTNER WITH US" class="btn-outline-primary" />
-							</div>
+						<div class="buttons d-none d-md-flex">
+							<Button title="FIND A PATNER" class="btn-primary" type="button" />
+							<Button title="partner with us" class="btn-outline-primary" type="button" />
 						</div>
 					</div>
 					<div class="toghether__imgs d-flex justify-content-around flex-wrap">
@@ -113,9 +111,14 @@
 							<img src="../assets/imgs/partners-logo05.png" alt="partners-logo" width="293" height="120" />
 						</picture>
 					</div>
+					<div class="buttons d-md-none">
+						<Button title="FIND A PATNER" class="btn-primary" type="button" />
+						<Button title="partner with us" class="btn-outline-primary" type="button" />
+					</div>
 				</div>
 			</div>
 		</div>
+		<SolutionSection />
 		<ContactSection />
 	</div>
 </template>
@@ -125,13 +128,15 @@ import Solutions from "@/components/Solutions";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
 import ContactSection from "@/components/ContactSection";
+import SolutionSection from "@/components/SolutionSection";
 
 export default {
 	components: {
 		Solutions,
 		Card,
 		Button,
-		ContactSection
+		ContactSection,
+		SolutionSection
 	},
 	data() {
 		return {
@@ -283,55 +288,57 @@ export default {
 	background: white;
 	position: relative;
 	padding-top: 14.2rem;
-	padding-bottom: 14rem;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 8rem;
-		padding-bottom: 23rem;
 	}
+
+	.toghether__wrapper {
+		padding-bottom: 14rem;
+
+		@include media-breakpoint-down(md) {
+			padding-bottom: 7rem;
+		}
+		border-bottom: 0.1rem solid rgba($black, 0.2);
+	}
+
+	.buttons {
+		max-width: 58rem;
+
+		@include media-breakpoint-up(sm) {
+			display: flex;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding-top: 4rem;
+		}
+
+		.btn {
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
+
+			&:first-child {
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 2.4rem;
+				}
+
+				@include media-breakpoint-up(sm) {
+					margin-right: 2.6rem;
+				}
+			}
+		}
+	}
+
 	.toghether__info {
 		max-width: 55.4rem;
+
 		@include media-breakpoint-down(xl) {
 			margin-bottom: 3rem;
 		}
-		.bottons {
-			max-width: 58rem;
-			@include media-breakpoint-down(md) {
-				position: absolute;
-				bottom: 5rem;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}
-		.botton {
-			@include media-breakpoint-up(md) {
-				display: flex;
-			}
 
-			@include media-breakpoint-down(md) {
-				min-width: 33.5rem;
-			}
-
-			.btn {
-				@include media-breakpoint-down(md) {
-					display: flex;
-					width: 100%;
-				}
-
-				@include media-breakpoint-up(md) {
-					white-space: nowrap;
-				}
-
-				&:not(:last-child) {
-					@include media-breakpoint-up(md) {
-						margin-right: 2.6rem;
-					}
-
-					@include media-breakpoint-down(md) {
-						margin-bottom: 2.4rem;
-					}
-				}
-			}
+		@include media-breakpoint-down(md) {
+			margin-bottom: 0;
 		}
 
 		.toghether__text {
@@ -339,7 +346,9 @@ export default {
 			margin-top: 4rem;
 			margin-bottom: 4rem;
 			line-height: 1.8;
+
 			@include media-breakpoint-down(md) {
+				margin-bottom: 3rem;
 				margin-top: 2.2rem;
 				font-size: 1.8rem;
 				max-width: 33.5rem;
@@ -361,6 +370,12 @@ export default {
 				padding-left: 4rem;
 			}
 		}
+	}
+}
+
+.solution {
+	@include media-breakpoint-down(md) {
+		padding-top: 8rem;
 	}
 }
 </style>

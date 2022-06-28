@@ -64,14 +64,14 @@ export default {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1.6rem 4.35rem;
+	padding: 1.6rem 4rem;
 	font-size: 2.2rem;
 	line-height: 1;
 	color: $white;
 	letter-spacing: 0.1rem;
 	background: $purple;
 	text-transform: uppercase;
-	border: solid 0.1rem $purple;
+	border: solid 0.2rem $purple;
 	border-radius: 0;
 
 	@include media-breakpoint-down(md) {
@@ -104,7 +104,7 @@ export default {
 	&.btn-outline-primary {
 		color: $black;
 		background: transparent;
-		border: solid 0.1rem $purple;
+		border: solid 0.2rem $purple;
 
 		&:hover {
 			color: $white;

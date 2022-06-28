@@ -5,6 +5,7 @@
 			<main class="main">
 				<nuxt />
 			</main>
+			<Cookies />
 		</div>
 	</transition>
 </template>
@@ -12,10 +13,12 @@
 <script>
 import Header from "@/components/Header";
 import globalBreakpoints from "@/mixins/globalBreakpoints";
+import Cookies from "@/components/Cookies";
 
 export default {
 	components: {
-		Header
+		Header,
+		Cookies
 	},
 	mixins: [globalBreakpoints],
 	mounted() {

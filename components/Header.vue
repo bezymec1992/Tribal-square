@@ -33,7 +33,7 @@
 							<div class="accordion-content">
 								<ul class="inner-menu">
 									<li @click="menuClose">
-										<nuxt-link to="/">All products overview</nuxt-link>
+										<nuxt-link to="/products">All products overview</nuxt-link>
 									</li>
 									<li @click="menuClose">
 										<nuxt-link to="/">Knock Knock</nuxt-link>
@@ -81,7 +81,7 @@
 							</div>
 						</li>
 						<li @click="menuClose">
-							<nuxt-link to="/" exact-active-class="active">For partners</nuxt-link>
+							<nuxt-link to="/partner" exact-active-class="active">For partners</nuxt-link>
 						</li>
 						<li @click="menuClose">
 							<nuxt-link to="/contact" exact-active-class="active">Contact</nuxt-link>

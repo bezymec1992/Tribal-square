@@ -14,13 +14,9 @@
 						<div class="img-holder">
 							<img src="@/assets/imgs/img-07.png" alt="Better together" />
 						</div>
-						<div class="row row-btns">
-							<div class="col-12 col-sm-auto">
-								<Button title="FIND A PATNER" class="btn-primary" type="button" />
-							</div>
-							<div class="col-12 col-sm-auto">
-								<Button title="FIND A PATNER" class="btn-outline-primary" type="button" />
-							</div>
+						<div class="buttons">
+							<Button title="FIND A PATNER" class="btn-primary" type="button" />
+							<Button title="PARTNER WITH US" class="btn-outline-primary" type="button" />
 						</div>
 					</div>
 				</div>
@@ -39,13 +35,18 @@
 							<h3 class="customer-ingagement__title">Global execution and delivery of your technology strategy.</h3>
 							<h4 class="customer-ingagement__subtitle">Build alongside TribalSquare experts</h4>
 							<p class="customer-ingagement__text">TribalSquare gives you the time, resources, and flexible pricing model designed to kickstart the success of your application. With Build, you have the runway and commitment from TribalSquare that you need to grow your customer base and build your business.</p>
-							<img class="customer-ingagement__img d-md-none" src="../assets/images/customer-engagement-004.svg" alt="image description" />
+							<div class="img-holder">
+								<img class="customer-ingagement__img d-md-none" src="@/assets/imgs/img-08.png" alt="image description" />
+							</div>
+
 							<h4 class="customer-ingagement__subtitle">Drive revenue to your practice</h4>
 							<p class="customer-ingagement__text">Build gives you the knowledge, guidance, and resources you need to grow your business. You'll receive guidance from TribalSquare sales and engineering experts who will help you build and scale your practice.</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 justify-content-center align-items-center d-none d-md-flex">
-						<img class="customer-ingagement__img" src="../assets/images/customer-engagement-004.svg" alt="image description" />
+					<div class="col-12 col-md-6 justify-content-start align-items-center d-none d-md-flex">
+						<div class="img-holder">
+							<img class="customer-ingagement__img" src="@/assets/imgs/img-08.png" alt="image description" />
+						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -53,16 +54,20 @@
 						<div class="customer-ingagement__body">
 							<p class="customer-ingagement__label text-uppercase">Technology partners</p>
 
-							<h3 class="customer-ingagement__title">Develop applications on a reliable, scalable platform .</h3>
+							<h3 class="customer-ingagement__title">Develop applications on a reliable, scalable platform.</h3>
 							<h4 class="customer-ingagement__subtitle">Enhance your profitability with a long-term partnership</h4>
 							<p class="customer-ingagement__text">TribalSquare gives you the time, resources, and flexible pricing model designed to kickstart the success of your application. With Build, you have the runway and commitment from TribalSquare that you need to grow your customer base and build your business.</p>
-							<img class="customer-ingagement__img d-md-none" src="../assets/images/customer-engagement-005.svg" alt="image description" />
+							<div class="img-holder">
+								<img class="customer-ingagement__img d-md-none" src="@/assets/imgs/img-09.png" alt="image description" />
+							</div>
 							<h4 class="customer-ingagement__subtitle">Review your applications with TribalSquare experts</h4>
 							<p class="customer-ingagement__text">Application quality is critical to driving sales and building long-lasting customer relationships. Build gives you access to expert TribalSquare engineers to review your applications before bringing them to market.</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 justify-content-center align-items-center d-none d-md-flex">
-						<img class="customer-ingagement__img" src="../assets/images/customer-engagement-005.svg" alt="image description" />
+					<div class="col-12 col-md-6 justify-content-end align-items-center d-none d-md-flex">
+						<div class="img-holder">
+							<img class="customer-ingagement__img" src="@/assets/imgs/img-09.png" alt="image description" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -109,13 +114,27 @@ export default {
 			position: relative;
 		}
 
-		.row-btns {
-			div[class^="col-"] {
+		.buttons {
+			@include media-breakpoint-up(sm) {
+				display: flex;
+			}
+
+			@include media-breakpoint-down(md) {
+				padding-top: 4rem;
+			}
+
+			.btn {
+				@include media-breakpoint-down(sm) {
+					width: 100%;
+				}
+
 				&:first-child {
-					.btn {
-						@include media-breakpoint-down(md) {
-							margin-bottom: 2.4rem;
-						}
+					@include media-breakpoint-down(sm) {
+						margin-bottom: 2.4rem;
+					}
+
+					@include media-breakpoint-up(sm) {
+						margin-right: 2.6rem;
 					}
 				}
 			}
@@ -178,6 +197,31 @@ export default {
 	}
 
 	.customer-ingagement {
+		@include media-breakpoint-up(xl) {
+			overflow: hidden;
+		}
+
+		@include media-breakpoint-down(md) {
+			overflow: hidden;
+		}
+
+		.row {
+			@include media-breakpoint-up(xl) {
+				@include grid-gutter(6rem);
+			}
+		}
+
+		.img-holder {
+			@include media-breakpoint-up(xl) {
+				max-width: 52rem;
+			}
+
+			@include media-breakpoint-down(md) {
+				// margin-left: -3rem;
+				// margin-right: -3rem;
+			}
+		}
+
 		&__block-title {
 			margin-bottom: 3.5rem;
 			font-size: 2.8rem;
