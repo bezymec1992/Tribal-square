@@ -75,7 +75,7 @@ export default {
 	border-radius: 0;
 
 	@include media-breakpoint-down(md) {
-		padding: 1.55rem 4.2rem;
+		padding: 1.55rem 4rem;
 		font-size: 1.8rem;
 	}
 
@@ -119,6 +119,7 @@ export default {
 
 		&:hover {
 			background: lighten($candlelight, 10);
+			border-color: lighten($candlelight, 10);
 		}
 	}
 
@@ -131,6 +132,17 @@ export default {
 
 		&:hover {
 			background: transparent;
+		}
+	}
+
+	&.btn-danger {
+		color: $white;
+		background: $torch-red;
+		border-color: $torch-red;
+
+		&:hover {
+			background: lighten($torch-red, 10);
+			border-color: lighten($torch-red, 10);
 		}
 	}
 }

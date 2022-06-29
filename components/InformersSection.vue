@@ -24,7 +24,7 @@
 						</div>
 						<div class="row">
 							<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
-								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" />
+								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" />
 							</div>
 							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
 								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">

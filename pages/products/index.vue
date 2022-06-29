@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
-						<Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" />
+						<Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" />
 					</div>
 				</div>
 			</div>

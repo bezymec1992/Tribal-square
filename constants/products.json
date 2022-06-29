@@ -5,7 +5,7 @@
 		"img": "img-01.jpg",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"about-link": "/"
+		"aboutLink": "/"
 	},
 	{
 		"title": "Coffee App",
@@ -13,7 +13,7 @@
 		"img": "img-02.jpg",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"about-link": "/"
+		"aboutLink": "/"
 	},
 	{
 		"title": "Digital Valet",
@@ -21,7 +21,7 @@
 		"img": "img-03.jpg",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"about-link": "/"
+		"aboutLink": "/products/digital-valet"
 	},
 	{
 		"title": "HandsRepublic",
@@ -29,6 +29,6 @@
 		"img": "img-04.jpg",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"about-link": "/"
+		"aboutLink": "/"
 	}
 ]

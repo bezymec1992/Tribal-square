@@ -1,19 +1,22 @@
 <template>
 	<div class="product-page">
 		<div class="product__main">
-			<Intro-section class="intro-section">
+			<Intro-section>
 				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<Breadcrumbs />
+						</div>
+					</div>
 					<div class="row align-items-md-center">
 						<div class="col-lg-7">
 							<h1 class="h1">Digital Valet</h1>
 							<div class="text-holder">
-								<p class="product__main-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac	
-								</p>
+								<p class="product__main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac</p>
 							</div>
 						</div>
 						<div class="col-lg-5 d-md-flex justify-content-end">
-							<Button title="FIND A PATNER" class="btn-warning" type="nuxt-link" to="/contact">
+							<Button title="VISIT WEBSITE" class="btn-warning" type="link" href="/">
 								<template #icon>
 									<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -27,12 +30,12 @@
 			</Intro-section>
 			<div class="product__main-picture d-flex justify-content-center">
 				<picture>
-					<source srcset="../assets/imgs/product-main-mb.jpg" media="(max-width: 767px)" width="802" height="370" />
-					<img src="../assets/imgs/product-main.jpg" alt="partners-logo" width="1300" height="600" />
+					<source srcset="@/assets/imgs/product-main-mb.jpg" media="(max-width: 767px)" width="802" height="370" />
+					<img src="@/assets/imgs/product-main.jpg" alt="partners-logo" width="1300" height="600" />
 				</picture>
 			</div>
 		</div>
-		
+
 		<div class="idea">
 			<div class="container">
 				<div class="idea__info row d-flex justify-content-between">
@@ -47,8 +50,8 @@
 				</div>
 				<div class="idea__picture d-flex justify-content-start">
 					<picture>
-						<source srcset="../assets/imgs/product__idea-mb.png" media="(max-width: 767px)" width="661" height="337" />
-						<img src="../assets/imgs/product__idea-desk.png" alt="partners-logo" width="1233" height="628" />
+						<source srcset="@/assets/imgs/product__idea-mb.png" media="(max-width: 767px)" width="661" height="337" />
+						<img src="@/assets/imgs/product__idea-desk.png" alt="partners-logo" width="1233" height="628" />
 					</picture>
 				</div>
 			</div>
@@ -81,8 +84,8 @@
 					</div>
 					<div class="location__picture">
 						<picture>
-							<source srcset="../assets/imgs/location-mb.png" media="(max-width: 1200px)" width="476" height="469" />
-							<img src="../assets/imgs/location-desk.png" alt="partners-logo" width="609" height="600" />
+							<source srcset="@/assets/imgs/location-mb.png" media="(max-width: 1200px)" width="476" height="469" />
+							<img src="@/assets/imgs/location-desk.png" alt="partners-logo" width="609" height="600" />
 						</picture>
 					</div>
 				</div>
@@ -99,8 +102,8 @@
 			<div class="additional__picture d-flex justify-content-center">
 				<h2 class="h2 additional__picture-title">Transform your customer experience</h2>
 				<picture>
-					<source srcset="../assets/imgs/additional-mb.jpg" media="(max-width: 767px)" width="1117" height="600" />
-					<img src="../assets/imgs/aditional-desk.jpg" alt="partners-logo" width="1348" height="728" />
+					<source srcset="@/assets/imgs/additional-mb.jpg" media="(max-width: 767px)" width="1117" height="600" />
+					<img src="@/assets/imgs/aditional-desk.jpg" alt="partners-logo" width="1348" height="728" />
 				</picture>
 			</div>
 		</div>
@@ -112,27 +115,31 @@
 						<h2 class="h2 more__title">Discover more our Products</h2>
 					</div>
 					<div class="more__items">
-						<div  v-for="card in cards" :key="card.id" class="card">
+						<div v-for="card in cards" :key="card.id" class="card">
 							<Discover :title="card.title" :text="card.text" :img="card.img" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<ContactSection />
 	</div>
 </template>
 
 <script>
-import IntroSection from '../components/IntroSection.vue';
+import IntroSection from "@/components/IntroSection";
 import Discover from "@/components/Discover";
 import Button from "@/components/Button";
+import ContactSection from "@/components/ContactSection";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default {
 	components: {
 		Discover,
 		IntroSection,
-		Button
-		
+		Button,
+		ContactSection,
+		Breadcrumbs
 	},
 	data() {
 		return {
@@ -148,10 +155,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	
 .product-page {
 	background: $white;
 	overflow: hidden;
+
+	.intro-section {
+		padding-top: 6rem;
+
+		@include media-breakpoint-down(md) {
+			padding-top: 3rem;
+		}
+
+		.breadcrumbs {
+			margin-bottom: 7.9rem;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 5.6rem;
+			}
+		}
+	}
+
 	.product__main-text {
 		max-width: 73.5rem;
 		@include media-breakpoint-down(sm) {
@@ -159,11 +182,11 @@ export default {
 		}
 	}
 	.product__main-picture {
-		background: linear-gradient(#EEF3F5 50%, white 50%);
-		padding-bottom: 10rem;
+		background: linear-gradient(#eef3f5 50%, white 50%);
+		padding-bottom: 8rem;
 	}
 	.intro-section {
-		background-color: #EEF3F5;
+		background-color: #eef3f5;
 		padding-bottom: 6rem;
 		@include media-breakpoint-down(md) {
 			padding-bottom: 0;
@@ -171,8 +194,7 @@ export default {
 				margin-bottom: 0;
 			}
 		}
-
-	} 
+	}
 	.btn-warning {
 		@include media-breakpoint-down(sm) {
 			position: relative;
@@ -223,7 +245,7 @@ export default {
 	}
 
 	.target {
-		padding-top: 100px;
+		padding-top: 50px;
 		padding-bottom: 140px;
 		@include media-breakpoint-down(lg) {
 			padding-top: 58px;

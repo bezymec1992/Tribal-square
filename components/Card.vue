@@ -1,6 +1,6 @@
 <template>
 	<div class="card">
-		<div class="card-header">
+		<nuxt-link class="card-header" :to="aboutLink">
 			<div class="d-flex align-items-center">
 				<div class="icon-holder">
 					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
@@ -15,7 +15,7 @@
 					<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
 				</svg>
 			</div>
-		</div>
+		</nuxt-link>
 
 		<div class="text-holder">
 			<p>Service which can help you to exchange your accommodation for a short period for free</p>
@@ -31,7 +31,7 @@
 				</template>
 			</Button>
 
-			<Button title="ABOUT" class="btn-warning d-none d-lg-inline-flex" type="nuxt-link" to="/contact">
+			<Button title="ABOUT" class="btn-warning d-none d-lg-inline-flex" type="nuxt-link" :to="aboutLink">
 				<template #icon>
 					<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -67,6 +67,10 @@ export default {
 		img: {
 			type: String,
 			default: "img-01.jpg"
+		},
+		aboutLink: {
+			type: String,
+			default: "/products"
 		}
 	}
 };
@@ -99,6 +103,7 @@ export default {
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 2.7rem;
+		transition: auto;
 
 		.icon-holder {
 			width: 6rem;

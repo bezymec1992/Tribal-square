@@ -80,7 +80,6 @@ export default {
 			padding-bottom: 40px;
 			@include media-breakpoint-down(sm) {
 				padding-bottom: 30px;
-				width: 345px;
 			}
 		}
 		.solution__text {

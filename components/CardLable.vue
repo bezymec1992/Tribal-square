@@ -240,10 +240,8 @@ export default {
 		}
 
 		&:hover {
-			@include media-breakpoint-up(md) {
-				color: $white;
-				background: $cloud-burst;
-			}
+			color: $white;
+			background: $cloud-burst;
 		}
 	}
 }
