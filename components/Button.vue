@@ -98,6 +98,7 @@ export default {
 
 		&:hover {
 			background: lighten($purple, 10);
+			border-color: lighten($purple, 10);
 		}
 	}
 

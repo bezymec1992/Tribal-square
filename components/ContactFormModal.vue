@@ -1,13 +1,9 @@
 <template>
-	<div class="contact-form">
+	<div class="modal-contact-form">
 		<form @submit.prevent>
-			<div class="text-holder">
-				<p>You are interested in</p>
-			</div>
-			<div class="radios">
-				<RadioInput v-model="form.type" :input-value="'Find a partner'" :label="'Find a partner'" />
-				<RadioInput v-model="form.type" :input-value="'Partner with us'" :label="'Partner with us'" />
-				<RadioInput v-model="form.type" :input-value="'Other'" :label="'Other'" />
+			<h3>{{ ModalType }}</h3>
+			<div class="text">
+				<p>Write us a we will contact you as soon as possible</p>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
@@ -36,7 +32,7 @@
 						<p v-else>
 							<template v-if="request.status === 'success'">
 								Request from <strong>{{ form.email }}</strong>
-								<span class="green">{{ request.message }}</span>
+								<span>{{ request.message }}</span>
 							</template>
 
 							<template v-else>
@@ -55,14 +51,18 @@ import { validationMixin } from "vuelidate";
 import { required, email } from "vuelidate/lib/validators";
 import Input from "@/components/Inputs/Input";
 import Button from "@/components/Button";
-import RadioInput from "@/components/Inputs/RadioInput";
 
 export default {
 	name: "ContactForm",
 	components: {
 		Input,
-		Button,
-		RadioInput
+		Button
+	},
+	props: {
+		ModalType: {
+			type: String,
+			default: ""
+		}
 	},
 	mixins: [validationMixin],
 	data() {
@@ -71,7 +71,7 @@ export default {
 				name: "",
 				email: "",
 				message: "",
-				type: ""
+				type: this.ModalType
 			},
 			request: {
 				loading: true,
@@ -116,6 +116,7 @@ export default {
 				setTimeout(() => {
 					this.closeModal();
 					this.clearForm();
+					this.$emit("submitForm");
 				}, 5000);
 			}
 		},
@@ -143,8 +144,32 @@ export default {
 };
 </script>
 
+<style lang="scss">
+.modal-contact-form {
+	.input-group {
+		.label {
+			background: $white;
+		}
+
+		.form-control {
+			background: $white;
+		}
+	}
+}
+</style>
+
 <style lang="scss" scoped>
-.contact-form {
+.modal-contact-form {
+	h3 {
+		margin-bottom: 1rem;
+		font-size: 3.2rem;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 1.1rem;
+			font-size: 2.8rem;
+		}
+	}
+
 	.btn {
 		width: 100%;
 		max-width: 28rem;
@@ -154,34 +179,16 @@ export default {
 		}
 	}
 
-	.text-holder {
-		margin-bottom: 2.2rem;
-		font-size: 2.2rem;
+	.text {
+		margin-bottom: 4.4rem;
+		font-size: 1.6rem;
 
 		@include media-breakpoint-down(md) {
-			margin-bottom: 1.2rem;
-			font-size: 1.8rem;
-		}
-	}
-
-	.radios {
-		display: flex;
-		flex-wrap: wrap;
-		margin-bottom: 2.7rem;
-
-		@include media-breakpoint-down(md) {
-			margin-bottom: 2.1rem;
-			flex-wrap: wrap;
+			margin-bottom: 5.2rem;
 		}
 
-		@include media-breakpoint-down(sm) {
-			flex-direction: column;
-		}
-
-		.wrapper-radio {
-			&:not(:last-child) {
-				margin-right: 3.6rem;
-			}
+		p {
+			margin-bottom: 0;
 		}
 	}
 }

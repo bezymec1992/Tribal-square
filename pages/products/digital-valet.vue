@@ -99,12 +99,24 @@
 					<p class="additional__text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. <span class="additional__span">Nulla facilisi. Phasellus at placerat felis. Intege.</span></p>
 				</div>
 			</div>
-			<div class="additional__picture d-flex justify-content-center">
-				<h2 class="h2 additional__picture-title">Transform your customer experience</h2>
-				<picture>
-					<source srcset="@/assets/imgs/additional-mb.jpg" media="(max-width: 767px)" width="1117" height="600" />
-					<img src="@/assets/imgs/aditional-desk.jpg" alt="partners-logo" width="1348" height="728" />
-				</picture>
+			<div class="additional__picture">
+				<div class="content-holder">
+					<h2 class="h2 additional__picture-title">Transform your customer experience</h2>
+					<Button title="VISIT WEBSITE" class="btn-warning" type="link" href="/">
+						<template #icon>
+							<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
+								<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+							</svg>
+						</template>
+					</Button>
+				</div>
+				<div class="img-holder">
+					<picture>
+						<source srcset="@/assets/imgs/additional-mb.jpg" media="(max-width: 767px)" width="1117" height="600" />
+						<img src="@/assets/imgs/aditional-desk.jpg" alt="partners-logo" width="1348" height="728" />
+					</picture>
+				</div>
 			</div>
 		</div>
 
@@ -194,11 +206,12 @@ export default {
 				margin-bottom: 0;
 			}
 		}
-	}
-	.btn-warning {
-		@include media-breakpoint-down(sm) {
-			position: relative;
-			bottom: -3rem;
+
+		.btn-warning {
+			@include media-breakpoint-down(sm) {
+				position: relative;
+				bottom: -3rem;
+			}
 		}
 	}
 
@@ -233,7 +246,7 @@ export default {
 		.idea__picture {
 			@include media-breakpoint-down(md) {
 				position: relative;
-				left: -50px;
+				left: -71px;
 			}
 		}
 		.idea__picture img {
@@ -398,21 +411,48 @@ export default {
 		}
 		.additional__picture {
 			position: relative;
+			max-width: 134rem;
+			margin: auto;
+			color: $white;
 		}
 
 		.additional__picture-title {
 			max-width: 562px;
-			position: absolute;
-			top: 250px;
-			transform: translateX(calc(100% - 562px));
-			color: white;
-			font-size: 48px;
+			margin-bottom: 7rem;
+			font-size: 4.8rem;
 			text-align: center;
 			@include media-breakpoint-down(lg) {
-				top: 160px;
+				margin-bottom: 8rem;
 				font-size: 28px;
 				max-width: 335px;
-				transform: translateX(calc(100% - 335px));
+			}
+		}
+
+		.content-holder {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			min-height: 72rem;
+
+			@include media-breakpoint-down(lg) {
+				min-height: 60rem;
+			}
+		}
+
+		.img-holder {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 	}
@@ -434,8 +474,13 @@ export default {
 				.more__title {
 					width: 300px;
 					max-width: 100%;
+
 					@include media-breakpoint-down(md) {
 						width: 211px;
+					}
+
+					@include media-breakpoint-up(xxl) {
+						margin-left: 10rem;
 					}
 				}
 			}

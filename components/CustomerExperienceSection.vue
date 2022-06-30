@@ -68,10 +68,17 @@ export default {
 		padding-left: 9.4rem;
 		padding-right: 11.6rem;
 		padding-bottom: 14.5rem;
+		height: 100%;
+
 		@include media-breakpoint-down(xxl) {
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+			justify-content: center;
 			padding-top: 10rem;
 			padding-right: 7rem;
 		}
+
 		@include media-breakpoint-down(lg) {
 			padding-top: 5rem;
 			padding-bottom: 5rem;

@@ -15,8 +15,8 @@
 							<img src="@/assets/imgs/img-07.png" alt="Better together" />
 						</div>
 						<div class="buttons">
-							<Button title="FIND A PATNER" class="btn-primary" type="button" />
-							<Button title="PARTNER WITH US" class="btn-outline-primary" type="button" />
+							<Button title="FIND A PATNER" class="btn-primary" type="button" @click="openModal('modalPartner', 'Find a partner')" />
+							<Button title="PARTNER WITH US" class="btn-outline-primary" type="button" @click="openModal('modalPartner', 'Partner with us')" />
 						</div>
 					</div>
 				</div>
@@ -53,7 +53,6 @@
 					<div class="col-12 col-md-6">
 						<div class="customer-ingagement__body">
 							<p class="customer-ingagement__label text-uppercase">Technology partners</p>
-
 							<h3 class="customer-ingagement__title">Develop applications on a reliable, scalable platform.</h3>
 							<h4 class="customer-ingagement__subtitle">Enhance your profitability with a long-term partnership</h4>
 							<p class="customer-ingagement__text">TribalSquare gives you the time, resources, and flexible pricing model designed to kickstart the success of your application. With Build, you have the runway and commitment from TribalSquare that you need to grow your customer base and build your business.</p>
@@ -77,8 +76,15 @@
 				<TxtBlock class="style-center" />
 			</div>
 		</div>
-
 		<ContactSection />
+
+		<modal ref="modalPartner" class="contact-from">
+			<template #modal-body>
+				<div class="modal-form">
+					<ContactFormModal :modal-type="modalType" @submitForm="closeModal('modalPartner')" />
+				</div>
+			</template>
+		</modal>
 	</div>
 </template>
 
@@ -87,13 +93,30 @@ import IntroSection from "@/components/IntroSection";
 import OurPartners from "@/components/OurPartners";
 import TxtBlock from "@/components/TxtBlock";
 import ContactSection from "@/components/ContactSection";
+import ContactFormModal from "@/components/ContactFormModal";
 
 export default {
 	components: {
 		IntroSection,
 		OurPartners,
 		TxtBlock,
-		ContactSection
+		ContactSection,
+		ContactFormModal
+	},
+	data() {
+		return {
+			modalType: ""
+		};
+	},
+	methods: {
+		openModal(modalName, modalType) {
+			this.$refs[modalName].handleOpen();
+
+			this.modalType = modalType;
+		},
+		closeModal(modalName) {
+			this.$refs[modalName].handleClose();
+		}
 	}
 };
 </script>

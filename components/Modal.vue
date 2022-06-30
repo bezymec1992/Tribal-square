@@ -1,22 +1,20 @@
 <template>
-	<div>
-		<transition name="fade">
-			<div v-if="isOpen" class="modal-overlay" @click="handleClose">
-				<div class="modal" @click.stop>
-					<div class="modal-header">
-						<slot name="modal-title" />
-						<a href="#" class="close-icon" @click.prevent="handleClose">
-							<svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<line x1="0.353553" y1="0.646447" x2="28.6378" y2="28.9307" stroke="black" />
-								<line x1="28.6377" y1="1.35355" x2="0.353462" y2="29.6378" stroke="black" />
-							</svg>
-						</a>
-					</div>
-					<slot name="modal-body" />
+	<transition name="fade">
+		<div v-if="isOpen" class="modal-overlay" @click="handleClose">
+			<div class="modal" @click.stop>
+				<div class="modal-header">
+					<slot name="modal-title" />
+					<a href="#" class="close-icon" @click.prevent="handleClose">
+						<svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="0.353553" y1="0.646447" x2="28.6378" y2="28.9307" stroke="black" />
+							<line x1="28.6377" y1="1.35355" x2="0.353462" y2="29.6378" stroke="black" />
+						</svg>
+					</a>
 				</div>
+				<slot name="modal-body" />
 			</div>
-		</transition>
-	</div>
+		</div>
+	</transition>
 </template>
 
 <script>
@@ -87,6 +85,18 @@ export default {
 		svg {
 			width: 100%;
 			height: 100%;
+		}
+	}
+
+	&.contact-from {
+		.modal {
+			max-width: 60rem;
+
+			@include media-breakpoint-down(md) {
+				padding-left: 2rem;
+				padding-right: 2rem;
+				border-radius: 0;
+			}
 		}
 	}
 }

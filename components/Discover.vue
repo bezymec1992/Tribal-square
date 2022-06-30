@@ -39,6 +39,11 @@ export default {
 		padding-left: 25px;
 		padding-right: 25px;
 	}
+
+	@include media-breakpoint-down(md) {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
 	&::after {
 		content: "";
 		position: absolute;
