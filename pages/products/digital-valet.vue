@@ -37,17 +37,8 @@
 		</div>
 
 		<div class="idea">
+			<SectionTwoTextCols first-title="Idea" :first-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" second-title="Assets" :second-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" />
 			<div class="container">
-				<div class="idea__info row d-flex justify-content-between">
-					<div class="idea__item col col-md-6 col-12">
-						<h3 class="h3 idea__title">Idea</h3>
-						<p class="idea__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit.</p>
-					</div>
-					<div class="idea__item col col-md-6 col-12">
-						<h3 class="h3 idea__title">Assets</h3>
-						<p class="idea__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit.</p>
-					</div>
-				</div>
 				<div class="idea__picture d-flex justify-content-start">
 					<picture>
 						<source srcset="@/assets/imgs/product__idea-mb.png" media="(max-width: 767px)" width="661" height="337" />
@@ -144,6 +135,7 @@ import Discover from "@/components/Discover";
 import Button from "@/components/Button";
 import ContactSection from "@/components/ContactSection";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import SectionTwoTextCols from "@/components/SectionTwoTextCols";
 
 export default {
 	components: {
@@ -151,7 +143,8 @@ export default {
 		IntroSection,
 		Button,
 		ContactSection,
-		Breadcrumbs
+		Breadcrumbs,
+		SectionTwoTextCols
 	},
 	data() {
 		return {

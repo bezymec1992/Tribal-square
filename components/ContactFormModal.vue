@@ -1,7 +1,7 @@
 <template>
 	<div class="modal-contact-form">
 		<form @submit.prevent>
-			<h3>{{ ModalType }}</h3>
+			<h3>{{ modalType }}</h3>
 			<div class="text">
 				<p>Write us a we will contact you as soon as possible</p>
 			</div>
@@ -58,13 +58,14 @@ export default {
 		Input,
 		Button
 	},
+	mixins: [validationMixin],
 	props: {
-		ModalType: {
+		modalType: {
 			type: String,
 			default: ""
 		}
 	},
-	mixins: [validationMixin],
+
 	data() {
 		return {
 			form: {
@@ -111,13 +112,13 @@ export default {
 
 				setTimeout(() => {
 					this.request.loading = false;
-				}, 2000);
+				}, 1500);
 
 				setTimeout(() => {
 					this.closeModal();
 					this.clearForm();
 					this.$emit("submitForm");
-				}, 5000);
+				}, 4000);
 			}
 		},
 

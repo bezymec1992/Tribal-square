@@ -4,10 +4,15 @@
 			<div class="text-holder">
 				<p>You are interested in</p>
 			</div>
+
 			<div class="radios">
-				<RadioInput v-model="form.type" :input-value="'Find a partner'" :label="'Find a partner'" />
-				<RadioInput v-model="form.type" :input-value="'Partner with us'" :label="'Partner with us'" />
-				<RadioInput v-model="form.type" :input-value="'Other'" :label="'Other'" />
+				<div class="radios-row">
+					<RadioInput v-model="form.type" :input-value="'Find a partner'" :label="'Find a partner'" />
+					<RadioInput v-model="form.type" :input-value="'Partner with us'" :label="'Partner with us'" />
+					<RadioInput v-model="form.type" :input-value="'Other'" :label="'Other'" />
+				</div>
+
+				<span v-if="$v.form.type.$error" class="error-message">Requred filed</span>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
@@ -85,7 +90,8 @@ export default {
 			form: {
 				name: { required },
 				email: { required, email },
-				message: { required }
+				message: { required },
+				type: { required }
 			}
 		};
 	},
@@ -165,22 +171,42 @@ export default {
 	}
 
 	.radios {
-		display: flex;
-		flex-wrap: wrap;
+		position: relative;
 		margin-bottom: 2.7rem;
+
+		.radios-row {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include media-breakpoint-down(md) {
+				flex-wrap: wrap;
+			}
+
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+		}
 
 		@include media-breakpoint-down(md) {
 			margin-bottom: 2.1rem;
-			flex-wrap: wrap;
-		}
-
-		@include media-breakpoint-down(sm) {
-			flex-direction: column;
 		}
 
 		.wrapper-radio {
 			&:not(:last-child) {
 				margin-right: 3.6rem;
+			}
+		}
+
+		.error-message {
+			position: absolute;
+			left: 0;
+			bottom: -1.3rem;
+			font-size: 1.5rem;
+			color: $red;
+
+			@include media-breakpoint-down(md) {
+				bottom: -0.5rem;
+				font-size: 1.2rem;
 			}
 		}
 	}

@@ -28,11 +28,18 @@ export default {
 	methods: {
 		handleOpen() {
 			this.isOpen = true;
+
+			const scrollWidth = window.innerWidth - document.getElementsByTagName("html")[0].clientWidth;
+			document.body.style.paddingRight = scrollWidth + "px";
 			document.body.style.overflow = "hidden";
 		},
 		handleClose() {
 			this.isOpen = false;
-			document.body.style.removeProperty("overflow");
+
+			setTimeout(() => {
+				document.body.style.removeProperty("padding-right");
+				document.body.style.removeProperty("overflow");
+			}, 250);
 		}
 	}
 };

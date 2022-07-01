@@ -42,21 +42,7 @@
 			</div>
 		</Intro-section>
 		<div class="about-the-label__section">
-			<div class="container">
-				<h3 class="about-the-label__title h3 text-left">About the label</h3>
-				<div class="row">
-					<div class="col-12 col-md-6">
-						<div class="about-the-label__text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit.</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6">
-						<div class="about-the-label__text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<SectionTwoTextCols first-title="About the label" :first-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" :second-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" />
 		</div>
 		<!-- How does it work section -->
 		<div class="how-does-it-work__section">
@@ -64,7 +50,6 @@
 				<h3 class="how-does-it-work__title text-center">How does it work</h3>
 				<div class="row">
 					<!-- How does it work section mobile-->
-
 					<div class="col-12 col-md-6 d-md-none d-flex justify-content-center">
 						<img class="how-does-it-work__desktop-img" src="@/assets/images/how-does-it-work-006.png" alt="image description" />
 					</div>
@@ -282,48 +267,7 @@ export default {
 				padding: 8rem 7rem;
 			}
 			@include media-breakpoint-up(xl) {
-				padding: 12rem 13rem;
-			}
-
-			.row {
-				@include media-breakpoint-up(xl) {
-					@include grid-gutter(7rem);
-				}
-
-				@include media-breakpoint-up(xxl) {
-					@include grid-gutter(14.4rem);
-				}
-			}
-
-			.container {
-				max-width: 122rem;
-			}
-		}
-
-		&__title {
-			margin-bottom: 1rem;
-			font-size: 2.8rem;
-			line-height: 1.42;
-			@include media-breakpoint-up(md) {
-				margin-bottom: 3rem;
-				font-size: 3.4rem;
-				line-height: 1.18;
-			}
-		}
-		&__text {
-			margin-bottom: 2rem;
-
-			@include media-breakpoint-up(md) {
-				margin-bottom: 0;
-			}
-
-			p {
-				font-size: 1.6rem;
-				line-height: 1.5;
-				@include media-breakpoint-up(md) {
-					font-size: 1.8rem;
-					line-height: 1.78;
-				}
+				padding: 12rem 0;
 			}
 		}
 	}

@@ -73,7 +73,7 @@
 		</div>
 		<div class="text-block-section">
 			<div class="container">
-				<TxtBlock class="style-center" />
+				<TxtBlock class="style-center" @clickFirstBtn="openModal('modalPartner', 'Find a partner')" @clickSecondBtn="openModal('modalPartner', 'Partner with us')" />
 			</div>
 		</div>
 		<ContactSection />
@@ -111,7 +111,6 @@ export default {
 	methods: {
 		openModal(modalName, modalType) {
 			this.$refs[modalName].handleOpen();
-
 			this.modalType = modalType;
 		},
 		closeModal(modalName) {
