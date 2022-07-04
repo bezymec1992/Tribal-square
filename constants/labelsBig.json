@@ -1,0 +1,59 @@
+[
+	{
+		"title": "powwows",
+		"svgTitle": "powwows.svg",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"type": "Website",
+		"topic": "Cyber Security",
+		"websiteLink": "/",
+		"img": "img-013.png",
+		"backgroundColor": "#000000",
+		"cardStyle": "style2",
+		"cardBackgroundColor": "black",
+		"nuxtLink": "/"
+	},
+	{
+		"title": "Tribal cyber",
+		"svgTitle": "tribal-cyber.svg",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"type": "Website",
+		"topic": "Cyber Security",
+		"websiteLink": "/",
+		"img": "img-012.png",
+		"cardBackgroundColor": "#2853C2",
+		"cardStyle": "style2",
+		"btnColor": "black",
+		"btnBackgroundColor": "white",
+		"nuxtLink": "/"
+	},
+	{
+		"title": "Digital Chiefs",
+		"svgTitle": "digital-chiefs.svg",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"type": "Website",
+		"topic": "Developing / Coding",
+		"websiteLink": "/",
+		"img": "img-015.svg",
+		"cardBackgroundColor": "black",
+		"cardStyle": "style2",
+		"btnColor": "white",
+		"btnBackgroundColor": "#0042FF",
+		"nuxtLink": "/",
+		"styleImg": "right:4.3rem;bottom: unset; width: 40%; top: 50%; transform: translateY(-50%);bottom: unset;"
+	},
+	{
+		"title": "TRIBALHANDS",
+		"svgTitle": "tribalhands.svg",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"type": "Website",
+		"topic": "Developing / Coding",
+		"websiteLink": "/",
+		"img": "img-014.png",
+		"cardBackgroundColor": "#200B5F",
+		"cardStyle": "style2",
+		"btnColor": "black",
+		"btnBackgroundColor": "#FFDB1C",
+		"nuxtLink": "/",
+		"styleImg": "bottom: unset; width: 47%; top: 50%; transform: translateY(-50%);bottom: unset;"
+	}
+]

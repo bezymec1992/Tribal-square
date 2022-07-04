@@ -1,18 +1,18 @@
 <template>
-	<nuxt-link v-if="type === 'nuxt-link'" :to="to" class="btn"
+	<nuxt-link v-if="type === 'nuxt-link'" :to="to" class="btn" :style="style"
 		>{{ title }}
 		<span v-if="hasIconSlot" class="icon-holder">
 			<slot name="icon" />
 		</span>
 	</nuxt-link>
-	<a v-else-if="type === 'link'" :href="href" target="_blank" class="btn"
+	<a v-else-if="type === 'link'" :href="href" target="_blank" class="btn" :style="style"
 		>{{ title }}
 
 		<span v-if="hasIconSlot" class="icon-holder">
 			<slot name="icon" />
 		</span>
 	</a>
-	<button v-else-if="type === 'button'" class="btn" @click="click">
+	<button v-else-if="type === 'button'" class="btn" :style="style" @click="click">
 		{{ title }}
 
 		<span v-if="hasIconSlot" class="icon-holder">
@@ -43,9 +43,24 @@ export default {
 			type: String,
 			default: "#",
 			require: false
+		},
+		color: {
+			type: String,
+			default: "black"
+		},
+		backgroundColor: {
+			type: String,
+			default: "white"
 		}
 	},
-
+	data() {
+		return {
+			style: {
+				"--color": this.color,
+				"--background-color": this.backgroundColor
+			}
+		};
+	},
 	computed: {
 		hasIconSlot() {
 			return !!this.$slots.icon;
@@ -67,11 +82,11 @@ export default {
 	padding: 1.6rem 4rem;
 	font-size: 2.2rem;
 	line-height: 1;
-	color: $white;
+	color: var(--color);
 	letter-spacing: 0.1rem;
-	background: $purple;
+	background: var(--background-color);
 	text-transform: uppercase;
-	border: solid 0.2rem $purple;
+	border: solid 0.2rem var(--background-color);
 	border-radius: 0;
 
 	@include media-breakpoint-down(md) {
@@ -95,6 +110,7 @@ export default {
 	&.btn-primary {
 		color: $white;
 		background: $purple;
+		border-color: $purple;
 
 		&:hover {
 			background: lighten($purple, 10);

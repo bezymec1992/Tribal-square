@@ -420,6 +420,7 @@ export default {
 			padding: 0;
 			list-style: none;
 			font-size: 1.7rem;
+			white-space: nowrap;
 
 			li {
 				&:not(:last-child) {

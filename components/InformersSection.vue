@@ -54,7 +54,7 @@
 						<div class="row">
 							<div class="col-12">
 								<div v-for="(item, index) in labelsList" :key="index" class="col-12">
-									<CardLable class="style1" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img">
+									<CardLable class="style1" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" card-style="style1">
 										<template #svg-title>
 											{{ svgTitle }}
 										</template>

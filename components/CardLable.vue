@@ -1,7 +1,7 @@
 <template>
 	<div class="label-card" :style="style">
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-md-7 col-lg-6">
 				<div class="content-holder">
 					<div class="svg-title">
 						<img :src="require(`@/assets/imgs/${svgTitle}`)" :alt="title" class="svg-html" />
@@ -23,10 +23,18 @@
 							</ul>
 						</div>
 					</div>
+					<Button v-if="cardStyle === 'style2'" title="DISCOVER MORE" class="d-none d-md-inline-flex" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor">
+						<template #icon>
+							<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
+								<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+							</svg>
+						</template>
+					</Button>
 				</div>
 			</div>
-			<div class="col-md-5 d-flex align-items-end justify-content-between justify-content-md-end align-items-md-start">
-				<Button title="WEBSITE" class="btn-link" type="link" :to="websiteLink">
+			<div class="col-md-5 d-md-flex align-items-end justify-content-between justify-content-md-end align-items-md-start">
+				<Button v-if="cardStyle === 'style1'" title="WEBSITE" class="btn-link" type="link" :to="websiteLink">
 					<template #icon>
 						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -34,9 +42,17 @@
 						</svg>
 					</template>
 				</Button>
-				<div class="img-holder">
+				<div class="img-holder" :style="styleImg">
 					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
 				</div>
+				<Button v-if="cardStyle === 'style2'" title="DISCOVER MORE" class="d-md-none" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor">
+					<template #icon>
+						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
+							<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+						</svg>
+					</template>
+				</Button>
 			</div>
 		</div>
 	</div>
@@ -46,11 +62,19 @@
 export default {
 	name: "CardLable",
 	props: {
-		color: {
+		cardColor: {
 			type: String,
 			default: "black"
 		},
-		backgroundColor: {
+		cardBackgroundColor: {
+			type: String,
+			default: "white"
+		},
+		btnColor: {
+			type: String,
+			default: "black"
+		},
+		btnBackgroundColor: {
 			type: String,
 			default: "white"
 		},
@@ -81,13 +105,25 @@ export default {
 		topic: {
 			type: String,
 			default: "topic"
+		},
+		cardStyle: {
+			type: String,
+			default: ""
+		},
+		nuxtLink: {
+			type: String,
+			default: "/"
+		},
+		styleImg: {
+			type: String,
+			default: ""
 		}
 	},
 	data() {
 		return {
 			style: {
-				"--color": this.color,
-				"--background-color": this.backgroundColor
+				"--card-color": this.cardColor,
+				"--card-background-color": this.cardBackgroundColor
 			}
 		};
 	},
@@ -142,8 +178,8 @@ export default {
 <style lang="scss" scoped>
 .label-card {
 	position: relative;
-	color: var(--color);
-	background: var(--background-color);
+	color: var(--card-color);
+	background: var(--card-background-color);
 	transition: $transition;
 	overflow: hidden;
 
@@ -242,6 +278,72 @@ export default {
 		&:hover {
 			color: $white;
 			background: $cloud-burst;
+		}
+	}
+
+	&.style2 {
+		padding: 10rem;
+		border-radius: 1.2rem;
+
+		@include media-breakpoint-down(xl) {
+			padding: 5rem;
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 2rem;
+			padding: 4rem 2rem;
+		}
+
+		ul {
+			@include media-breakpoint-up(md) {
+				margin-bottom: 5.2rem;
+			}
+		}
+
+		.svg-title {
+			margin-bottom: 4.4rem;
+
+			@include media-breakpoint-up(md) {
+				max-width: 43rem;
+			}
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		.text-holder {
+			margin-bottom: 5rem;
+			padding-bottom: 5rem;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 2.4rem;
+				padding-bottom: 2.4rem;
+			}
+		}
+
+		.img-holder {
+			@include media-breakpoint-down(md) {
+				top: unset !important;
+				transform: unset !important;
+				width: unset !important;
+				margin-right: -2rem;
+				margin-left: 0;
+				margin-bottom: -4rem;
+			}
+
+			@include media-breakpoint-up(md) {
+				width: 40%;
+			}
+		}
+
+		.btn {
+			@include media-breakpoint-down(md) {
+				position: absolute;
+				left: 2.6rem;
+				bottom: 3rem;
+				width: calc(100% - 5.2rem);
+			}
 		}
 	}
 }
