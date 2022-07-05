@@ -49,6 +49,10 @@ export default {
 
 <style lang="scss" scoped>
 .section-two-text-cols {
+	@include media-breakpoint-up(xl) {
+		overflow: hidden;
+	}
+
 	.container {
 		max-width: 122rem;
 	}

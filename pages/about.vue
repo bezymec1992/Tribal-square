@@ -75,6 +75,11 @@
 						</Button>
 					</div>
 				</div>
+
+				<div class="healp__title-wrapp3">
+					<h2 class="h2">Companies Overview</h2>
+				</div>
+				<SliderLabels />
 			</div>
 		</div>
 
@@ -85,8 +90,8 @@
 						<h2 class="h2">Better together</h2>
 						<p class="toghether__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet</p>
 						<div class="buttons d-none d-md-flex">
-							<Button title="FIND A PATNER" class="btn-primary" type="button" />
-							<Button title="partner with us" class="btn-outline-primary" type="button" />
+							<Button title="FIND A PATNER" class="btn-primary" type="button" @click="openModal('modalPartner', 'Find a partner')" />
+							<Button title="partner with us" class="btn-outline-primary" type="button" @click="openModal('modalPartner', 'Partner with us')" />
 						</div>
 					</div>
 					<div class="toghether__imgs d-flex justify-content-around flex-wrap">
@@ -120,6 +125,14 @@
 		</div>
 		<SolutionSection />
 		<ContactSection />
+
+		<modal ref="modalPartner" class="contact-from">
+			<template #modal-body>
+				<div class="modal-form">
+					<ContactFormModal :modal-type="modalType" @submitForm="closeModal('modalPartner')" />
+				</div>
+			</template>
+		</modal>
 	</div>
 </template>
 
@@ -129,6 +142,9 @@ import Card from "@/components/Card";
 import Button from "@/components/Button";
 import ContactSection from "@/components/ContactSection";
 import SolutionSection from "@/components/SolutionSection";
+import SliderLabels from "@/components/SliderLabels";
+import ContactFormModal from "@/components/ContactFormModal";
+import Modal from "@/components/Modal";
 
 export default {
 	components: {
@@ -136,7 +152,10 @@ export default {
 		Card,
 		Button,
 		ContactSection,
-		SolutionSection
+		SolutionSection,
+		SliderLabels,
+		ContactFormModal,
+		Modal
 	},
 	data() {
 		return {
@@ -151,6 +170,15 @@ export default {
 				{ id: 2, title: "Coffee App", category: "App", img: "more-2.jpg" }
 			]
 		};
+	},
+	methods: {
+		openModal(modalName, modalType) {
+			this.$refs[modalName].handleOpen();
+			this.modalType = modalType;
+		},
+		closeModal(modalName) {
+			this.$refs[modalName].handleClose();
+		}
 	}
 };
 </script>
@@ -274,6 +302,22 @@ export default {
 
 		@include media-breakpoint-down(md) {
 			margin-bottom: 2.4rem;
+		}
+	}
+
+	.healp__title-wrapp3 {
+		padding-top: 12rem;
+
+		@include media-breakpoint-down(md) {
+			padding-top: 8rem;
+		}
+
+		.h2 {
+			margin-bottom: 3.2rem;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 0.6rem;
+			}
 		}
 	}
 

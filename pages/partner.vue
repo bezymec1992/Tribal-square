@@ -94,6 +94,7 @@ import OurPartners from "@/components/OurPartners";
 import TxtBlock from "@/components/TxtBlock";
 import ContactSection from "@/components/ContactSection";
 import ContactFormModal from "@/components/ContactFormModal";
+import Modal from "@/components/Modal";
 
 export default {
 	components: {
@@ -101,7 +102,8 @@ export default {
 		OurPartners,
 		TxtBlock,
 		ContactSection,
-		ContactFormModal
+		ContactFormModal,
+		Modal
 	},
 	data() {
 		return {

@@ -54,6 +54,7 @@ export default {
 	background: rgba($black, 0.6);
 	border: none;
 	transition: $transition;
+	z-index: 10;
 
 	@include media-breakpoint-down(md) {
 		right: 1.5rem;

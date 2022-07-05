@@ -2,14 +2,14 @@
 	<div class="section-informers">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-4 d-none d-lg-block">
+				<div class="col-xl-3 col-xxl-4 d-none d-xl-block">
 					<ul class="anchor-links">
 						<li><a anchor-link="section-1" href="#">PRODUCTS</a></li>
 						<li><a anchor-link="section-2" href="#">COMPANIES</a></li>
 						<li><a anchor-link="section-3" href="#">WORK WITH US</a></li>
 					</ul>
 				</div>
-				<div class="col-xl-8">
+				<div class="col-xl-9 col-xxl-8">
 					<div class="products-informer" anchor-section="section-1">
 						<div class="header d-flex align-items-center justify-content-between">
 							<h3 class="h2">Discover our Products</h3>
@@ -53,13 +53,11 @@
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<div v-for="(item, index) in labelsList" :key="index" class="col-12">
-									<CardLable class="style1" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" card-style="style1">
-										<template #svg-title>
-											{{ svgTitle }}
-										</template>
-									</CardLable>
-								</div>
+								<CardLable v-for="(item, index) in labelsList" :key="index" class="style1" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img-down-md="item.img" :img-up-md="item.img" card-style="style1">
+									<template #svg-title>
+										{{ svgTitle }}
+									</template>
+								</CardLable>
 							</div>
 							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
 								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
@@ -74,11 +72,19 @@
 						</div>
 					</div>
 					<div anchor-section="section-3">
-						<TxtBlock />
+						<TxtBlock @clickFirstBtn="openModal('modalPartner', 'Find a partner')" @clickSecondBtn="openModal('modalPartner', 'Partner with us')" />
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<modal ref="modalPartner" class="contact-from">
+			<template #modal-body>
+				<div class="modal-form">
+					<ContactFormModal :modal-type="modalType" @submitForm="closeModal('modalPartner')" />
+				</div>
+			</template>
+		</modal>
 	</div>
 </template>
 
@@ -89,6 +95,8 @@ import Products from "@/constants/products";
 import Labels from "@/constants/Labels";
 import CardLable from "@/components/CardLable";
 import TxtBlock from "@/components/TxtBlock";
+import ContactFormModal from "@/components/ContactFormModal";
+import Modal from "@/components/Modal";
 
 export default {
 	name: "InformersSection",
@@ -96,7 +104,9 @@ export default {
 		Button,
 		Card,
 		CardLable,
-		TxtBlock
+		TxtBlock,
+		ContactFormModal,
+		Modal
 	},
 	data() {
 		return {
@@ -114,6 +124,14 @@ export default {
 	},
 
 	methods: {
+		openModal(modalName, modalType) {
+			this.$refs[modalName].handleOpen();
+			this.modalType = modalType;
+		},
+		closeModal(modalName) {
+			this.$refs[modalName].handleClose();
+		},
+
 		scrollTo() {
 			const links = document.querySelectorAll("[anchor-link]");
 

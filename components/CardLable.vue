@@ -33,7 +33,14 @@
 					</Button>
 				</div>
 			</div>
-			<div class="col-md-5 d-md-flex align-items-end justify-content-between justify-content-md-end align-items-md-start">
+			<div class="col-md-5 col-lg-6 d-md-flex align-items-end justify-content-between justify-content-md-end align-items-md-start">
+				<div class="img-holder" :style="imgStyle">
+					<picture>
+						<source :srcset="require('@/assets/imgs/' + imgUpMd)" media="(min-width: 768px)" type="image/jpg" />
+						<img :src="require('@/assets/imgs/' + imgDownMd)" :alt="title" />
+					</picture>
+				</div>
+
 				<Button v-if="cardStyle === 'style1'" title="WEBSITE" class="btn-link" type="link" :to="websiteLink">
 					<template #icon>
 						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,9 +49,6 @@
 						</svg>
 					</template>
 				</Button>
-				<div class="img-holder" :style="styleImg">
-					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
-				</div>
 				<Button v-if="cardStyle === 'style2'" title="DISCOVER MORE" class="d-md-none" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor">
 					<template #icon>
 						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,8 +63,11 @@
 </template>
 
 <script>
+import getterBreakpoints from "@/mixins/getterBreakpoints";
+
 export default {
 	name: "CardLable",
+	mixins: [getterBreakpoints],
 	props: {
 		cardColor: {
 			type: String,
@@ -90,7 +97,11 @@ export default {
 			type: String,
 			default: "tribal-cyber.svg"
 		},
-		img: {
+		imgUpMd: {
+			type: String,
+			default: "img-05.png"
+		},
+		imgDownMd: {
 			type: String,
 			default: "img-05.png"
 		},
@@ -114,7 +125,11 @@ export default {
 			type: String,
 			default: "/"
 		},
-		styleImg: {
+		imgStyleUpMd: {
+			type: String,
+			default: ""
+		},
+		imgStyleDownMd: {
 			type: String,
 			default: ""
 		}
@@ -127,6 +142,15 @@ export default {
 			}
 		};
 	},
+	computed: {
+		imgStyle() {
+			if (this.up_md) {
+				return this.imgStyleUpMd;
+			} else {
+				return this.imgStyleDownMd;
+			}
+		}
+	},
 	mounted() {
 		const imgs = document.querySelectorAll(".svg-html");
 
@@ -134,6 +158,7 @@ export default {
 			this.replaseInlineSvg(element);
 		});
 	},
+
 	methods: {
 		replaseInlineSvg(el) {
 			const imgID = el.getAttribute("id");
@@ -236,7 +261,6 @@ export default {
 		}
 
 		@include media-breakpoint-down(md) {
-			margin-left: -9rem;
 			margin-right: -2rem;
 			margin-bottom: -3rem;
 		}
@@ -278,6 +302,12 @@ export default {
 		&:hover {
 			color: $white;
 			background: $cloud-burst;
+		}
+
+		.img-holder {
+			@include media-breakpoint-down(md) {
+				margin-bottom: -6rem;
+			}
 		}
 	}
 
@@ -324,9 +354,6 @@ export default {
 
 		.img-holder {
 			@include media-breakpoint-down(md) {
-				top: unset !important;
-				transform: unset !important;
-				width: unset !important;
 				margin-right: -2rem;
 				margin-left: 0;
 				margin-bottom: -4rem;

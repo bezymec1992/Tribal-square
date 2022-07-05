@@ -18,8 +18,8 @@
 		<div class="labels-section">
 			<div class="container">
 				<h2 class="h2">Our solutions for all your needs</h2>
+				<SliderLabels />
 			</div>
-			<SliderLabels />
 		</div>
 		<SolutionSection />
 		<ContactSection />

@@ -41,7 +41,7 @@ export default {
 	}
 
 	.container {
-		max-width: 129.6rem;
+		max-width: 134rem;
 	}
 
 	&__title {

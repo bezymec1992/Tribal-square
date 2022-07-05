@@ -6,11 +6,15 @@
 		"type": "Website",
 		"topic": "Cyber Security",
 		"websiteLink": "/",
-		"img": "img-013.png",
-		"backgroundColor": "#000000",
+		"btnColor": "white",
+		"btnBackgroundColor": "#F40029",
 		"cardStyle": "style2",
 		"cardBackgroundColor": "black",
-		"nuxtLink": "/"
+		"nuxtLink": "/labels/powwows",
+		"imgUpMd": "img-013.png",
+		"imgDownMd": "img-017.png",
+		"imgStyleUpMd": "width:48%;right:0;bottom: 0;",
+		"imgStyleDownMd": "max-width: 32rem;margin-left: auto;padding-top: 4rem;padding-bottom: 7rem;"
 	},
 	{
 		"title": "Tribal cyber",
@@ -19,12 +23,15 @@
 		"type": "Website",
 		"topic": "Cyber Security",
 		"websiteLink": "/",
-		"img": "img-012.png",
 		"cardBackgroundColor": "#2853C2",
 		"cardStyle": "style2",
 		"btnColor": "black",
 		"btnBackgroundColor": "white",
-		"nuxtLink": "/"
+		"nuxtLink": "/",
+		"imgUpMd": "img-012.png",
+		"imgDownMd": "img-012.png",
+		"imgStyleUpMd": "",
+		"imgStyleDownMd": "padding-top: 2rem;margin-right: -5rem;"
 	},
 	{
 		"title": "Digital Chiefs",
@@ -33,13 +40,15 @@
 		"type": "Website",
 		"topic": "Developing / Coding",
 		"websiteLink": "/",
-		"img": "img-015.svg",
+		"imgUpMd": "img-015.svg",
+		"imgDownMd": "img-015.svg",
 		"cardBackgroundColor": "black",
 		"cardStyle": "style2",
 		"btnColor": "white",
 		"btnBackgroundColor": "#0042FF",
 		"nuxtLink": "/",
-		"styleImg": "right:4.3rem;bottom: unset; width: 40%; top: 50%; transform: translateY(-50%);bottom: unset;"
+		"imgStyleUpMd": "right:4.3rem;bottom: unset; width: 40%; top: 15%; bottom: unset;",
+		"imgStyleDownMd": "margin-right: 0; padding-top: 4rem; padding-bottom: 12rem;"
 	},
 	{
 		"title": "TRIBALHANDS",
@@ -48,12 +57,14 @@
 		"type": "Website",
 		"topic": "Developing / Coding",
 		"websiteLink": "/",
-		"img": "img-014.png",
+		"imgUpMd": "img-014.png",
+		"imgDownMd": "img-016.png",
 		"cardBackgroundColor": "#200B5F",
 		"cardStyle": "style2",
 		"btnColor": "black",
 		"btnBackgroundColor": "#FFDB1C",
 		"nuxtLink": "/",
-		"styleImg": "bottom: unset; width: 47%; top: 50%; transform: translateY(-50%);bottom: unset;"
+		"imgStyleUpMd": "bottom: unset; width: 47%; top: 50%; transform: translateY(-50%);bottom: unset;",
+		"imgStyleDownMd": "margin-left: -2rem; margin-bottom: 0;"
 	}
 ]

@@ -63,7 +63,7 @@
 							<div class="accordion-content">
 								<ul class="inner-menu">
 									<li @click="menuClose">
-										<nuxt-link to="/">All labels overview</nuxt-link>
+										<nuxt-link to="/labels">All labels overview</nuxt-link>
 									</li>
 									<li @click="menuClose">
 										<nuxt-link to="/">TribalHands</nuxt-link>
@@ -72,7 +72,7 @@
 										<nuxt-link to="/">Digital Chiefs</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">Powwows</nuxt-link>
+										<nuxt-link to="/labels/powwows">Powwows</nuxt-link>
 									</li>
 									<li @click="menuClose">
 										<nuxt-link to="/">Tribal Cyber</nuxt-link>
