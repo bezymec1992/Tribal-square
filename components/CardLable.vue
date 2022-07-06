@@ -41,22 +41,9 @@
 					</picture>
 				</div>
 
-				<Button v-if="cardStyle === 'style1'" title="WEBSITE" class="btn-link" type="link" :to="websiteLink">
-					<template #icon>
-						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-							<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-						</svg>
-					</template>
-				</Button>
-				<Button v-if="cardStyle === 'style2'" title="DISCOVER MORE" class="d-md-none" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor">
-					<template #icon>
-						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-							<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-						</svg>
-					</template>
-				</Button>
+				<Button v-if="cardStyle === 'style1'" title="WEBSITE" class="btn-link" type="link" :to="websiteLink" />
+
+				<Button v-if="cardStyle === 'style2'" title="DISCOVER MORE" class="d-md-none" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor" />
 			</div>
 		</div>
 	</div>

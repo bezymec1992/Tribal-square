@@ -1,18 +1,18 @@
 <template>
-	<nuxt-link v-if="type === 'nuxt-link'" :to="to" class="btn" :style="style"
+	<nuxt-link v-if="type === 'nuxt-link'" :to="to" class="btn" :class="hasIconSlot === false ? 'd-inline-block' : null" :style="style"
 		>{{ title }}
 		<span v-if="hasIconSlot" class="icon-holder">
 			<slot name="icon" />
 		</span>
 	</nuxt-link>
-	<a v-else-if="type === 'link'" :href="href" target="_blank" class="btn" :style="style"
+	<a v-else-if="type === 'link'" :href="href" target="_blank" class="btn" :class="hasIconSlot === false ? 'd-inline-block' : null" :style="style"
 		>{{ title }}
 
 		<span v-if="hasIconSlot" class="icon-holder">
 			<slot name="icon" />
 		</span>
 	</a>
-	<button v-else-if="type === 'button'" class="btn" :style="style" @click="click">
+	<button v-else-if="type === 'button'" class="btn" :class="hasIconSlot === false ? 'd-inline-block' : null" :style="style" @click="click">
 		{{ title }}
 
 		<span v-if="hasIconSlot" class="icon-holder">
@@ -77,20 +77,22 @@ export default {
 <style lang="scss" scoped>
 .btn {
 	display: inline-flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	padding: 1.6rem 4rem;
+	width: 100%;
+	max-width: 30rem;
+	padding: 1.6rem 3rem;
 	font-size: 2.2rem;
 	line-height: 1;
 	color: var(--color);
 	letter-spacing: 0.1rem;
 	background: var(--background-color);
-	text-transform: uppercase;
 	border: solid 0.2rem var(--background-color);
-	border-radius: 0;
+	border-radius: 3rem;
 
 	@include media-breakpoint-down(md) {
-		padding: 1.55rem 4rem;
+		max-width: 22rem;
+		padding: 1.55rem 3rem;
 		font-size: 1.8rem;
 	}
 
@@ -100,10 +102,10 @@ export default {
 
 	.icon-holder {
 		display: inline-flex;
-		margin-left: 2.3rem;
+		margin-left: 1.6rem;
 
 		@include media-breakpoint-down(md) {
-			margin-left: 2rem;
+			margin-left: 1.3rem;
 		}
 	}
 
@@ -141,7 +143,9 @@ export default {
 	}
 
 	&.btn-link {
+		width: unset;
 		padding: 0;
+		font-weight: 500;
 		color: $black;
 		background: transparent;
 		text-decoration: none;
@@ -160,6 +164,29 @@ export default {
 		&:hover {
 			background: lighten($torch-red, 10);
 			border-color: lighten($torch-red, 10);
+		}
+	}
+
+	&.btn-dark {
+		color: $white;
+		background: $black;
+		border-color: $black;
+
+		&:hover {
+			background: lighten($black, 10);
+			border-color: lighten($black, 10);
+		}
+	}
+
+	&.btn-outline-dark {
+		color: $black;
+		background: transparent;
+		border-color: $black;
+
+		&:hover {
+			color: $white;
+			background: $black;
+			border-color: $black;
 		}
 	}
 }

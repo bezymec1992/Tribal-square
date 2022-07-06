@@ -1,6 +1,6 @@
 <template>
 	<div class="card">
-		<nuxt-link class="card-header" :to="aboutLink">
+		<div class="card-header">
 			<div class="d-flex align-items-center">
 				<div class="icon-holder">
 					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
@@ -10,12 +10,15 @@
 					<h3 class="title">{{ title }}</h3>
 				</div>
 			</div>
-			<div class="arrow-holder">
-				<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
-				</svg>
-			</div>
-		</nuxt-link>
+
+			<nuxt-link class="arrow-holder" :to="aboutLink">
+				<span>
+					<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
+					</svg>
+				</span>
+			</nuxt-link>
+		</div>
 
 		<div class="text-holder">
 			<p>Service which can help you to exchange your accommodation for a short period for free</p>
@@ -24,9 +27,11 @@
 		<div class="card-footer">
 			<Button title="WEBSITE" class="btn-link" type="link" to="/contact">
 				<template #icon>
-					<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-						<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+					<svg class="d-none d-md-inline-block" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor" />
+					</svg>
+					<svg class="d-md-none" width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M24.5303 6.53033C24.8232 6.23744 24.8232 5.76256 24.5303 5.46967L19.7574 0.696699C19.4645 0.403806 18.9896 0.403806 18.6967 0.696699C18.4038 0.989593 18.4038 1.46447 18.6967 1.75736L22.9393 6L18.6967 10.2426C18.4038 10.5355 18.4038 11.0104 18.6967 11.3033C18.9896 11.5962 19.4645 11.5962 19.7574 11.3033L24.5303 6.53033ZM0 6.75H24V5.25H0V6.75Z" fill="currentColor" />
 					</svg>
 				</template>
 			</Button>
@@ -108,6 +113,8 @@ export default {
 		.icon-holder {
 			width: 6rem;
 			margin-right: 1.6rem;
+			border-radius: 0.8rem;
+			box-shadow: 0 0.5rem 1.5rem rgba($black, 0.2);
 
 			img {
 				width: 100%;
@@ -135,20 +142,42 @@ export default {
 			@include media-breakpoint-down(md) {
 				font-size: 2.4rem;
 			}
+
+			@include media-breakpoint-down(sm) {
+				width: 15rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 		}
 
 		.arrow-holder {
-			width: 1.8rem;
-			height: 3.6rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 6rem;
+			height: 6rem;
+			transition: auto;
+			color: rgba($black, 0.4);
+			background: $aqua-haze;
+			border-radius: 0.8rem;
 
 			@include media-breakpoint-down(md) {
-				width: 1.5rem;
-				height: 3rem;
+				width: 4rem;
+				height: 4rem;
+			}
+
+			span {
+				width: 1.1rem;
+
+				@include media-breakpoint-down(md) {
+					width: 0.7rem;
+				}
 			}
 
 			svg {
 				width: 100%;
-				height: 100%;
+				height: auto;
 			}
 		}
 	}
@@ -193,6 +222,10 @@ export default {
 	}
 
 	&.style1 {
+		@include media-breakpoint-up(md) {
+			padding: 4rem 3rem;
+		}
+
 		.btn-warning {
 			display: none !important;
 		}

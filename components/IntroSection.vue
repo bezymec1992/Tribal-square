@@ -12,11 +12,11 @@ export default {
 
 <style lang="scss" scoped>
 .intro-section {
-	padding-top: 20rem;
+	padding-top: 30rem;
 	padding-bottom: 17.8rem;
 
 	@include media-breakpoint-down(md) {
-		padding-top: 10rem;
+		padding-top: 17rem;
 		padding-bottom: 6.2rem;
 	}
 

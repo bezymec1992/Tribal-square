@@ -32,7 +32,7 @@
 			<Input v-model="form.message" placeholder="Type your message" label="Your message" input-type="textarea" :error-showing="$v.form.message.$error" />
 			<Button type="button" title="Send" class="btn-primary" @click="submitForm" />
 		</form>
-		<modal ref="modal">
+		<modal ref="modal" class="contact-from">
 			<template #modal-body>
 				<div class="modal-request">
 					<h3 class="h2 text-center">PROCESSING</h3>

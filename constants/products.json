@@ -2,7 +2,7 @@
 	{
 		"title": "Knock Knock",
 		"category": "Platform & App",
-		"img": "img-01.jpg",
+		"img": "img-01.png",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/"
@@ -10,7 +10,7 @@
 	{
 		"title": "Coffee App",
 		"category": "App",
-		"img": "img-02.jpg",
+		"img": "img-02.png",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/"
@@ -18,7 +18,7 @@
 	{
 		"title": "Digital Valet",
 		"category": "Platform",
-		"img": "img-03.jpg",
+		"img": "img-03.png",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/digital-valet"
@@ -26,7 +26,7 @@
 	{
 		"title": "HandsRepublic",
 		"category": "Platform",
-		"img": "img-04.jpg",
+		"img": "img-04.png",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/"

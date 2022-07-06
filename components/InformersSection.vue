@@ -5,51 +5,30 @@
 				<div class="col-xl-3 col-xxl-3 d-none d-xl-block">
 					<ul class="anchor-links">
 						<li><a anchor-link="section-1" href="#">PRODUCTS</a></li>
-						<li><a anchor-link="section-2" href="#">COMPANIES</a></li>
+						<li><a anchor-link="section-2" href="#">LABELS OVERVIEW</a></li>
 						<li><a anchor-link="section-3" href="#">WORK WITH US</a></li>
 					</ul>
 				</div>
 				<div class="col-xl-9 col-xxl-9">
 					<div class="products-informer" anchor-section="section-1">
-						<div class="header d-flex align-items-center justify-content-between">
+						<div class="header d-flex align-items-baseline justify-content-between">
 							<h3 class="h2">Discover our Products</h3>
-							<Button title="VIEW ALL" class="btn-link d-none d-sm-inline-flex" type="nuxt-link" to="/products">
-								<template #icon>
-									<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-										<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-									</svg>
-								</template>
-							</Button>
+							<Button title="VIEW ALL" class="btn-link d-none d-sm-inline-flex" type="nuxt-link" to="/products" />
 						</div>
 						<div class="row">
 							<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
 								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" />
 							</div>
-							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
-								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
-									<template #icon>
-										<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-											<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-										</svg>
-									</template>
-								</Button>
+							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn pt-4">
+								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products" />
 							</div>
 						</div>
 					</div>
 
 					<div class="products-informer" anchor-section="section-2">
-						<div class="header d-flex align-items-center justify-content-between">
+						<div class="header d-flex align-items-baseline justify-content-between">
 							<h3 class="h2">Labels Overview</h3>
-							<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/products">
-								<template #icon>
-									<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-										<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-									</svg>
-								</template>
-							</Button>
+							<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/products" />
 						</div>
 						<div class="row">
 							<div class="col-12">
@@ -198,7 +177,7 @@ export default {
 		@include media-breakpoint-up(xl) {
 			position: sticky;
 			top: 1rem;
-			padding-top: 9rem;
+			padding-top: 10.5rem;
 		}
 
 		li {
@@ -216,17 +195,19 @@ export default {
 					position: absolute;
 					top: 50%;
 					left: 0;
-					transform: translateY(-50%) translateX(-2rem);
-					width: 1.4rem;
-					height: 1.4rem;
-					background-image: url("data:image/svg+xml,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 15.25L12.5 8.25L5.5 1.25' stroke='%23500AC9'/%3E%3Cpath d='M12.5 8.25L0 8.25' stroke='%23500AC9'/%3E%3C/svg%3E%0A");
+					transform: translateY(-50%) translateX(-3rem);
+					width: 3rem;
+					height: 1rem;
+					background-image: url("data:image/svg+xml,%3Csvg width='31' height='12' viewBox='0 0 31 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.5303 6.53033C30.8232 6.23744 30.8232 5.76256 30.5303 5.46967L25.7574 0.696699C25.4645 0.403806 24.9896 0.403806 24.6967 0.696699C24.4038 0.989592 24.4038 1.46447 24.6967 1.75736L28.9393 6L24.6967 10.2426C24.4038 10.5355 24.4038 11.0104 24.6967 11.3033C24.9896 11.5962 25.4645 11.5962 25.7574 11.3033L30.5303 6.53033ZM0 6.75H30V5.25H0V6.75Z' fill='%23015236'/%3E%3C/svg%3E%0A");
+					background-repeat: no-repeat;
+					background-size: 3rem;
 					opacity: 0;
 					transition: $transition;
 				}
 
 				&.active {
-					padding-left: 3.2rem;
-					color: $purple;
+					padding-left: 4.7rem;
+					color: $aqua-deep;
 
 					&::before {
 						transform: translateY(-50%) translateX(0);

@@ -5,8 +5,8 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.</p>
 		</div>
 		<div class="buttons">
-			<Button title="FIND A PATNER" class="btn-primary" type="button" @click="firstBtnClick" />
-			<Button title="PARTNER WITH US" class="btn-outline-primary" type="button" @click="secondBtnClick" />
+			<Button title="Find a partner" class="btn-dark" type="button" @click="firstBtnClick" />
+			<Button title="Partner with us" class="btn-outline-dark" type="button" @click="secondBtnClick" />
 		</div>
 	</div>
 </template>

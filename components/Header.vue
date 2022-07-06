@@ -88,7 +88,7 @@
 						</li>
 					</ul>
 					<div class="bottom">
-						<SocialLinks hover-color="#000000" hover-background="#FFDB1C" />
+						<SocialLinks hover-color="white" hover-background="#500AC9" />
 						<ul class="bottom-menu">
 							<li @click="menuClose">
 								<nuxt-link to="/">Terms & Conditions</nuxt-link>
@@ -127,10 +127,10 @@ export default {
 					title: "Products",
 					to: "/products"
 				},
-				// {
-				// 	title: "Labels",
-				// 	to: "#"
-				// },
+				{
+					title: "Labels",
+					to: "/labels"
+				},
 				{
 					title: "For partners",
 					to: "/partner"
@@ -215,9 +215,10 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+	position: absolute;
+	width: 100%;
 	padding-top: 2.4rem;
 	padding-bottom: 2.4rem;
-	background: $white;
 	border-bottom: solid 0.1rem rgba($black, 0.2);
 
 	@include media-breakpoint-down(md) {
@@ -235,6 +236,7 @@ export default {
 		position: relative;
 		font-family: $pontiff-wide;
 		font-size: 4rem;
+		text-transform: uppercase;
 		z-index: 100;
 
 		@include media-breakpoint-down(md) {
@@ -255,6 +257,7 @@ export default {
 			height: calc(100% - 9.6rem);
 			padding: 5.6rem 2rem;
 			background: $aqua-haze;
+			color: $black;
 			opacity: 0;
 			visibility: hidden;
 			pointer-events: none;
@@ -348,6 +351,7 @@ export default {
 			padding: 0;
 			list-style: none;
 			font-size: 2.4rem;
+			font-weight: 500;
 
 			> li {
 				&:not(:last-child) {
@@ -362,7 +366,7 @@ export default {
 
 			a {
 				&.active {
-					font-weight: 700;
+					color: $purple;
 				}
 			}
 
@@ -465,6 +469,12 @@ export default {
 				}
 			}
 		}
+	}
+
+	.header-white & {
+		color: $white;
+		background: transparent;
+		border-bottom: solid 0.1rem rgba($white, 0.2);
 	}
 }
 </style>
