@@ -2,14 +2,14 @@
 	<div class="section-informers">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-3 col-xxl-4 d-none d-xl-block">
+				<div class="col-xl-3 col-xxl-3 d-none d-xl-block">
 					<ul class="anchor-links">
 						<li><a anchor-link="section-1" href="#">PRODUCTS</a></li>
 						<li><a anchor-link="section-2" href="#">COMPANIES</a></li>
 						<li><a anchor-link="section-3" href="#">WORK WITH US</a></li>
 					</ul>
 				</div>
-				<div class="col-xl-9 col-xxl-8">
+				<div class="col-xl-9 col-xxl-9">
 					<div class="products-informer" anchor-section="section-1">
 						<div class="header d-flex align-items-center justify-content-between">
 							<h3 class="h2">Discover our Products</h3>
@@ -53,14 +53,14 @@
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<CardLable v-for="(item, index) in labelsList" :key="index" class="style1" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img-down-md="item.img" :img-up-md="item.img" card-style="style1">
+								<CardLable v-for="(item, index) in labelsList" :key="index" class="style1" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img-down-md="item.imgDownMd" :img-style-down-md="item.imgStyleDownMd" :img-up-md="item.imgUpMd" card-style="style1">
 									<template #svg-title>
 										{{ svgTitle }}
 									</template>
 								</CardLable>
 							</div>
 							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
-								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products">
+								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/labels">
 									<template #icon>
 										<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -186,6 +186,10 @@ export default {
 		padding-bottom: 10rem;
 	}
 
+	.container {
+		max-width: 123.7rem;
+	}
+
 	.anchor-links {
 		margin: 0 0 6rem 0;
 		padding: 0;
@@ -194,6 +198,7 @@ export default {
 		@include media-breakpoint-up(xl) {
 			position: sticky;
 			top: 1rem;
+			padding-top: 9rem;
 		}
 
 		li {

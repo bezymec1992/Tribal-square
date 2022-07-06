@@ -221,8 +221,8 @@ export default {
 	border-bottom: solid 0.1rem rgba($black, 0.2);
 
 	@include media-breakpoint-down(md) {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding-top: 1.45rem;
+		padding-bottom: 1.45rem;
 	}
 
 	> .container {
@@ -260,7 +260,6 @@ export default {
 			pointer-events: none;
 			z-index: 99;
 			overflow: auto;
-			// border-top: solid 0.1rem rgba($black, 0.2);
 		}
 
 		@include media-breakpoint-down(md) {
@@ -432,8 +431,8 @@ export default {
 
 	.open-menu {
 		position: relative;
-		width: 3rem;
-		height: 3rem;
+		width: 4rem;
+		height: 4rem;
 		display: block;
 		font-size: 0;
 		line-height: 0;

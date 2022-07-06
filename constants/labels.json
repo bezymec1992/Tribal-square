@@ -6,7 +6,8 @@
 		"type": "Website",
 		"topic": "Cyber Security",
 		"websiteLink": "/",
-		"img": "img-05.png"
+		"imgUpMd": "img-05.png",
+		"imgDownMd": "img-05.png"
 	},
 	{
 		"title": "powwows",
@@ -15,6 +16,8 @@
 		"type": "Website",
 		"topic": "Cyber Security",
 		"websiteLink": "/",
-		"img": "img-06.png"
+		"imgUpMd": "img-06.png",
+		"imgDownMd": "img-019.png",
+		"imgStyleDownMd": "max-width: 25rem;margin-left: auto;padding-bottom: 1rem;"
 	}
 ]

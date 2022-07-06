@@ -12,7 +12,10 @@
 							</p>
 						</div>
 						<div class="img-holder">
-							<img src="@/assets/imgs/img-07.png" alt="Better together" />
+							<picture>
+								<source srcset="@/assets/imgs/img-07.png" media="(min-width: 768px)" type="image/jpg" />
+								<img src="@/assets/imgs/img-020.png" alt="Better together" />
+							</picture>
 						</div>
 						<div class="buttons">
 							<Button title="FIND A PATNER" class="btn-primary" type="button" @click="openModal('modalPartner', 'Find a partner')" />
@@ -180,9 +183,9 @@ export default {
 			}
 
 			@include media-breakpoint-down(md) {
-				max-width: 41.9rem;
+				max-width: 33rem;
 				margin-left: auto;
-				margin-right: -10rem;
+				margin-right: -2rem;
 			}
 
 			@include media-breakpoint-up(lg) {

@@ -79,7 +79,7 @@
 				<div class="healp__title-wrapp3">
 					<h2 class="h2">Companies Overview</h2>
 				</div>
-				<SliderLabels />
+				<SliderLabels limit-labels-mobile="2" />
 			</div>
 		</div>
 
@@ -316,7 +316,7 @@ export default {
 			margin-bottom: 3.2rem;
 
 			@include media-breakpoint-down(md) {
-				margin-bottom: 0.6rem;
+				margin-bottom: 1.6rem;
 			}
 		}
 	}

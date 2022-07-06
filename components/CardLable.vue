@@ -1,7 +1,7 @@
 <template>
 	<div class="label-card" :style="style">
 		<div class="row">
-			<div class="col-md-7 col-lg-6">
+			<div class="col-md-7 col-lg-7">
 				<div class="content-holder">
 					<div class="svg-title">
 						<img :src="require(`@/assets/imgs/${svgTitle}`)" :alt="title" class="svg-html" />
@@ -10,13 +10,13 @@
 						<p>{{ description }}</p>
 					</div>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-5">
 							<ul>
 								<li>TYPE</li>
 								<li>{{ type }}</li>
 							</ul>
 						</div>
-						<div class="col-6">
+						<div class="col-7">
 							<ul>
 								<li>TOPIC</li>
 								<li>{{ topic }}</li>
@@ -33,7 +33,7 @@
 					</Button>
 				</div>
 			</div>
-			<div class="col-md-5 col-lg-6 d-md-flex align-items-end justify-content-between justify-content-md-end align-items-md-start">
+			<div class="col-md-5 col-lg-5 d-md-flex align-items-end justify-content-between justify-content-md-end align-items-md-start">
 				<div class="img-holder" :style="imgStyle">
 					<picture>
 						<source :srcset="require('@/assets/imgs/' + imgUpMd)" media="(min-width: 768px)" type="image/jpg" />
