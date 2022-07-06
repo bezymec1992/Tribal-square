@@ -154,7 +154,7 @@ export default {
 	padding-top: 10.6rem;
 	padding-bottom: 10rem;
 	color: $white;
-	background: $cloud-burst;
+	background: $tiber;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 5rem;

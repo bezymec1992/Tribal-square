@@ -4,7 +4,8 @@
 			<div class="row align-items-md-end">
 				<div class="col-lg-5">
 					<h2 class="h2">
-						Ready to start <br />
+						Ready to <br class="d-none d-md-block" />
+						start <br class="d-md-none" />
 						right now?
 					</h2>
 					<div class="text-holder d-none d-md-block">
@@ -50,6 +51,7 @@ export default {
 
 	.h2 {
 		margin-bottom: 3.2rem;
+		line-height: 1.1;
 
 		@include media-breakpoint-down(md) {
 			margin-bottom: 3rem;

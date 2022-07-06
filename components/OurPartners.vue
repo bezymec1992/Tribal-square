@@ -78,13 +78,12 @@ export default {
 
 <style lang="scss" scoped>
 .our-partners {
-	padding: 10rem 0;
+	padding: 10rem 0 0 0;
 	background: $white;
 	.our-partners__items {
 		max-width: 116.3rem;
-		border-bottom: 0.1rem solid rgb($black, 0.2);
 		padding-bottom: 7rem;
-		padding-top: 6rem; ///12
+		padding-top: 6rem;
 		@include media-breakpoint-down(md) {
 			padding-top: 3rem;
 			padding-bottom: 1rem;
@@ -119,7 +118,7 @@ export default {
 			margin-top: 3rem;
 			line-height: 1.27;
 			font-size: 22px;
-			font-weight: 400;
+			font-weight: 500;
 		}
 		.our-partners__job {
 			opacity: 0.5;

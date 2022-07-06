@@ -8,7 +8,6 @@
 							Intelligent client engagement — <br />
 							at scale
 						</h1>
-
 						<Button title="About us" class="btn-dark" type="nuxt-link" to="/contact">
 							<template #icon>
 								<svg width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +21,7 @@
 		</Intro-section>
 		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" :button="true" class="style-3" />
 		<InformersSection />
-		<CustomerExperienceSection />
+		<CustomerExperienceSection img="img-021.jpg" bg-color="#09291A" />
 		<OurPartners />
 		<SolutionSection />
 		<ContactSection />

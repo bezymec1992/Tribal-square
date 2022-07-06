@@ -189,5 +189,17 @@ export default {
 			border-color: $black;
 		}
 	}
+
+	&.btn-light {
+		color: $black;
+		background: $white;
+		border-color: $white;
+
+		&:hover {
+			color: $black;
+			background: darken($white, 10);
+			border-color: darken($white, 10);
+		}
+	}
 }
 </style>
