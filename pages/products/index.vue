@@ -25,7 +25,12 @@
 				</div>
 			</div>
 		</div>
-		<CustomerExperienceSection />
+		<CustomerExperienceSection title="The perfect balance" img="img-022.jpg" :btn="{ title: 'About us', to: '/about' }" bg-color="#1C354C">
+			<template #title
+				>The perfect <br />
+				balance</template
+			>
+		</CustomerExperienceSection>
 		<ContactSection />
 	</div>
 </template>

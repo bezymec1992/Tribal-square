@@ -92,7 +92,7 @@ export default {
 
 	@include media-breakpoint-down(md) {
 		max-width: 22rem;
-		padding: 1.55rem 3rem;
+		padding: 1.55rem 2.3rem;
 		font-size: 1.8rem;
 	}
 

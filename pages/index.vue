@@ -21,7 +21,7 @@
 		</Intro-section>
 		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" :button="true" class="style-3" />
 		<InformersSection />
-		<CustomerExperienceSection img="img-021.jpg" bg-color="#09291A" />
+		<CustomerExperienceSection img="img-021.jpg" bg-color="#09291A" :btn="{ title: 'Our labels', to: '/labels' }" />
 		<OurPartners />
 		<SolutionSection />
 		<ContactSection />

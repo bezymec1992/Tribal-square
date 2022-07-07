@@ -10,7 +10,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="solution__picture-wrap">
+		<div class="solution__picture-wrap" v-if="img">
 			<div class="solution__picture d-flex justify-content-center">
 				<Button v-if="button" title="Our labels" class="btn-dark" type="nuxt-link" to="/labels">
 					<template #icon>
@@ -69,7 +69,7 @@ export default {
 	.solution__info {
 		padding-bottom: 70px;
 		@include media-breakpoint-down(lg) {
-			padding-bottom: 40px;
+			padding-bottom: 6rem;
 		}
 		@include media-breakpoint-up(lg) {
 			padding-left: 100px;

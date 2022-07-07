@@ -35,15 +35,6 @@
 					</svg>
 				</template>
 			</Button>
-
-			<Button title="ABOUT" class="btn-warning d-none d-lg-inline-flex" type="nuxt-link" :to="aboutLink">
-				<template #icon>
-					<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-						<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-					</svg>
-				</template>
-			</Button>
 		</div>
 	</div>
 </template>
@@ -84,7 +75,7 @@ export default {
 <style lang="scss" scoped>
 .card {
 	margin-bottom: 2.6rem;
-	padding: 4rem;
+	padding: 4rem 3rem;
 	background: $white;
 	border-radius: 1.2rem;
 	transition: $transition;
@@ -222,20 +213,12 @@ export default {
 	}
 
 	&.style1 {
-		@include media-breakpoint-up(md) {
-			padding: 4rem 3rem;
-		}
-
 		.btn-warning {
 			display: none !important;
 		}
 	}
 
 	&.style2 {
-		@include media-breakpoint-up(md) {
-			padding-bottom: 2.2rem;
-		}
-
 		.card-header {
 			@include media-breakpoint-up(md) {
 				margin-bottom: 3.7rem;
@@ -244,13 +227,13 @@ export default {
 
 		.text-holder {
 			@include media-breakpoint-up(md) {
-				margin-bottom: 2.1rem;
-				padding-bottom: 3.1rem;
+				margin-bottom: 3.2rem;
+				padding-bottom: 3.9rem;
 			}
 		}
 
 		.arrow-holder {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-down(md) {
 				display: none;
 			}
 		}

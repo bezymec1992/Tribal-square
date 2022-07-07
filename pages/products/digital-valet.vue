@@ -16,11 +16,10 @@
 							</div>
 						</div>
 						<div class="col-lg-5 d-md-flex justify-content-end">
-							<Button title="VISIT WEBSITE" class="btn-warning" type="link" href="/">
+							<Button title="Visit website" class="btn-dark" type="link" href="/">
 								<template #icon>
-									<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-										<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+									<svg width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="CurrentColor" />
 									</svg>
 								</template>
 							</Button>
@@ -30,8 +29,8 @@
 			</Intro-section>
 			<div class="product__main-picture d-flex justify-content-center">
 				<picture>
-					<source srcset="@/assets/imgs/product-main-mb.jpg" media="(max-width: 767px)" width="802" height="370" />
-					<img src="@/assets/imgs/product-main.jpg" alt="partners-logo" width="1300" height="600" />
+					<source srcset="@/assets/imgs/img-023.jpg" media="(max-width: 767px)" width="802" height="370" />
+					<img src="@/assets/imgs/img-023.jpg" alt="partners-logo" width="1300" height="600" />
 				</picture>
 			</div>
 		</div>
@@ -75,8 +74,8 @@
 					</div>
 					<div class="location__picture">
 						<picture>
-							<source srcset="@/assets/imgs/location-mb.png" media="(max-width: 1200px)" width="476" height="469" />
-							<img src="@/assets/imgs/location-desk.png" alt="partners-logo" width="609" height="600" />
+							<source srcset="@/assets/imgs/img-026.svg" media="(max-width: 1200px)" width="476" height="469" />
+							<img src="@/assets/imgs/img-025.svg" alt="partners-logo" width="609" height="600" />
 						</picture>
 					</div>
 				</div>
@@ -93,7 +92,7 @@
 			<div class="additional__picture">
 				<div class="content-holder">
 					<h2 class="h2 additional__picture-title">Transform your customer experience</h2>
-					<Button title="VISIT WEBSITE" class="btn-warning" type="link" href="/">
+					<Button title="VISIT WEBSITE" class="btn-light" type="link" href="/">
 						<template #icon>
 							<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
@@ -104,8 +103,8 @@
 				</div>
 				<div class="img-holder">
 					<picture>
-						<source srcset="@/assets/imgs/additional-mb.jpg" media="(max-width: 767px)" width="1117" height="600" />
-						<img src="@/assets/imgs/aditional-desk.jpg" alt="partners-logo" width="1348" height="728" />
+						<source srcset="@/assets/imgs/img-027.jpg" media="(max-width: 767px)" width="1117" height="600" />
+						<img src="@/assets/imgs/img-027.jpg" alt="partners-logo" width="1348" height="728" />
 					</picture>
 				</div>
 			</div>
@@ -118,8 +117,8 @@
 						<h2 class="h2 more__title">Discover more our Products</h2>
 					</div>
 					<div class="more__items">
-						<div v-for="card in cards" :key="card.id" class="card">
-							<Discover :title="card.title" :text="card.text" :img="card.img" />
+						<div v-for="item in productsList" :key="item.id" class="card">
+							<Discover :title="item.title" :text="item.category" :img="item.img" :route="item.aboutLink" />
 						</div>
 					</div>
 				</div>
@@ -136,6 +135,7 @@ import Button from "@/components/Button";
 import ContactSection from "@/components/ContactSection";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SectionTwoTextCols from "@/components/SectionTwoTextCols";
+import Products from "@/constants/products";
 
 export default {
 	components: {
@@ -148,13 +148,11 @@ export default {
 	},
 	data() {
 		return {
-			cards: [
-				{ id: 1, title: "Platform & App", text: "Knock Knock", img: "more-1.jpg" },
-				{ id: 2, title: "App", text: "Coffee App", img: "more-2.jpg" },
-				{ id: 3, title: "Platform", text: "HandsRepublic", img: "more-3.jpg" },
-				{ id: 4, title: "Platform & App", text: "Knock Knock", img: "more-1.jpg" }
-			]
+			productsList: []
 		};
+	},
+	mounted() {
+		this.productsList = Products.slice(0, 4);
 	}
 };
 </script>
@@ -165,10 +163,10 @@ export default {
 	overflow: hidden;
 
 	.intro-section {
-		padding-top: 6rem;
+		padding-top: 16rem;
 
 		@include media-breakpoint-down(md) {
-			padding-top: 3rem;
+			padding-top: 10rem;
 		}
 
 		.breadcrumbs {
@@ -177,6 +175,10 @@ export default {
 			@include media-breakpoint-down(md) {
 				margin-bottom: 5.6rem;
 			}
+		}
+
+		.btn {
+			transform: translateY(50%);
 		}
 	}
 
@@ -317,14 +319,15 @@ export default {
 
 	.location {
 		overflow: hidden;
-		background: #eef3f5;
+		color: $white;
+		background: $astronaut-blue;
 		max-width: 1240px;
-		height: 600px;
+		min-height: 600px;
 		margin: 0 auto;
 		position: relative;
 		margin-bottom: 100px;
 		@include media-breakpoint-down(xl) {
-			height: 832px;
+			min-height: 832px;
 			.laction__wrapper {
 				flex-direction: column;
 				align-items: center;
@@ -351,16 +354,15 @@ export default {
 				font-size: 22px;
 				line-height: 24px;
 				text-transform: uppercase;
-				color: #500ac9;
 			}
 			.location__text {
 				font-size: 18px;
 				line-height: 32px;
 			}
 			.location__title {
-				padding-bottom: 30px;
+				margin-bottom: 20px;
 				padding-top: 20px;
-				font-size: 34px;
+				font-size: 50px;
 				@include media-breakpoint-down(md) {
 					font-size: 24px;
 				}
@@ -376,6 +378,11 @@ export default {
 	.additional {
 		overflow: hidden;
 		padding-bottom: 120px;
+
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 7.2rem;
+		}
+
 		.additional__info {
 			max-width: 752px;
 			margin: 0 auto;
@@ -410,9 +417,9 @@ export default {
 		}
 
 		.additional__picture-title {
-			max-width: 562px;
-			margin-bottom: 7rem;
-			font-size: 4.8rem;
+			max-width: 60rem;
+			margin-bottom: 6rem;
+			font-size: 5.4rem;
 			text-align: center;
 			@include media-breakpoint-down(lg) {
 				margin-bottom: 8rem;
@@ -452,6 +459,11 @@ export default {
 
 	.more {
 		padding-bottom: 120px;
+
+		@include media-breakpoint-down(md) {
+			padding-bottom: 8rem;
+		}
+
 		.more__wrapper {
 			@include media-breakpoint-down(lg) {
 				flex-direction: column;
@@ -465,9 +477,6 @@ export default {
 				width: 550px;
 				max-width: 100%;
 				.more__title {
-					width: 300px;
-					max-width: 100%;
-
 					@include media-breakpoint-down(md) {
 						width: 211px;
 					}

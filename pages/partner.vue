@@ -18,14 +18,14 @@
 							</picture>
 						</div>
 						<div class="buttons">
-							<Button title="FIND A PATNER" class="btn-primary" type="button" @click="openModal('modalPartner', 'Find a partner')" />
-							<Button title="PARTNER WITH US" class="btn-outline-primary" type="button" @click="openModal('modalPartner', 'Partner with us')" />
+							<Button title="Find a Partner" class="btn-dark" type="button" @click="openModal('modalPartner', 'Find a partner')" />
+							<Button title="Partner with us" class="btn-outline-dark" type="button" @click="openModal('modalPartner', 'Partner with us')" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</Intro-section>
-		<OurPartners :people-is-show="false" />
+		<OurPartners :people-is-show="false" class="cp-border-bottom" />
 		<div class="customer-ingagement">
 			<div class="container">
 				<h2 class="customer-ingagement__block-title h3 text-left text-md-center">Accelerate customer engagement initiatives with confidence</h2>

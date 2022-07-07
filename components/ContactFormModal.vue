@@ -21,7 +21,7 @@
 				</div>
 			</div>
 			<Input v-model="form.message" placeholder="Type your message" label="Your message" input-type="textarea" :error-showing="$v.form.message.$error" />
-			<Button type="button" title="Send" class="btn-primary" @click="submitForm" />
+			<Button type="button" title="Send" class="btn-dark" @click="submitForm" />
 		</form>
 		<modal ref="modal">
 			<template #modal-body>

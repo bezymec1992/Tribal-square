@@ -78,17 +78,17 @@ export default {
 					},
 					{
 						title: "About",
-						to: "/"
+						to: "/about"
 					},
 					{
 						title: "Contact",
-						to: "/"
+						to: "/contact"
 					}
 				],
 				[
 					{
 						title: "Products",
-						to: "/"
+						to: "/products"
 					},
 					{
 						title: "Knock Knock",
@@ -100,7 +100,7 @@ export default {
 					},
 					{
 						title: "Digital Valet",
-						to: "/"
+						to: "/products/digital-valet"
 					},
 					{
 						title: "HandsRepublic",
@@ -110,7 +110,7 @@ export default {
 				[
 					{
 						title: "Lables",
-						to: "/"
+						to: "/labels"
 					},
 					{
 						title: "TribalHands",
@@ -122,7 +122,7 @@ export default {
 					},
 					{
 						title: "Powwows",
-						to: "/"
+						to: "/labels/Powwows"
 					},
 					{
 						title: "Tribal Cyber",

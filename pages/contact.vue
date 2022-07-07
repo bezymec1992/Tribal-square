@@ -21,6 +21,9 @@
 				</div>
 			</div>
 		</div>
+		<span class="ellipse ellipse-1"></span>
+		<span class="ellipse ellipse-2"></span>
+		<span class="ellipse ellipse-3"></span>
 	</div>
 </template>
 
@@ -34,21 +37,65 @@ export default {
 		ContactForm,
 		SocialLinks
 	},
-	layout: "without-footer"
+	layout: "without-footer",
+	head() {
+		return {
+			bodyAttrs: {
+				class: "header-white"
+			}
+		};
+	}
 };
 </script>
 
 <style lang="scss" scoped>
 .contact-page {
+	position: relative;
 	padding-top: 16rem;
 	padding-bottom: 9rem;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
-	background-color: $purple;
+	background: $matisse;
+	overflow: hidden;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 4rem;
 		padding-bottom: 4.3rem;
+	}
+
+	.ellipse {
+		position: absolute;
+		border-radius: 50%;
+
+		&.ellipse-1 {
+			top: -10%;
+			left: -50%;
+			width: 160rem;
+			height: 160rem;
+			background: radial-gradient(50% 50% at 50% 50%, #005570 0%, rgba(0, 85, 112, 0) 100%);
+		}
+
+		&.ellipse-2 {
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			width: 108.9rem;
+			height: 108.9rem;
+			background: radial-gradient(50% 50% at 50% 50%, #005570 0%, rgba(0, 85, 112, 0) 100%);
+		}
+
+		&.ellipse-3 {
+			top: -50%;
+			right: -40%;
+			width: 126.2rem;
+			height: 117.6rem;
+			background: radial-gradient(50% 50% at 50% 50%, #1f98be 0%, rgba(31, 152, 190, 0) 100%);
+		}
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
 	}
 
 	&__title {

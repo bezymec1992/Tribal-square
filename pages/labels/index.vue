@@ -4,7 +4,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8">
-						<h1 class="h1">Easy to find and use what you need</h1>
+						<h1 class="h1">
+							Easy to find and <br />
+							use what you need
+						</h1>
 						<div class="text-holder">
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean <br class="d-none d-md-block" />
@@ -15,28 +18,27 @@
 				</div>
 			</div>
 		</Intro-section>
+		<Solutions class="pb-0 style-2" title="We provide solutions that help your business grow" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege." />
 		<div class="labels-section">
 			<div class="container">
-				<h2 class="h2">Our solutions for all your needs</h2>
 				<SliderLabels />
 			</div>
 		</div>
 		<SolutionSection />
-		<ContactSection />
 	</div>
 </template>
 
 <script>
 import IntroSection from "@/components/IntroSection";
 import SolutionSection from "@/components/SolutionSection";
-import ContactSection from "@/components/ContactSection";
+import Solutions from "@/components/Solutions";
 
 export default {
 	name: "Labels",
 	components: {
 		IntroSection,
-		ContactSection,
-		SolutionSection
+		SolutionSection,
+		Solutions
 	}
 };
 </script>
@@ -50,16 +52,12 @@ export default {
 	}
 
 	.labels-section {
-		padding-top: 8rem;
+		padding-top: 4rem;
+		padding-bottom: 8rem;
 
 		@include media-breakpoint-down(md) {
-			padding-top: 7.7rem;
+			padding-top: 4rem;
 			padding-bottom: 4rem;
-		}
-
-		.h2 {
-			margin-bottom: 4rem;
-			text-align: center;
 		}
 	}
 }

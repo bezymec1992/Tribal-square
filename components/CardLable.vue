@@ -23,11 +23,10 @@
 							</ul>
 						</div>
 					</div>
-					<Button v-if="cardStyle === 'style2'" title="DISCOVER MORE" class="d-none d-md-inline-flex" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor">
+					<Button v-if="cardStyle === 'style2'" title="Discover more" class="d-none d-md-inline-flex" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor">
 						<template #icon>
-							<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-								<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
+							<svg width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="CurrentColor" />
 							</svg>
 						</template>
 					</Button>
@@ -43,7 +42,13 @@
 
 				<Button v-if="cardStyle === 'style1'" title="WEBSITE" class="btn-link" type="link" :to="websiteLink" />
 
-				<Button v-if="cardStyle === 'style2'" title="DISCOVER MORE" class="d-md-none" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor" />
+				<Button v-if="cardStyle === 'style2'" title="Discover more" class="d-md-none" type="nuxt-link" :to="nuxtLink" :color="btnColor" :background-color="btnBackgroundColor">
+					<template #icon>
+						<svg width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="CurrentColor" />
+						</svg>
+					</template>
+				</Button>
 			</div>
 		</div>
 	</div>
@@ -356,7 +361,7 @@ export default {
 				position: absolute;
 				left: 2.6rem;
 				bottom: 3rem;
-				width: calc(100% - 5.2rem);
+				max-width: calc(100% - 5.2rem);
 			}
 		}
 	}

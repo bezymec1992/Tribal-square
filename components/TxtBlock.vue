@@ -55,7 +55,7 @@ export default {
 	.btn {
 		@include media-breakpoint-down(sm) {
 			display: flex;
-			width: 100%;
+			max-width: 100%;
 		}
 	}
 

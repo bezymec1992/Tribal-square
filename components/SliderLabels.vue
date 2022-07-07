@@ -11,15 +11,8 @@
 			<CardLable v-for="(item, index) in sliceLabelsArray" :key="index" class="style2" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" card-color="white" :card-background-color="item.cardBackgroundColor" :btn-color="item.btnColor" :btn-background-color="item.btnBackgroundColor" :card-style="item.cardStyle" :img-style-up-md="item.imgStyleUpMd" :img-style-down-md="item.imgStyleDownMd" :img-up-md="item.imgUpMd" :img-down-md="item.imgDownMd" :nuxt-link="item.nuxtLink" />
 
 			<template v-if="limitLabelsMobile">
-				<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
-					<Button title="VIEW ALL" class="btn-link pt-3" type="nuxt-link" to="/labels">
-						<template #icon>
-							<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-								<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-							</svg>
-						</template>
-					</Button>
+				<div class="col-12 d-flex justify-content-center d-md-none col-w-btn pt-3">
+					<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/labels" />
 				</div>
 			</template>
 		</div>

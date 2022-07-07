@@ -8,16 +8,39 @@
 						<p class="main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet</p>
 					</div>
 					<div class="main__picture">
-						<picture>
+						<!-- <picture>
 							<source srcset="../assets/imgs/about-main-mb.png" media="(max-width: 767px)" width="357" height="369" />
 							<img src="../assets/imgs/about-main.png" alt="partners-logo" width="427" height="543" />
-						</picture>
+						</picture> -->
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" class="style-2" />
+		<Solutions :title="info.title" :text="info.text" class="solution-first style-2" />
+
+		<div class="after-solution-section">
+			<div class="container">
+				<div class="inner-holder">
+					<div class="row g-0">
+						<div class="col-md-6">
+							<!-- <div class="img-holder">
+							<img src="" alt="We can add a cool slogan here" />
+						</div> -->
+						</div>
+						<div class="col-md-6">
+							<div class="content-holder">
+								<h2 class="h2">
+									We can add a <br />
+									cool slogan <br />
+									here
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="accelerate">
 			<div class="container">
@@ -25,19 +48,22 @@
 				<div class="accelerate__items d-flex flex-column flex-lg-row justify-content-around align-items-center">
 					<div class="accelerate__item d-flex flex-column align-items-center">
 						<picture class="accelerate__picture">
-							<source srcset="../assets/imgs/accelerate1-mb.png" media="(max-width: 767px)" width="408" height="360" />
-							<img src="../assets/imgs/accelerate1-desk.png" alt="partners-logo" width="437" height="365" />
+							<source srcset="@/assets/imgs/img-028.png" media="(max-width: 767px)" width="408" height="360" />
+							<img src="@/assets/imgs/img-028.png" alt="partners-logo" width="437" height="365" />
 						</picture>
-						<span class="accelerate__span"> Consultancy Partners </span>
+						<span class="accelerate__span">Consultancy Partners </span>
 						<p class="accelerate__text">Global execution and delivery of your technology strategy.</p>
 					</div>
 					<div class="accelerate__item d-flex flex-column align-items-center">
 						<picture class="accelerate__picture">
-							<source srcset="../assets/imgs/accelerate2-mb.png" media="(max-width: 767px)" width="409" height="360" />
-							<img src="../assets/imgs/accelerate2-desk.png" alt="partners-logo" width="437" height="365" />
+							<source srcset="@/assets/imgs/img-029.png" media="(max-width: 767px)" width="409" height="360" />
+							<img src="@/assets/imgs/img-029.png" alt="partners-logo" width="437" height="365" />
 						</picture>
 						<span class="accelerate__span"> Technology partners </span>
-						<p class="accelerate__text">Develop applications on a reliable, scalable platform.</p>
+						<p class="accelerate__text">
+							Develop applications on a <br />
+							reliable, scalable platform.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -51,35 +77,21 @@
 				</div>
 				<div class="healp__title-wrapp2 d-flex justify-content-between">
 					<h2 class="h2">Discover our Products</h2>
-					<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/products">
-						<template #icon>
-							<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-								<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-							</svg>
-						</template>
-					</Button>
+					<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/products" />
 				</div>
 				<div class="row">
-					<div v-for="card in cards" :key="card.id" class="col-md-6">
-						<Card :title="card.title" :category="card.category" :img="card.img" class="style2" />
+					<div v-for="item in productsList" :key="item.id" class="col-md-6">
+						<Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" />
 					</div>
-					<div class="col-12 d-flex justify-content-center">
-						<Button title="VIEW ALL" class="btn-link d-md-none" type="nuxt-link" to="/products">
-							<template #icon>
-								<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M15 0V14H0" stroke="CurrentColor" stroke-width="1.5" />
-									<path d="M15 14L1 0.93335" stroke="CurrentColor" stroke-width="1.5" />
-								</svg>
-							</template>
-						</Button>
+					<div class="col-12 d-flex justify-content-center pt-3">
+						<Button title="VIEW ALL" class="btn-link d-md-none" type="nuxt-link" to="/products" />
 					</div>
 				</div>
 
 				<div class="healp__title-wrapp3">
 					<h2 class="h2">Companies Overview</h2>
 				</div>
-				<SliderLabels limit-labels-mobile="2" />
+				<SliderLabels :limit-labels-mobile="2" />
 			</div>
 		</div>
 
@@ -90,8 +102,8 @@
 						<h2 class="h2">Better together</h2>
 						<p class="toghether__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet</p>
 						<div class="buttons d-none d-md-flex">
-							<Button title="FIND A PATNER" class="btn-primary" type="button" @click="openModal('modalPartner', 'Find a partner')" />
-							<Button title="partner with us" class="btn-outline-primary" type="button" @click="openModal('modalPartner', 'Partner with us')" />
+							<Button title="Find a partner" class="btn-dark" type="button" @click="openModal('modalPartner', 'Find a partner')" />
+							<Button title="Partner with us" class="btn-outline-dark" type="button" @click="openModal('modalPartner', 'Partner with us')" />
 						</div>
 					</div>
 					<div class="toghether__imgs d-flex justify-content-around flex-wrap">
@@ -117,8 +129,8 @@
 						</picture>
 					</div>
 					<div class="buttons d-md-none">
-						<Button title="FIND A PATNER" class="btn-primary" type="button" />
-						<Button title="partner with us" class="btn-outline-primary" type="button" />
+						<Button title="Find a partner" class="btn-dark" type="button" @click="openModal('modalPartner', 'Find a partner')" />
+						<Button title="Partner with us" class="btn-outline-dark" type="button" @click="openModal('modalPartner', 'Partner with us')" />
 					</div>
 				</div>
 			</div>
@@ -145,6 +157,7 @@ import SolutionSection from "@/components/SolutionSection";
 import SliderLabels from "@/components/SliderLabels";
 import ContactFormModal from "@/components/ContactFormModal";
 import Modal from "@/components/Modal";
+import Products from "@/constants/products";
 
 export default {
 	components: {
@@ -165,11 +178,18 @@ export default {
 				img: "solution-about-desk.jpg",
 				imgMob: "solution-about-mb.jpg"
 			},
-			cards: [
-				{ id: 1, title: "Knock Knock", category: "Platform & App", img: "more-1.jpg" },
-				{ id: 2, title: "Coffee App", category: "App", img: "more-2.jpg" }
-			]
+			productsList: []
 		};
+	},
+	head() {
+		return {
+			bodyAttrs: {
+				class: "header-white"
+			}
+		};
+	},
+	mounted() {
+		this.productsList = Products.slice(0, 2);
 	},
 	methods: {
 		openModal(modalName, modalType) {
@@ -185,11 +205,18 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-	padding-top: 2.7rem;
+	padding-top: 14.7rem;
+	color: $white;
+	background: #009656;
 
 	@include media-breakpoint-down(lg) {
-		padding-top: 11rem;
+		padding-top: 13rem;
 	}
+
+	&__wrapper {
+		min-height: 70vh;
+	}
+
 	.main__title {
 		max-width: 73.1rem;
 		margin-bottom: 4rem;
@@ -211,8 +238,57 @@ export default {
 		}
 	}
 }
-.solution {
-	background: white;
+
+.solution-first {
+	padding-bottom: 0;
+	background: $white;
+}
+
+.after-solution-section {
+	padding-bottom: 12rem;
+	color: $white;
+	background: $white;
+
+	@include media-breakpoint-down(md) {
+		padding-bottom: 8rem;
+	}
+
+	.container {
+		max-width: 134rem;
+
+		@include media-breakpoint-down(md) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.inner-holder {
+		background: #b7a38f;
+	}
+
+	.content-holder {
+		display: flex;
+		align-items: center;
+		min-height: 60rem;
+
+		@include media-breakpoint-up(md) {
+			justify-content: center;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding-left: 4rem;
+			padding-right: 4rem;
+		}
+	}
+
+	.h2 {
+		font-size: 6.4rem;
+		line-height: 1.2;
+
+		@include media-breakpoint-down(md) {
+			font-size: 4rem;
+		}
+	}
 }
 
 .accelerate {
@@ -220,10 +296,10 @@ export default {
 	background: white;
 	padding-bottom: 13.6rem;
 	@include media-breakpoint-down(md) {
-		padding-bottom: 10rem;
+		padding-bottom: 8rem;
 	}
 	.accelerate__title {
-		max-width: 85.4rem;
+		max-width: 86.4rem;
 		text-align: center;
 		margin: 0 auto 5.2rem auto;
 		@include media-breakpoint-down(md) {
@@ -234,7 +310,7 @@ export default {
 	.accelerate__picture {
 		@include media-breakpoint-down(md) {
 			position: relative;
-			left: 3rem;
+			left: 2rem;
 			top: 0;
 		}
 	}
@@ -255,7 +331,7 @@ export default {
 		line-height: 1.09;
 		text-align: center;
 		text-transform: uppercase;
-		color: #500ac9;
+		color: rgba($black, 0.3);
 		margin-bottom: 2rem;
 		margin-top: 4.3rem;
 		@include media-breakpoint-down(md) {
@@ -359,7 +435,7 @@ export default {
 
 		.btn {
 			@include media-breakpoint-down(sm) {
-				width: 100%;
+				max-width: 100%;
 			}
 
 			&:first-child {
