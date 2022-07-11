@@ -12,7 +12,7 @@
 						<h2 class="solution__title">
 							We provide <br class="d-none d-md-block" />
 							solutions <br class="d-md-none" />
-							that help your business grow
+							that help <br class="d-none d-md-block" />your business grow
 						</h2>
 						<p class="solution__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.</p>
 					</div>
@@ -81,6 +81,12 @@ export default {
 		z-index: 2;
 	}
 
+	&__body {
+		@include media-breakpoint-up(lg) {
+			max-width: 52rem;
+		}
+	}
+
 	&__title {
 		font-size: 2.8rem;
 		line-height: 1.42;
@@ -105,6 +111,10 @@ export default {
 	}
 
 	.img-holder {
+		@include media-breakpoint-up(lg) {
+			margin-left: -5.8rem;
+		}
+
 		@include media-breakpoint-down(md) {
 			margin-right: -9rem;
 		}

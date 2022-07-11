@@ -1,17 +1,23 @@
 <template>
 	<div class="about">
-		<div class="main">
+		<div class="first-section">
 			<div class="container">
-				<div class="main__wrapper d-flex flex-column flex-lg-row align-items-center justify-content-lg-between">
-					<div class="about__info">
-						<h1 class="h1 main__title">Everything you need to know about us</h1>
-						<p class="main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet</p>
-					</div>
-					<div class="main__picture">
-						<!-- <picture>
-							<source srcset="../assets/imgs/about-main-mb.png" media="(max-width: 767px)" width="357" height="369" />
-							<img src="../assets/imgs/about-main.png" alt="partners-logo" width="427" height="543" />
-						</picture> -->
+				<div class="first-section__wrapper">
+					<div class="row align-items-lg-center">
+						<div class="col-lg-7">
+							<div class="about__info">
+								<h1 class="h1 first-section__title">
+									Everything you need <br class="d-none d-md-block" />
+									to know about us
+								</h1>
+								<p class="first-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet</p>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="img-holder">
+								<img src="@/assets/imgs/img-033.png" alt="Everything you need to know about us" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -204,27 +210,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
+.first-section {
 	padding-top: 14.7rem;
 	color: $white;
-	background: #009656;
+	background: url("@/assets/imgs/img-032.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	@include media-breakpoint-down(lg) {
 		padding-top: 13rem;
 	}
 
-	&__wrapper {
+	@include media-breakpoint-up(lg) {
+		padding-bottom: 6.4rem;
+	}
+
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 3.9rem;
+		background: url("@/assets/imgs/img-034.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.row {
 		min-height: 70vh;
 	}
 
-	.main__title {
+	.first-section__title {
 		max-width: 73.1rem;
 		margin-bottom: 4rem;
 		@include media-breakpoint-down(md) {
 			max-width: 33.5rem;
 		}
 	}
-	.main__text {
+	.first-section__text {
 		max-width: 55rem;
 		font-size: 2.2rem;
 		line-height: 1.8;
@@ -235,6 +254,32 @@ export default {
 			max-width: 33.5rem;
 			font-size: 1.8rem;
 			line-height: 1.6;
+		}
+	}
+
+	.about__info {
+		position: relative;
+		z-index: 2;
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+
+	.img-holder {
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: 50%;
+			max-width: 65.4rem;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 }

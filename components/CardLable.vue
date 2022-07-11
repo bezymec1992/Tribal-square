@@ -316,6 +316,11 @@ export default {
 			padding: 4rem 2rem;
 		}
 
+		@include media-breakpoint-up(lg) {
+			min-height: 64rem;
+			max-height: 64rem;
+		}
+
 		ul {
 			@include media-breakpoint-up(md) {
 				margin-bottom: 5.2rem;

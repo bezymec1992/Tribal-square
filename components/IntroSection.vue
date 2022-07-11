@@ -16,7 +16,7 @@ export default {
 	padding-bottom: 17.8rem;
 
 	@include media-breakpoint-down(md) {
-		padding-top: 17rem;
+		padding-top: 13rem;
 		padding-bottom: 6.2rem;
 	}
 

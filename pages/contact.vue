@@ -85,8 +85,8 @@ export default {
 		}
 
 		&.ellipse-3 {
-			top: -50%;
-			right: -40%;
+			top: -46%;
+			right: -25%;
 			width: 126.2rem;
 			height: 117.6rem;
 			background: radial-gradient(50% 50% at 50% 50%, #1f98be 0%, rgba(31, 152, 190, 0) 100%);
