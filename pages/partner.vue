@@ -153,6 +153,7 @@ export default {
 			.btn {
 				@include media-breakpoint-down(sm) {
 					width: 100%;
+					max-width: 100%;
 				}
 
 				&:first-child {
