@@ -4,14 +4,17 @@
 			<div class="row align-items-md-center">
 				<div class="col-lg-6">
 					<h2 class="h2 d-lg-none"><slot name="title" /></h2>
-					<div class="text-holder d-lg-none">
+					<div class="text-holder d-lg-none first">
 						<p>{{ text[0] }}</p>
 					</div>
-					<div class="img-holder">
-						<picture>
+					<div class="video-holder">
+						<!-- <picture>
 							<source v-if="img.mobile" :srcset="require(`@/assets/imgs/${img.mobile}`)" media="(max-width: 575px)" />
 							<img :src="require(`@/assets/imgs/${img.desktop}`)" :alt="img.alt" />
-						</picture>
+						</picture> -->
+						<video muted autoplay loop>
+							<source src="@/assets/videos/video-01.mp4" type="video/mp4" />
+						</video>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -37,10 +40,10 @@
 export default {
 	name: "SectionBlock",
 	props: {
-		img: {
-			type: Object,
-			default: () => ({})
-		},
+		// img: {
+		// 	type: Object,
+		// 	default: () => ({})
+		// },
 		text: {
 			type: Array,
 			default: () => []
@@ -76,7 +79,14 @@ export default {
 		}
 	}
 
-	.img-holder {
+	.video-holder {
+		position: relative;
+		min-height: 58rem;
+
+		@include media-breakpoint-down(sm) {
+			min-height: 40rem;
+		}
+
 		@include media-breakpoint-up(xxl) {
 			margin-left: -3.5rem;
 		}
@@ -86,13 +96,16 @@ export default {
 		}
 
 		@include media-breakpoint-down(lg) {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
+			margin-bottom: 3rem;
 		}
 
-		img {
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			height: auto;
+			height: 100%;
+			object-fit: cover;
 			border-radius: 1rem;
 		}
 	}
@@ -118,6 +131,10 @@ export default {
 					margin-bottom: 4rem;
 				}
 			}
+		}
+
+		&.first {
+			margin-bottom: 3rem;
 		}
 	}
 }
