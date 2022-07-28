@@ -113,6 +113,7 @@ export default {
 			modalType: ""
 		};
 	},
+
 	methods: {
 		openModal(modalName, modalType) {
 			this.$refs[modalName].handleOpen();

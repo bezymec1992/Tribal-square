@@ -59,7 +59,7 @@ export default {
 	overflow: hidden;
 
 	@include media-breakpoint-down(md) {
-		padding-top: 4rem;
+		padding-top: 10rem;
 		padding-bottom: 4.3rem;
 	}
 

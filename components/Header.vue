@@ -220,7 +220,11 @@ export default {
 	padding-top: 2.4rem;
 	padding-bottom: 2.4rem;
 	border-bottom: solid 0.1rem rgba($black, 0.2);
-	z-index: 10;
+	z-index: 1;
+
+	.menu-opened & {
+		z-index: 100;
+	}
 
 	@include media-breakpoint-down(md) {
 		padding-top: 1.45rem;
@@ -246,8 +250,6 @@ export default {
 	}
 
 	.main-nav {
-		transition: $transition;
-
 		@include media-breakpoint-down(lg) {
 			position: fixed;
 			top: 9.6rem;
@@ -264,6 +266,7 @@ export default {
 			pointer-events: none;
 			z-index: 99;
 			overflow: auto;
+			transition: $transition;
 		}
 
 		@include media-breakpoint-down(md) {

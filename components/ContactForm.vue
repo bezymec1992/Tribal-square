@@ -7,9 +7,9 @@
 
 			<div class="radios">
 				<div class="radios-row">
-					<RadioInput v-model="form.type" :input-value="'Find a partner'" :label="'Find a partner'" />
-					<RadioInput v-model="form.type" :input-value="'Partner with us'" :label="'Partner with us'" />
-					<RadioInput v-model="form.type" :input-value="'Other'" :label="'Other'" />
+					<RadioInput v-model="form.type" :input-value="'FIND_A_PARTNER'" :label="'Find a partner'" />
+					<RadioInput v-model="form.type" :input-value="'PARTNER_WITH_US'" :label="'Partner with us'" />
+					<RadioInput v-model="form.type" :input-value="'OTHER'" :label="'Other'" />
 				</div>
 
 				<span v-if="$v.form.type.$error" class="error-message">Requred filed</span>
@@ -105,12 +105,37 @@ export default {
 				this.form[Vmodel] = x.substring(0, 100);
 			}
 		},
-		submitForm() {
+		async submitForm() {
 			this.$v.form.$touch();
 
 			if (this.$v.form.$invalid) {
 				return console.log("some erorr");
 			} else {
+				const url = this.$config.apiURL + "/contact-form";
+				const formData = {
+					name: this.form.name,
+					email: this.form.email,
+					text: this.form.message,
+					type: this.form.type
+				};
+
+				try {
+					this.requestDataSet("success", "has been sent");
+					this.openModal();
+
+					const response = await fetch(url, {
+						headers: {
+							"Content-Type": "application/json"
+						},
+						method: "POST",
+						body: JSON.stringify(formData)
+					});
+					await response.json();
+					console.log("form success");
+				} catch (error) {
+					console.error("error", error);
+				}
+
 				console.log("form success");
 				this.requestDataSet("success", "has been sent");
 				this.openModal();

@@ -35,7 +35,7 @@
 
 		<SectionTwoTextCols first-title="About the label" :first-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" :second-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" />
 
-		<SectionImg :img="{ desktop: 'img-038.jpg', mobile: 'img-039.jpg', alt: 'TribalDen img' }" />
+		<SectionImg :img="{ desktop: 'img-061.jpg', mobile: 'img-062.jpg', alt: 'TribalDen img' }" />
 
 		<TextBlock title="What do we do at core" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']" />
 
@@ -62,12 +62,12 @@
 			</template>
 		</SectionInfoBlock>
 
-		<SectionBlock :img="{ desktop: 'img-042.jpg', mobile: 'img-043.jpg', alt: 'Where can you find us?' }" :text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet.', 'Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']">
+		<!-- <SectionBlock :img="{ desktop: 'img-042.jpg', mobile: 'img-043.jpg', alt: 'Where can you find us?' }" :text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet.', 'Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']">
 			<template #title>
 				Where can you <br />
 				find us?
 			</template>
-		</SectionBlock>
+		</SectionBlock> -->
 
 		<SectionSlogan>
 			<template #title>
@@ -88,7 +88,7 @@ import TextBlock from "@/components/LabelPage/TextBlock";
 import HowItWork from "@/components/LabelPage/HowItWork";
 import SectionImg from "@/components/LabelPage/SectionImg";
 import SectionInfoBlock from "@/components/LabelPage/SectionInfoBlock";
-import SectionBlock from "@/components/LabelPage/SectionBlock";
+// import SectionBlock from "@/components/LabelPage/SectionBlock";
 import SectionSlogan from "@/components/LabelPage/SectionSlogan";
 
 export default {
@@ -101,7 +101,7 @@ export default {
 		SectionInfoBlock,
 		HowItWork,
 		SectionImg,
-		SectionBlock,
+		// SectionBlock,
 		SectionSlogan
 	}
 	// head() {

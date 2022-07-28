@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-7 col-lg-7">
 				<div class="content-holder">
-					<div class="svg-title">
+					<div class="svg-title" :style="titleStyle">
 						<img :src="require(`@/assets/imgs/${svgTitle}`)" :alt="title" class="svg-html" />
 					</div>
 					<div class="text-holder">
@@ -124,6 +124,14 @@ export default {
 		imgStyleDownMd: {
 			type: String,
 			default: ""
+		},
+		titleStyleUpMd: {
+			type: String,
+			default: ""
+		},
+		titleStyleDownMd: {
+			type: String,
+			default: ""
 		}
 	},
 	data() {
@@ -140,6 +148,13 @@ export default {
 				return this.imgStyleUpMd;
 			} else {
 				return this.imgStyleDownMd;
+			}
+		},
+		titleStyle() {
+			if (this.up_md) {
+				return this.titleStyleUpMd;
+			} else {
+				return this.titleStyleDownMd;
 			}
 		}
 	},
@@ -342,6 +357,10 @@ export default {
 		.text-holder {
 			margin-bottom: 5rem;
 			padding-bottom: 5rem;
+
+			@include media-breakpoint-up(md) {
+				max-width: 45rem;
+			}
 
 			@include media-breakpoint-down(md) {
 				margin-bottom: 2.4rem;

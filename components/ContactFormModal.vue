@@ -2,6 +2,7 @@
 	<div class="modal-contact-form">
 		<form @submit.prevent>
 			<h3>{{ modalType }}</h3>
+
 			<div class="text">
 				<p>Write us a we will contact you as soon as possible</p>
 			</div>
@@ -72,7 +73,7 @@ export default {
 				name: "",
 				email: "",
 				message: "",
-				type: this.ModalType
+				type: ""
 			},
 			request: {
 				loading: true,
@@ -90,6 +91,7 @@ export default {
 			}
 		};
 	},
+
 	methods: {
 		formatInput(Vmodel) {
 			if (Vmodel === "name") {
@@ -100,12 +102,37 @@ export default {
 				this.form[Vmodel] = x.substring(0, 100);
 			}
 		},
-		submitForm() {
+		async submitForm() {
 			this.$v.form.$touch();
 
 			if (this.$v.form.$invalid) {
 				return console.log("some erorr");
 			} else {
+				const url = this.$config.apiURL + "/contact-form";
+				const formData = {
+					name: this.form.name,
+					email: this.form.email,
+					text: this.form.message,
+					type: this.modalType.toUpperCase().replace(/\s/g, "_")
+				};
+
+				try {
+					this.requestDataSet("success", "has been sent");
+					this.openModal();
+
+					const response = await fetch(url, {
+						headers: {
+							"Content-Type": "application/json"
+						},
+						method: "POST",
+						body: JSON.stringify(formData)
+					});
+					await response.json();
+					console.log("form success");
+				} catch (error) {
+					console.error("error", error);
+				}
+
 				console.log("form success");
 				this.requestDataSet("success", "has been sent");
 				this.openModal();
