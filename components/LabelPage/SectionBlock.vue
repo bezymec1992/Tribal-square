@@ -12,8 +12,8 @@
 							<source v-if="img.mobile" :srcset="require(`@/assets/imgs/${img.mobile}`)" media="(max-width: 575px)" />
 							<img :src="require(`@/assets/imgs/${img.desktop}`)" :alt="img.alt" />
 						</picture> -->
-						<video muted autoplay loop>
-							<source src="@/assets/videos/video-01.mp4" type="video/mp4" />
+						<video v-if="video" muted autoplay loop>
+							<source :src="require(`@/assets/videos/${video}`)" type="video/mp4" />
 						</video>
 					</div>
 				</div>
@@ -44,6 +44,10 @@ export default {
 		// 	type: Object,
 		// 	default: () => ({})
 		// },
+		video: {
+			type: String,
+			default: ""
+		},
 		text: {
 			type: Array,
 			default: () => []

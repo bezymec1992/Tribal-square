@@ -85,7 +85,7 @@
 		"btnColor": "black",
 		"cardColor": "black",
 		"btnBackgroundColor": "#8ECB7F",
-		"nuxtLink": "/",
+		"nuxtLink": "/labels/ASD-online",
 		"imgStyleUpMd": "width: 95rem;",
 		"imgStyleDownMd": "margin-left: -2rem; margin-top: -10rem; margin-bottom: 2rem;",
 		"titleStyleUpMd": "max-width: 12.4rem",

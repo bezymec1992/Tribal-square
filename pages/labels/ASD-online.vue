@@ -1,6 +1,6 @@
 <template>
-    <div class="ASD-online">
-        <Intro-section class="label-page">
+	<div class="ASD-online">
+		<Intro-section class="label-page">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -33,13 +33,13 @@
 			</div>
 		</Intro-section>
 
-        <SectionTwoTextCols first-title="About the label" :first-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" :second-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" />
+		<SectionTwoTextCols first-title="About the label" :first-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" :second-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" />
 
-        <SectionImg :img="{ desktop: 'img-009.jpg', mobile: 'img-0010.jpg', alt: 'TribalDen img' }" />
+		<SectionImg :img="{ desktop: 'img-009.jpg', mobile: 'img-0010.jpg', alt: 'TribalDen img' }" />
 
-        <TextBlock title="What do we do at core" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']" />
+		<TextBlock title="What do we do at core" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']" />
 
-        <SectionInfoBlock :img="{ desktop: 'img-0011.jpg', mobile: 'img-0012.jpg', alt: 'Services we provide' }" :btn="{ href: '/' }">
+		<SectionInfoBlock :img="{ desktop: 'img-0011.jpg', mobile: 'img-0012.jpg', alt: 'Services we provide' }" :btn="{ href: '/' }">
 			<template #title>
 				Services we <br />
 				provide
@@ -49,44 +49,39 @@
 					<div class="col-6">
 						<ul>
 							<li>Software</li>
-							
 						</ul>
 					</div>
 					<div class="col-6">
 						<ul>
-							
-                            <li>CRM/CMS</li>
-							
+							<li>CRM/CMS</li>
 						</ul>
 					</div>
-                    <div>
-                        <ul >
-                            <li>Connecting to our platforms</li>
-                        </ul>
-                    </div>
+					<div>
+						<ul>
+							<li>Connecting to our platforms</li>
+						</ul>
+					</div>
 				</div>
 			</template>
-		</SectionInfoBlock >
+		</SectionInfoBlock>
 
-        <SectionBlock :img="{ desktop: 'img-042.jpg', mobile: 'img-043.jpg', alt: 'Where can you find us?' }" :text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet.', 'Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']">
+		<SectionBlock video="video-02.mp4" :text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet.', 'Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']">
 			<template #title>
-                How can it help your <br /> flower business?
+				How can it help your <br />
+				flower business?
 			</template>
 		</SectionBlock>
 
-        
-
-        <SectionSlogan>
+		<SectionSlogan>
 			<template #title>
 				This is a place for a final <br class="d-none d-md-block" />
 				slogan about this label
 			</template>
 		</SectionSlogan>
 
-        <NextLabel :label="{ title: 'TribalHands', text: 'This is a place of a short description of the website and about what we do there.' }" :img="{ desktop: 'img-018.jpg', mobile: 'img-044.jpg', alt: 'TribalHands' }" />
-    </div>
+		<NextLabel :label="{ title: 'TribalHands', text: 'This is a place of a short description of the website and about what we do there.' }" :img="{ desktop: 'img-018.jpg', mobile: 'img-044.jpg', alt: 'TribalHands' }" />
+	</div>
 </template>
-
 
 <script>
 import IntroSection from "@/components/IntroSection";
@@ -102,23 +97,19 @@ export default {
 	name: "ASD-online",
 	components: {
 		IntroSection,
-        Button,
-        SectionImg,
-        TextBlock,
-        SectionInfoBlock,
-        SectionBlock,
-        NextLabel,
-        SectionSlogan,
-        
-    }
-
-}
+		Button,
+		SectionImg,
+		TextBlock,
+		SectionInfoBlock,
+		SectionBlock,
+		NextLabel,
+		SectionSlogan
+	}
+};
 </script>
 
 <style lang="scss" scoped>
-    .ASD-online {
-        background: white;
-        
-    }
-
+.ASD-online {
+	background: white;
+}
 </style>
