@@ -1,6 +1,13 @@
 <template>
 	<div class="card">
-		<div class="card-header">
+		<div class="img-holder">
+			<picture>
+				<source v-if="cardImg.mobile" :srcset="require(`@/assets/imgs/${cardImg.mobile}`)" media="(max-width: 575px)" />
+				<img v-if="cardImg.desktop" :src="require(`@/assets/imgs/${cardImg.desktop}`)" :alt="title" />
+			</picture>
+		</div>
+
+		<nuxt-link class="card-header" :to="aboutLink">
 			<div class="d-flex align-items-center">
 				<div class="icon-holder">
 					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
@@ -10,15 +17,14 @@
 					<h3 class="title">{{ title }}</h3>
 				</div>
 			</div>
-
-			<nuxt-link class="arrow-holder" :to="aboutLink">
+			<span class="arrow-holder">
 				<span>
 					<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
 					</svg>
 				</span>
-			</nuxt-link>
-		</div>
+			</span>
+		</nuxt-link>
 
 		<div class="text-holder">
 			<p>Service which can help you to exchange your accommodation for a short period for free</p>
@@ -67,6 +73,10 @@ export default {
 		aboutLink: {
 			type: String,
 			default: "/products"
+		},
+		cardImg: {
+			type: Object,
+			default: () => ({})
 		}
 	}
 };
@@ -75,13 +85,17 @@ export default {
 <style lang="scss" scoped>
 .card {
 	margin-bottom: 2.6rem;
-	padding: 4rem 3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 5rem;
 	background: $white;
 	border-radius: 1.2rem;
 	transition: $transition;
 
 	@include media-breakpoint-down(md) {
-		padding: 2.4rem 2rem;
+		padding-left: 2.4rem;
+		padding-right: 2.4rem;
+		padding-bottom: 2.3rem;
 		margin-bottom: 2rem;
 	}
 
@@ -132,13 +146,6 @@ export default {
 
 			@include media-breakpoint-down(md) {
 				font-size: 2.4rem;
-			}
-
-			@include media-breakpoint-down(sm) {
-				width: 15rem;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
 			}
 		}
 
@@ -212,9 +219,46 @@ export default {
 		}
 	}
 
+	.img-holder {
+		margin-left: -3rem;
+		margin-right: -3rem;
+		margin-bottom: 2.4rem;
+
+		@include media-breakpoint-down(md) {
+			margin-left: -2.4rem;
+			margin-right: -2.4rem;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			border-top-left-radius: 1.2rem;
+			border-top-right-radius: 1.2rem;
+		}
+	}
+
 	&.style1 {
+		@include media-breakpoint-down(md) {
+			padding-top: 2.6rem;
+		}
+
 		.btn-warning {
 			display: none !important;
+		}
+
+		.title {
+			@include media-breakpoint-down(sm) {
+				width: 15rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+
+		.img-holder {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
 		}
 	}
 
@@ -226,16 +270,20 @@ export default {
 		}
 
 		.text-holder {
-			@include media-breakpoint-up(md) {
-				margin-bottom: 3.2rem;
-				padding-bottom: 3.9rem;
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			&::after {
+				display: none;
 			}
 		}
 
 		.arrow-holder {
-			@include media-breakpoint-down(md) {
-				display: none;
-			}
+			display: none;
+		}
+
+		.card-footer {
+			display: none;
 		}
 	}
 }

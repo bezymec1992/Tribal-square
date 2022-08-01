@@ -1,56 +1,70 @@
 <template>
 	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-5">
-					<strong class="logo">LOGO</strong>
-					<SocialLinks color="white" hover-color="#000000" hover-background="#FFDB1C" />
-					<div class="text-holder">
-						<p>Feel free to contact us at</p>
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-5">
+						<div class="text-holder">
+							<p>Feel free to contact us at</p>
+						</div>
+						<a href="mailto:hello@tribalsquare.com" class="mail-link">hello@tribalsquare.com</a>
 					</div>
-					<a href="mailto:hello@tribalsquare.com" class="mail-link">hello@tribalsquare.com</a>
-					<ul class="menu style-1 d-none d-xl-flex">
-						<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
-						<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
-					</ul>
-				</div>
-				<div class="col-xl-7">
-					<div class="row">
-						<div class="col-6 col-md-3 order-1 order-md-1">
-							<ul class="menu style-2">
-								<li v-for="(item, index) in menu[0]" :key="index">
-									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
-								</li>
-							</ul>
-						</div>
-						<div class="col-6 col-md-3 order-3 order-md-2">
-							<ul class="menu style-2">
-								<li v-for="(item, index) in menu[1]" :key="index">
-									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
-								</li>
-							</ul>
-						</div>
-						<div class="col-6 col-md-3 order-4 order-md-3">
-							<ul class="menu style-2">
-								<li v-for="(item, index) in menu[2]" :key="index">
-									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
-								</li>
-							</ul>
-						</div>
-						<div class="col-6 col-md-3 order-2 order-md-4">
-							<ul class="menu style-2">
-								<li v-for="(item, index) in menu[3]" :key="index">
-									<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
-								</li>
-							</ul>
+					<div class="col-xl-7">
+						<div class="row">
+							<div class="col-6 col-md-3 order-1 order-md-1">
+								<ul class="menu style-2">
+									<li v-for="(item, index) in menu[0]" :key="index">
+										<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
+									</li>
+								</ul>
+							</div>
+							<div class="col-6 col-md-3 order-3 order-md-2">
+								<ul class="menu style-2">
+									<li v-for="(item, index) in menu[1]" :key="index">
+										<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
+									</li>
+									<li v-for="(item, index) in productsList" :key="index + item.title">
+										<nuxt-link :to="item.aboutLink">{{ item.title }}</nuxt-link>
+									</li>
+								</ul>
+							</div>
+							<div class="col-6 col-md-3 order-4 order-md-3">
+								<ul class="menu style-2">
+									<li v-for="(item, index) in menu[2]" :key="index">
+										<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
+									</li>
+									<li v-for="(item, index) in labelsList" :key="index + item.title">
+										<nuxt-link :to="item.nuxtLink">{{ item.title }}</nuxt-link>
+									</li>
+								</ul>
+							</div>
+							<div class="col-6 col-md-3 order-2 order-md-4">
+								<ul class="menu style-2">
+									<li v-for="(item, index) in menu[3]" :key="index">
+										<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-12">
-					<ul class="menu style-1 d-xl-none">
-						<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
-						<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
-					</ul>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div class="container">
+				<div class="row align-items-md-center">
+					<div class="col-md-6 d-md-flex align-items-md-center">
+						<strong class="logo">LOGO</strong>
+						<SocialLinks color="#000000" hover-color="#000000" hover-background="#FFDB1C" />
+					</div>
+
+					<div class="col-md-6 d-md-flex justify-content-md-end">
+						<ul class="menu style-1">
+							<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
+							<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -61,6 +75,8 @@
 <script>
 import SocialLinks from "@/components/SocialLinks";
 import GoTopBtn from "@/components/GoTopBtn";
+import Products from "@/constants/products";
+import LabelsBig from "@/constants/labelsBig";
 
 export default {
 	name: "Footer",
@@ -89,44 +105,12 @@ export default {
 					{
 						title: "Products",
 						to: "/products"
-					},
-					{
-						title: "Knock Knock",
-						to: "/"
-					},
-					{
-						title: "Coffee App",
-						to: "/"
-					},
-					{
-						title: "Digital Valet",
-						to: "/products/digital-valet"
-					},
-					{
-						title: "HandsRepublic",
-						to: "/"
 					}
 				],
 				[
 					{
 						title: "Lables",
 						to: "/labels"
-					},
-					{
-						title: "TribalHands",
-						to: "/"
-					},
-					{
-						title: "Digital Chiefs",
-						to: "/"
-					},
-					{
-						title: "Powwows",
-						to: "/labels/Powwows"
-					},
-					{
-						title: "Tribal Cyber",
-						to: "/"
 					}
 				],
 				[
@@ -143,8 +127,14 @@ export default {
 						to: "/"
 					}
 				]
-			]
+			],
+			productsList: [],
+			labelsList: []
 		};
+	},
+	mounted() {
+		this.productsList = Products;
+		this.labelsList = LabelsBig;
 	}
 };
 </script>
@@ -152,35 +142,24 @@ export default {
 <style lang="scss" scoped>
 .footer {
 	padding-top: 10.6rem;
-	padding-bottom: 10rem;
 	color: $white;
 	background: $tiber;
 
 	@include media-breakpoint-down(md) {
 		padding-top: 5rem;
-		padding-bottom: 4.5rem;
 	}
 
 	.logo {
 		display: block;
+		margin-right: 10rem;
 		font-size: 4rem;
 		line-height: 2;
 		font-weight: 400;
+		line-height: 1;
 
 		@include media-breakpoint-down(md) {
+			margin-bottom: 1.6rem;
 			font-size: 3.2rem;
-		}
-	}
-
-	.social-links {
-		margin-bottom: 14.3rem;
-
-		@include media-breakpoint-down(xl) {
-			margin-bottom: 7rem;
-		}
-
-		@include media-breakpoint-down(md) {
-			margin-bottom: 3.3rem;
 		}
 	}
 
@@ -227,7 +206,7 @@ export default {
 
 			li {
 				&:not(:last-child) {
-					margin-right: 4.1rem;
+					margin-right: 7.5rem;
 
 					@include media-breakpoint-down(md) {
 						margin-right: 3.8rem;
@@ -249,6 +228,32 @@ export default {
 						margin-bottom: 2rem;
 					}
 				}
+			}
+		}
+	}
+
+	.top {
+		padding-bottom: 7.4rem;
+
+		@include media-breakpoint-down(md) {
+			padding-bottom: 0.7rem;
+		}
+	}
+
+	.bottom {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		color: $black;
+		background: $white;
+
+		@include media-breakpoint-down(md) {
+			padding-top: 2.7rem;
+			padding-bottom: 2.7rem;
+		}
+
+		.social-links {
+			@include media-breakpoint-down(md) {
+				margin-bottom: 3.1rem;
 			}
 		}
 	}

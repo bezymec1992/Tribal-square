@@ -3,6 +3,10 @@
 		"title": "Knock Knock",
 		"category": "Platform & App",
 		"img": "img-01.png",
+		"cardImg": {
+			"desktop": "img-0114.png",
+			"mobile": "img-0115.png"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/knock-knock"
@@ -11,6 +15,10 @@
 		"title": "Coffee App",
 		"category": "App",
 		"img": "img-02.png",
+		"cardImg": {
+			"desktop": "img-0116.jpg",
+			"mobile": "img-0117.jpg"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/coffee-app"
@@ -19,6 +27,10 @@
 		"title": "Digital Valet",
 		"category": "Platform",
 		"img": "img-03.png",
+		"cardImg": {
+			"desktop": "img-0118.jpg",
+			"mobile": "img-0119.jpg"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/digital-valet"
@@ -27,6 +39,10 @@
 		"title": "HandsRepublic",
 		"category": "Platform",
 		"img": "img-04.png",
+		"cardImg": {
+			"desktop": "img-0120.jpg",
+			"mobile": "img-0121.jpg"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/hands-republic"
@@ -35,6 +51,10 @@
 		"title": "Going Home",
 		"category": "App",
 		"img": "img-078.png",
+		"cardImg": {
+			"desktop": "img-0122.jpg",
+			"mobile": "img-0123.jpg"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/going-home"
@@ -43,6 +63,10 @@
 		"title": "Mother Goose",
 		"category": "Platform",
 		"img": "img-087.png",
+		"cardImg": {
+			"desktop": "img-0124.jpg",
+			"mobile": "img-0123.jpg"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/mother-goose"
@@ -51,6 +75,10 @@
 		"title": "Training App",
 		"category": "App",
 		"img": "img-099.png",
+		"cardImg": {
+			"desktop": "img-0126.jpg",
+			"mobile": "img-0127.jpg"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/training-app"
@@ -59,6 +87,10 @@
 		"title": "Safeplace",
 		"category": "Software",
 		"img": "img-0107.png",
+		"cardImg": {
+			"desktop": "img-0128.jpg",
+			"mobile": "img-0129.jpg"
+		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
 		"aboutLink": "/products/safeplace"
