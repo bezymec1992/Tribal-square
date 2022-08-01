@@ -89,5 +89,35 @@ export default {
 			}
 		}
 	}
+
+	&.product-page {
+		background: $aqua-haze;
+		padding-top: 16rem;
+		padding-bottom: 6rem;
+
+		@include media-breakpoint-down(md) {
+			padding-top: 10rem;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 0;
+		}
+
+		.breadcrumbs {
+			margin-bottom: 7.9rem;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 5.6rem;
+			}
+		}
+
+		.btn {
+			transform: translateY(-50%);
+
+			@include media-breakpoint-down(lg) {
+				transform: translateY(50%);
+			}
+		}
+	}
 }
 </style>

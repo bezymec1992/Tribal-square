@@ -1,6 +1,13 @@
 <template>
 	<div class="card">
-		<div class="card-header">
+		<div class="img-holder">
+			<picture>
+				<source v-if="cardImg.mobile" :srcset="require(`@/assets/imgs/${cardImg.mobile}`)" media="(max-width: 575px)" />
+				<img v-if="cardImg.desktop" :src="require(`@/assets/imgs/${cardImg.desktop}`)" :alt="title" />
+			</picture>
+		</div>
+
+		<nuxt-link class="card-header" :to="aboutLink">
 			<div class="d-flex align-items-center">
 				<div class="icon-holder">
 					<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
@@ -10,21 +17,20 @@
 					<h3 class="title">{{ title }}</h3>
 				</div>
 			</div>
-
-			<nuxt-link class="arrow-holder" :to="aboutLink">
+			<!-- <span class="arrow-holder">
 				<span>
 					<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
 					</svg>
 				</span>
-			</nuxt-link>
-		</div>
+			</span> -->
+		</nuxt-link>
 
 		<div class="text-holder">
 			<p>Service which can help you to exchange your accommodation for a short period for free</p>
 		</div>
 
-		<div class="card-footer">
+		<!-- <div class="card-footer">
 			<Button title="WEBSITE" class="btn-link" type="link" to="/contact">
 				<template #icon>
 					<svg class="d-none d-md-inline-block" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +41,7 @@
 					</svg>
 				</template>
 			</Button>
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -67,6 +73,10 @@ export default {
 		aboutLink: {
 			type: String,
 			default: "/products"
+		},
+		cardImg: {
+			type: Object,
+			default: () => ({})
 		}
 	}
 };
@@ -75,13 +85,17 @@ export default {
 <style lang="scss" scoped>
 .card {
 	margin-bottom: 2.6rem;
-	padding: 4rem 3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 5rem;
 	background: $white;
 	border-radius: 1.2rem;
 	transition: $transition;
 
 	@include media-breakpoint-down(md) {
-		padding: 2.4rem 2rem;
+		padding-left: 2.4rem;
+		padding-right: 2.4rem;
+		padding-bottom: 2.3rem;
 		margin-bottom: 2rem;
 	}
 
@@ -133,50 +147,41 @@ export default {
 			@include media-breakpoint-down(md) {
 				font-size: 2.4rem;
 			}
-
-			@include media-breakpoint-down(sm) {
-				width: 15rem;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
 		}
 
-		.arrow-holder {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 6rem;
-			height: 6rem;
-			transition: auto;
-			color: rgba($black, 0.4);
-			background: $aqua-haze;
-			border-radius: 0.8rem;
+		// .arrow-holder {
+		// 	display: flex;
+		// 	align-items: center;
+		// 	justify-content: center;
+		// 	width: 6rem;
+		// 	height: 6rem;
+		// 	transition: auto;
+		// 	color: rgba($black, 0.4);
+		// 	background: $aqua-haze;
+		// 	border-radius: 0.8rem;
 
-			@include media-breakpoint-down(md) {
-				width: 4rem;
-				height: 4rem;
-			}
+		// 	@include media-breakpoint-down(md) {
+		// 		width: 4rem;
+		// 		height: 4rem;
+		// 	}
 
-			span {
-				width: 1.1rem;
+		// 	span {
+		// 		width: 1.1rem;
 
-				@include media-breakpoint-down(md) {
-					width: 0.7rem;
-				}
-			}
+		// 		@include media-breakpoint-down(md) {
+		// 			width: 0.7rem;
+		// 		}
+		// 	}
 
-			svg {
-				width: 100%;
-				height: auto;
-			}
-		}
+		// 	svg {
+		// 		width: 100%;
+		// 		height: auto;
+		// 	}
+		// }
 	}
 
 	.text-holder {
 		position: relative;
-		margin-bottom: 3.9rem;
-		padding-bottom: 3.8rem;
 		font-size: 1.8rem;
 		line-height: 1.3;
 		opacity: 0.4;
@@ -191,30 +196,67 @@ export default {
 			margin-bottom: 0;
 		}
 
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 0;
-			border-bottom: solid 0.1rem;
-			opacity: 0.4;
-		}
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 0;
+		// 	border-bottom: solid 0.1rem;
+		// 	opacity: 0.4;
+		// }
 	}
 
-	.card-footer {
-		display: flex;
-		justify-content: space-between;
+	// .card-footer {
+	// 	display: flex;
+	// 	justify-content: space-between;
 
-		.btn-link {
-			padding: 0;
+	// 	.btn-link {
+	// 		padding: 0;
+	// 	}
+	// }
+
+	.img-holder {
+		margin-left: -3rem;
+		margin-right: -3rem;
+		margin-bottom: 2.4rem;
+
+		@include media-breakpoint-down(md) {
+			margin-left: -2.4rem;
+			margin-right: -2.4rem;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			border-top-left-radius: 1.2rem;
+			border-top-right-radius: 1.2rem;
 		}
 	}
 
 	&.style1 {
+		@include media-breakpoint-down(md) {
+			padding-top: 2.6rem;
+		}
+
 		.btn-warning {
 			display: none !important;
+		}
+
+		.title {
+			@include media-breakpoint-down(sm) {
+				width: 15rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+
+		.img-holder {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
 		}
 	}
 
@@ -222,19 +264,6 @@ export default {
 		.card-header {
 			@include media-breakpoint-up(md) {
 				margin-bottom: 3.7rem;
-			}
-		}
-
-		.text-holder {
-			@include media-breakpoint-up(md) {
-				margin-bottom: 3.2rem;
-				padding-bottom: 3.9rem;
-			}
-		}
-
-		.arrow-holder {
-			@include media-breakpoint-down(md) {
-				display: none;
 			}
 		}
 	}

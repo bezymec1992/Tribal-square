@@ -10,17 +10,43 @@
 					</ul>
 				</div>
 				<div class="col-xl-9 col-xxl-9">
-					<div class="products-informer" anchor-section="section-1">
+					<div class="products-informer style1" anchor-section="section-1">
 						<div class="header d-flex align-items-baseline justify-content-between">
 							<h3 class="h2">Discover our Products</h3>
 							<Button title="VIEW ALL" class="btn-link d-none d-sm-inline-flex" type="nuxt-link" to="/products" />
 						</div>
 						<div class="row">
 							<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
-								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" />
+								<Card class="style1" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" :card-img="item.cardImg" />
 							</div>
 							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn pt-4">
 								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/products" />
+							</div>
+						</div>
+					</div>
+
+					<div class="visual-block">
+						<div class="row g-0 align-items-lg-center">
+							<div class="col-lg-6">
+								<div class="content-holder">
+									<h3 class="h2">
+										Everything you <br class="d-none d-md-block" />
+										need at one <br class="d-none d-md-block" />
+										place
+									</h3>
+									<Button title="Get in touch" class="btn-light shadow-sm" type="nuxt-link" to="/">
+										<template #icon>
+											<svg width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor" />
+											</svg>
+										</template>
+									</Button>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="img-holder">
+									<img src="@/assets/imgs/img-0113.png" alt="Everything you need at one place" />
+								</div>
 							</div>
 						</div>
 					</div>
@@ -94,7 +120,7 @@ export default {
 		};
 	},
 	mounted() {
-		this.productsList = Products;
+		this.productsList = Products.slice(0, 4);
 		this.labelsList = Labels;
 
 		window.addEventListener("scroll", this.handleScroll);
@@ -240,6 +266,12 @@ export default {
 		@include media-breakpoint-down(md) {
 			margin-bottom: 8rem;
 		}
+
+		&.style1 {
+			@include media-breakpoint-up(md) {
+				margin-bottom: 9rem;
+			}
+		}
 	}
 
 	.txt-block {
@@ -254,6 +286,69 @@ export default {
 
 	.col-w-btn {
 		padding-top: 2rem;
+	}
+
+	.visual-block {
+		position: relative;
+		margin-bottom: 10rem;
+		padding: 6.2rem 4rem 0 4rem;
+		color: $white;
+		background: rgb(1, 82, 109);
+		background: linear-gradient(198deg, rgba(1, 82, 109, 1) 0%, rgba(0, 108, 136, 1) 100%);
+		overflow: hidden;
+
+		@include media-breakpoint-up(lg) {
+			padding: 7.5rem 2.6rem 0 7rem;
+		}
+
+		@include media-breakpoint-down(md) {
+			margin-left: -2rem;
+			margin-right: -2rem;
+			margin-bottom: 8rem;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: -50%;
+			top: -50%;
+			width: 1090px;
+			height: 1090px;
+			background: radial-gradient(50% 50% at 50% 50%, #0084a2 0%, rgba(0, 132, 162, 0) 100%);
+			border-radius: 50%;
+		}
+
+		.h2 {
+			margin-bottom: 5.2rem;
+			line-height: 1.2;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 2.4rem;
+			}
+		}
+
+		.row {
+			position: relative;
+			z-index: 2;
+		}
+
+		.content-holder {
+			padding-bottom: 4rem;
+
+			@include media-breakpoint-up(lg) {
+				padding-bottom: 10rem;
+			}
+		}
+
+		.img-holder {
+			max-width: 35rem;
+			margin: auto;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 }
 </style>

@@ -57,6 +57,7 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 101;
 
 	@include media-breakpoint-down(md) {
 		padding: 2rem;

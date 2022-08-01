@@ -28,18 +28,19 @@
 		<div class="after-solution-section">
 			<div class="container">
 				<div class="inner-holder">
-					<div class="row g-0">
-						<div class="col-md-6">
-							<!-- <div class="img-holder">
-							<img src="" alt="We can add a cool slogan here" />
-						</div> -->
+					<div class="row align-items-md-center g-0">
+						<div class="col-lg-6 d-lg-flex justify-content-lg-start">
+							<div class="img-holder">
+								<img src="@/assets/imgs/img-0112.png" alt="We create multifuctional products for your business" />
+							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-lg-6">
 							<div class="content-holder">
 								<h2 class="h2">
-									We can add a <br />
-									cool slogan <br />
-									here
+									We create <br class="d-none d-md-block" />
+									multifuctional <br class="d-none d-md-block" />
+									products for <br class="d-none d-md-block" />
+									your business
 								</h2>
 							</div>
 						</div>
@@ -299,7 +300,7 @@ export default {
 	}
 
 	.container {
-		max-width: 134rem;
+		max-width: 138rem;
 
 		@include media-breakpoint-down(md) {
 			padding-left: 0;
@@ -308,30 +309,100 @@ export default {
 	}
 
 	.inner-holder {
-		background: #b7a38f;
+		position: relative;
+		padding-top: 4.8rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		padding-bottom: 6rem;
+		background: #c2b075;
+		overflow: hidden;
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 7rem;
+			padding-bottom: 7rem;
+			padding-left: 7rem;
+			padding-right: 11rem;
+		}
+
+		&::before {
+			@include media-breakpoint-up(lg) {
+				content: "";
+				position: absolute;
+				width: 1262px;
+				height: 1314px;
+				left: -20%;
+				top: -30%;
+				background: radial-gradient(50% 50% at 50% 50%, rgba(137, 105, 40, 0.7) 0%, rgba(137, 105, 40, 0) 100%);
+				border-radius: 50%;
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			@include media-breakpoint-up(lg) {
+				top: -87%;
+				right: -36%;
+				width: 1048px;
+				height: 1091px;
+				background: radial-gradient(50% 50% at 50% 50%, #ffeab7 0%, rgba(255, 234, 183, 0) 100%);
+			}
+
+			@include media-breakpoint-down(lg) {
+				width: 1278px;
+				height: 1339.96px;
+				top: 6%;
+				left: -50%;
+				background: radial-gradient(50% 50% at 50% 50%, rgba(137, 105, 40, 0.7) 0%, rgba(137, 105, 40, 0) 100%);
+			}
+		}
+	}
+
+	.img-holder {
+		max-width: 51.9rem;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: -1.4rem;
+			margin-right: -1.4rem;
+			margin-bottom: 4rem;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.row {
+		position: relative;
+		z-index: 2;
 	}
 
 	.content-holder {
-		display: flex;
-		align-items: center;
-		min-height: 60rem;
-
 		@include media-breakpoint-up(md) {
 			justify-content: center;
 		}
 
-		@include media-breakpoint-down(md) {
-			padding-left: 4rem;
-			padding-right: 4rem;
+		@include media-breakpoint-up(xl) {
+			margin-left: -6rem;
+		}
+
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			align-items: center;
+			min-height: 60rem;
+			padding-left: 10rem;
 		}
 	}
 
 	.h2 {
+		margin-bottom: 0;
 		font-size: 6.4rem;
 		line-height: 1.2;
 
 		@include media-breakpoint-down(md) {
-			font-size: 4rem;
+			font-size: 3.8rem;
 		}
 	}
 }

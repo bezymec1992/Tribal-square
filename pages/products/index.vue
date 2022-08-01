@@ -19,9 +19,7 @@
 		<div class="products-section">
 			<div class="container">
 				<div class="row">
-					<div v-for="(item, index) in productsList" :key="index" class="col-md-6">
-						<Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" />
-					</div>
+					<div v-for="(item, index) in productsList" :key="index" class="col-md-6"><Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" :card-img="item.cardImg" /></div>
 				</div>
 			</div>
 		</div>
@@ -29,6 +27,11 @@
 			<template #title
 				>The perfect <br />
 				balance</template
+			>
+			<template #text
+				>Lorem ipsum dolor sit amet, <br />
+				consectetur adipiscing elit. Aenean <br class="d-none d-md-block" />
+				egestas in est ut aliquet</template
 			>
 		</CustomerExperienceSection>
 		<ContactSection />
@@ -65,7 +68,7 @@ export default {
 .products-page {
 	.intro-section {
 		@include media-breakpoint-down(md) {
-			padding-top: 11rem;
+			padding-top: 18rem;
 			padding-bottom: 4rem;
 		}
 	}

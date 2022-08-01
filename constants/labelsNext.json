@@ -1,0 +1,74 @@
+[
+	{
+		"title": "TribalHands",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-044.jpg",
+		"imgMobile": "img-018.jpg",
+		"imgAlt": "TribalHands"
+	},
+	{
+		"title": "Tribal Den",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-045.jpg",
+		"imgMobile": "img-046.jpg",
+		"imgAlt": "Tribal Den"
+	},
+	{
+		"title": "Tribal Cyber",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-047.jpg",
+		"imgMobile": "img-048.jpg",
+		"imgAlt": "Tribal Cyber"
+	},
+	{
+		"title": "Tribal Cyber",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-047.jpg",
+		"imgMobile": "img-048.jpg",
+		"imgAlt": "Tribal Cyber"
+	},
+	{
+		"title": "ASD Online",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-049.jpg",
+		"imgMobile": "img-050.jpg",
+		"imgAlt": "ASD Online"
+	},
+	{
+		"title": "Juridische Handjes",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-051.jpg",
+		"imgMobile": "img-052.jpg",
+		"imgAlt": "Juridische Handjes"
+	},
+	{
+		"title": "Didital Chiefs",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-053.jpg",
+		"imgMobile": "img-054.jpg",
+		"imgAlt": "Didital Chiefs"
+	},
+	{
+		"title": "Safeguard",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-055.jpg",
+		"imgMobile": "img-056.jpg",
+		"imgAlt": "Safeguard"
+	},
+	{
+		"title": "New Tribe Agency",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"to": "/",
+		"imgDesktop": "img-057.jpg",
+		"imgMobile": "img-058.jpg",
+		"imgAlt": "New Tribe Agency"
+	}
+]

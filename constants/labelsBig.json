@@ -14,7 +14,8 @@
 		"imgUpMd": "img-013.png",
 		"imgDownMd": "img-017.png",
 		"imgStyleUpMd": "width:48%;right:0;bottom: 0;",
-		"imgStyleDownMd": "max-width: 32rem;margin-left: auto;padding-top: 4rem;padding-bottom: 7rem;"
+		"imgStyleDownMd": "max-width: 32rem;margin-left: auto;padding-top: 4rem;padding-bottom: 7rem;",
+		"cardColor": "white"
 	},
 	{
 		"title": "Tribal cyber",
@@ -31,7 +32,8 @@
 		"imgUpMd": "img-012.png",
 		"imgDownMd": "img-012.png",
 		"imgStyleUpMd": "",
-		"imgStyleDownMd": "padding-top: 2rem;margin-right: -5rem;"
+		"imgStyleDownMd": "padding-top: 2rem;margin-right: -5rem;",
+		"cardColor": "white"
 	},
 	{
 		"title": "Digital Chiefs",
@@ -48,7 +50,8 @@
 		"btnBackgroundColor": "#0042FF",
 		"nuxtLink": "/",
 		"imgStyleUpMd": "right:4.3rem;bottom: unset; width: 40%; top: 15%; bottom: unset;",
-		"imgStyleDownMd": "margin-right: 0; padding-top: 4rem; padding-bottom: 12rem;"
+		"imgStyleDownMd": "margin-right: 0; padding-top: 4rem; padding-bottom: 12rem;",
+		"cardColor": "white"
 	},
 	{
 		"title": "TRIBALHANDS",
@@ -65,6 +68,27 @@
 		"btnBackgroundColor": "#FFDB1C",
 		"nuxtLink": "/",
 		"imgStyleUpMd": "bottom: unset; width: 47%; top: 50%; transform: translateY(-50%);bottom: unset;",
-		"imgStyleDownMd": "margin-left: -2rem; margin-bottom: 0;"
+		"imgStyleDownMd": "margin-left: -2rem; margin-bottom: 0;",
+		"cardColor": "white"
+	},
+	{
+		"title": "ASD",
+		"svgTitle": "ASD.svg",
+		"description": "This is a place of a short description of the website and about what we do there.",
+		"type": "Website",
+		"topic": "Developing / Coding",
+		"websiteLink": "/",
+		"imgUpMd": "img-059.png",
+		"imgDownMd": "img-060.png",
+		"cardBackgroundColor": "#EDEDED",
+		"cardStyle": "style2",
+		"btnColor": "black",
+		"cardColor": "black",
+		"btnBackgroundColor": "#8ECB7F",
+		"nuxtLink": "/",
+		"imgStyleUpMd": "width: 95rem;",
+		"imgStyleDownMd": "margin-left: -2rem; margin-top: -10rem; margin-bottom: 2rem;",
+		"titleStyleUpMd": "max-width: 12.4rem",
+		"titleStyleDownMd": "max-width: 8.8rem"
 	}
 ]
