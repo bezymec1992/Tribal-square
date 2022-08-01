@@ -85,7 +85,7 @@ import IntroSection from "@/components/IntroSection";
 import Button from "@/components/Button";
 import NextLabel from "@/components/NextLabel";
 import TextBlock from "@/components/LabelPage/TextBlock";
-import HowItWork from "@/components/LabelPage/HowItWork";
+// import HowItWork from "@/components/LabelPage/HowItWork";
 import SectionImg from "@/components/LabelPage/SectionImg";
 import SectionInfoBlock from "@/components/LabelPage/SectionInfoBlock";
 import SectionBlock from "@/components/LabelPage/SectionBlock";
@@ -99,7 +99,7 @@ export default {
 		NextLabel,
 		TextBlock,
 		SectionInfoBlock,
-		HowItWork,
+		// HowItWork,
 		SectionImg,
 		SectionBlock,
 		SectionSlogan

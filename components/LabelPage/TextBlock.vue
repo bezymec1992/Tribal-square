@@ -30,11 +30,16 @@ export default {
 
 	@include media-breakpoint-down(md) {
 		padding-bottom: 10rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.h2 {
 		text-align: center;
 		margin-bottom: 2rem;
+		@include media-breakpoint-down(md) {
+			text-align: left;
+		}
 	}
 
 	.text-holder {
@@ -52,6 +57,7 @@ export default {
 			margin-bottom: 3rem;
 			font-size: 1.8rem;
 			line-height: 1.6;
+			text-align: left;
 		}
 	}
 }
