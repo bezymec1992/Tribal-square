@@ -34,7 +34,7 @@
 	{
 		"title": "ASD Online",
 		"description": "This is a place of a short description of the website and about what we do there.",
-		"to": "/",
+		"to": "/labels/ASD-online",
 		"imgDesktop": "img-049.jpg",
 		"imgMobile": "img-050.jpg",
 		"imgAlt": "ASD Online"
