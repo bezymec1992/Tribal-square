@@ -17,20 +17,20 @@
 					<h3 class="title">{{ title }}</h3>
 				</div>
 			</div>
-			<span class="arrow-holder">
+			<!-- <span class="arrow-holder">
 				<span>
 					<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
 					</svg>
 				</span>
-			</span>
+			</span> -->
 		</nuxt-link>
 
 		<div class="text-holder">
 			<p>Service which can help you to exchange your accommodation for a short period for free</p>
 		</div>
 
-		<div class="card-footer">
+		<!-- <div class="card-footer">
 			<Button title="WEBSITE" class="btn-link" type="link" to="/contact">
 				<template #icon>
 					<svg class="d-none d-md-inline-block" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
 					</svg>
 				</template>
 			</Button>
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -149,41 +149,39 @@ export default {
 			}
 		}
 
-		.arrow-holder {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 6rem;
-			height: 6rem;
-			transition: auto;
-			color: rgba($black, 0.4);
-			background: $aqua-haze;
-			border-radius: 0.8rem;
+		// .arrow-holder {
+		// 	display: flex;
+		// 	align-items: center;
+		// 	justify-content: center;
+		// 	width: 6rem;
+		// 	height: 6rem;
+		// 	transition: auto;
+		// 	color: rgba($black, 0.4);
+		// 	background: $aqua-haze;
+		// 	border-radius: 0.8rem;
 
-			@include media-breakpoint-down(md) {
-				width: 4rem;
-				height: 4rem;
-			}
+		// 	@include media-breakpoint-down(md) {
+		// 		width: 4rem;
+		// 		height: 4rem;
+		// 	}
 
-			span {
-				width: 1.1rem;
+		// 	span {
+		// 		width: 1.1rem;
 
-				@include media-breakpoint-down(md) {
-					width: 0.7rem;
-				}
-			}
+		// 		@include media-breakpoint-down(md) {
+		// 			width: 0.7rem;
+		// 		}
+		// 	}
 
-			svg {
-				width: 100%;
-				height: auto;
-			}
-		}
+		// 	svg {
+		// 		width: 100%;
+		// 		height: auto;
+		// 	}
+		// }
 	}
 
 	.text-holder {
 		position: relative;
-		margin-bottom: 3.9rem;
-		padding-bottom: 3.8rem;
 		font-size: 1.8rem;
 		line-height: 1.3;
 		opacity: 0.4;
@@ -198,26 +196,26 @@ export default {
 			margin-bottom: 0;
 		}
 
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 0;
-			border-bottom: solid 0.1rem;
-			opacity: 0.4;
-		}
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 0;
+		// 	border-bottom: solid 0.1rem;
+		// 	opacity: 0.4;
+		// }
 	}
 
-	.card-footer {
-		display: flex;
-		justify-content: space-between;
+	// .card-footer {
+	// 	display: flex;
+	// 	justify-content: space-between;
 
-		.btn-link {
-			padding: 0;
-		}
-	}
+	// 	.btn-link {
+	// 		padding: 0;
+	// 	}
+	// }
 
 	.img-holder {
 		margin-left: -3rem;
@@ -267,23 +265,6 @@ export default {
 			@include media-breakpoint-up(md) {
 				margin-bottom: 3.7rem;
 			}
-		}
-
-		.text-holder {
-			margin-bottom: 0;
-			padding-bottom: 0;
-
-			&::after {
-				display: none;
-			}
-		}
-
-		.arrow-holder {
-			display: none;
-		}
-
-		.card-footer {
-			display: none;
 		}
 	}
 }
