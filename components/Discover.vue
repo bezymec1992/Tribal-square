@@ -1,25 +1,22 @@
 <template>
-	<div>
-		<div class="more__item d-flex align-items-center">
-			<img class="more__main-icon" :src="require('@/assets/imgs/' + img)" :alt="title" />
-			<div class="more__text-wrap">
-				<span class="more__span">
-					{{ title }}
-				</span>
-				<p class="more__text">
-					{{ text }}
-				</p>
-			</div>
-
-			<nuxt-link class="arrow-holder" :to="route">
-				<span>
-					<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
-					</svg>
-				</span>
-			</nuxt-link>
+	<nuxt-link :to="route" class="more__item d-flex align-items-center">
+		<img class="more__main-icon" :src="require('@/assets/imgs/' + img)" :alt="title" />
+		<div class="more__text-wrap">
+			<span class="more__span">
+				{{ title }}
+			</span>
+			<p class="more__text">
+				{{ text }}
+			</p>
 		</div>
-	</div>
+		<span class="arrow-holder">
+			<span>
+				<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L19 19L1 37" stroke="CurrentColor" stroke-width="2" />
+				</svg>
+			</span>
+		</span>
+	</nuxt-link>
 </template>
 
 <script>
@@ -39,12 +36,10 @@ export default {
 
 <style lang="scss" scoped>
 .more__item {
-	padding: 30px 0;
-	width: 550px;
-	max-width: 100%;
-	transition: $transition;
-	margin: 0 auto;
 	position: relative;
+	display: block;
+	padding: 30px 0;
+	transition: $transition;
 	border-radius: 20px;
 
 	@include media-breakpoint-up(md) {

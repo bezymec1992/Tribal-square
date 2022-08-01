@@ -30,6 +30,11 @@
 				>The perfect <br />
 				balance</template
 			>
+			<template #text
+				>Lorem ipsum dolor sit amet, <br />
+				consectetur adipiscing elit. Aenean <br class="d-none d-md-block" />
+				egestas in est ut aliquet</template
+			>
 		</CustomerExperienceSection>
 		<ContactSection />
 	</div>

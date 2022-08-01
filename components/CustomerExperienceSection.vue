@@ -15,6 +15,11 @@
 								customer experience
 							</slot>
 						</h2>
+						<div v-if="hasTextSlot" class="text-holder">
+							<p>
+								<slot name="text"></slot>
+							</p>
+						</div>
 						<Button :title="btn.title" class="btn-light shadow-sm" type="nuxt-link" :to="btn.to">
 							<template #icon>
 								<svg width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,6 +61,11 @@ export default {
 				default: "/"
 			}
 		}
+	},
+	computed: {
+		hasTextSlot() {
+			return !!this.$slots.text;
+		}
 	}
 };
 </script>
@@ -63,6 +73,7 @@ export default {
 <style lang="scss" scoped>
 .customer-experience {
 	max-width: 144rem;
+	color: $white;
 	margin: auto;
 
 	&__wrap {
@@ -87,7 +98,7 @@ export default {
 	&__inner {
 		padding-top: 20rem;
 		padding-left: 9.4rem;
-		padding-right: 11.6rem;
+		padding-right: 5.6rem;
 		padding-bottom: 14.5rem;
 		height: 100%;
 
@@ -113,8 +124,23 @@ export default {
 		}
 	}
 	&__title {
-		margin-bottom: 3.7rem;
-		color: $white;
+		margin-bottom: 3.2rem;
+		line-height: 1.1;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 1.6rem;
+			line-height: 1.25;
+		}
+	}
+	.text-holder {
+		margin-bottom: 4.5rem;
+		font-size: 2.2rem;
+		line-height: 1.6;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 2.4rem;
+			font-size: 1.6rem;
+		}
 	}
 }
 </style>

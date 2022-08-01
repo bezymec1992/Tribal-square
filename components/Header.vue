@@ -220,7 +220,7 @@ export default {
 	padding-top: 2.4rem;
 	padding-bottom: 2.4rem;
 	border-bottom: solid 0.1rem rgba($black, 0.2);
-	z-index: 1;
+	z-index: 2;
 
 	.menu-opened & {
 		z-index: 100;

@@ -5,7 +5,7 @@
 		"img": "img-01.png",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"aboutLink": "/"
+		"aboutLink": "/products/knock-knock"
 	},
 	{
 		"title": "Coffee App",
@@ -13,7 +13,7 @@
 		"img": "img-02.png",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"aboutLink": "/"
+		"aboutLink": "/products/coffee-app"
 	},
 	{
 		"title": "Digital Valet",
@@ -29,6 +29,38 @@
 		"img": "img-04.png",
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"aboutLink": "/"
+		"aboutLink": "/products/hands-republic"
+	},
+	{
+		"title": "Going Home",
+		"category": "App",
+		"img": "img-078.png",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"aboutLink": "/products/going-home"
+	},
+	{
+		"title": "Mother Goose",
+		"category": "Platform",
+		"img": "img-087.png",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"aboutLink": "/products/mother-goose"
+	},
+	{
+		"title": "Training App",
+		"category": "App",
+		"img": "img-099.png",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"aboutLink": "/products/training-app"
+	},
+	{
+		"title": "Safeplace",
+		"category": "Software",
+		"img": "img-0107.png",
+		"description": "Service which can help you to exchange your accommodation for a short period for free",
+		"link": "/",
+		"aboutLink": "/products/safeplace"
 	}
 ]
