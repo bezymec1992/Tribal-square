@@ -54,12 +54,12 @@
 		<div class="bottom">
 			<div class="container">
 				<div class="row align-items-md-center">
-					<div class="col-md-6 d-md-flex align-items-md-center">
+					<div class="col-lg-6 d-md-flex align-items-lg-center">
 						<strong class="logo">LOGO</strong>
 						<SocialLinks color="#000000" hover-color="#000000" hover-background="#FFDB1C" />
 					</div>
 
-					<div class="col-md-6 d-md-flex justify-content-md-end">
+					<div class="col-lg-6 d-md-flex justify-content-lg-end">
 						<ul class="menu style-1">
 							<li><nuxt-link to="/">Terms & Conditions</nuxt-link></li>
 							<li><nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></li>
@@ -252,7 +252,7 @@ export default {
 		}
 
 		.social-links {
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				margin-bottom: 3.1rem;
 			}
 		}

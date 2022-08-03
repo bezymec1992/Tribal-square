@@ -29,7 +29,8 @@
 
 		<div class="labels-section">
 			<div class="container">
-				<SliderLabels />
+				<!-- <SliderLabels /> -->
+				<CardLable v-for="(item, index) in labelsList" :key="index" class="style2" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" :card-background-color="item.cardBackgroundColor" :btn-color="item.btnColor" :btn-background-color="item.btnBackgroundColor" :card-style="item.cardStyle" :style-img="item.styleImg" :img-style-up-md="item.imgStyleUpMd" :img-style-down-md="item.imgStyleDownMd" :img-up-md="item.imgUpMd" :img-down-md="item.imgDownMd" :nuxt-link="item.nuxtLink" :title-style-up-md="item.titleStyleUpMd" :card-color="item.cardColor" />
 			</div>
 		</div>
 		
@@ -41,13 +42,16 @@
 import IntroSection from "@/components/IntroSection";
 import SolutionSection from "@/components/SolutionSection";
 import Solutions from "@/components/Solutions";
+import LabelsBig from "@/constants/labelsBig";
+import CardLable from "@/components/CardLable";
 
 export default {
 	name: "Labels",
 	components: {
 		IntroSection,
 		SolutionSection,
-		Solutions
+		Solutions,
+		CardLable
 	},
 	head() {
 		return {
@@ -55,6 +59,14 @@ export default {
 				class: "header-white"
 			}
 		};
+	},
+	data() {
+		return {
+			labelsList: []
+		};
+	},
+	mounted() {
+		this.labelsList = LabelsBig;
 	}
 };
 </script>
@@ -112,6 +124,14 @@ export default {
 		@include media-breakpoint-down(md) {
 			padding-top: 4rem;
 			padding-bottom: 4rem;
+		}
+
+		.label-card {
+			margin-bottom: 4.2rem;
+
+			@include media-breakpoint-down(md) {
+				margin-bottom: 2rem;
+			}
 		}
 	}
 }

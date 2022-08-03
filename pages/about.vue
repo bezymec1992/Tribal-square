@@ -95,10 +95,14 @@
 					</div>
 				</div>
 
-				<div class="healp__title-wrapp3">
+				<div class="healp__title-wrapp3 d-flex justify-content-between">
 					<h2 class="h2">Companies Overview</h2>
+					<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/labels" />
 				</div>
-				<SliderLabels :limit-labels-mobile="2" />
+				<CardLable v-for="(item, index) in labelsList" :key="index" class="style2" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" :card-background-color="item.cardBackgroundColor" :btn-color="item.btnColor" :btn-background-color="item.btnBackgroundColor" :card-style="item.cardStyle" :style-img="item.styleImg" :img-style-up-md="item.imgStyleUpMd" :img-style-down-md="item.imgStyleDownMd" :img-up-md="item.imgUpMd" :img-down-md="item.imgDownMd" :nuxt-link="item.nuxtLink" :title-style-up-md="item.titleStyleUpMd" :card-color="item.cardColor" />
+				<div class="col-12 d-flex justify-content-center pt-3">
+					<Button title="VIEW ALL" class="btn-link d-md-none" type="nuxt-link" to="/products" />
+				</div>
 			</div>
 		</div>
 
@@ -164,6 +168,8 @@ import SolutionSection from "@/components/SolutionSection";
 import SliderLabels from "@/components/SliderLabels";
 import ContactFormModal from "@/components/ContactFormModal";
 import Modal from "@/components/Modal";
+import CardLable from "@/components/CardLable";
+import LabelsBig from "@/constants/labelsBig";
 import Products from "@/constants/products";
 
 export default {
@@ -175,7 +181,8 @@ export default {
 		SolutionSection,
 		SliderLabels,
 		ContactFormModal,
-		Modal
+		Modal,
+		CardLable
 	},
 	data() {
 		return {
@@ -185,7 +192,8 @@ export default {
 				img: "solution-about-desk.jpg",
 				imgMob: "solution-about-mb.jpg"
 			},
-			productsList: []
+			productsList: [],
+			labelsList: []
 		};
 	},
 	head() {
@@ -197,6 +205,7 @@ export default {
 	},
 	mounted() {
 		this.productsList = Products.slice(0, 2);
+		this.labelsList = LabelsBig.slice(0, 2);
 	},
 	methods: {
 		openModal(modalName, modalType) {
@@ -612,6 +621,16 @@ export default {
 .solution {
 	@include media-breakpoint-down(md) {
 		padding-top: 8rem;
+	}
+}
+
+.label-card {
+	&:not(:last-child) {
+		margin-bottom: 4.2rem;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 2rem;
+		}
 	}
 }
 </style>

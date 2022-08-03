@@ -9,7 +9,6 @@
 		</template> -->
 		<template>
 			<CardLable v-for="(item, index) in sliceLabelsArray" :key="index" class="style2" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" :card-background-color="item.cardBackgroundColor" :btn-color="item.btnColor" :btn-background-color="item.btnBackgroundColor" :card-style="item.cardStyle" :img-style-up-md="item.imgStyleUpMd" :img-style-down-md="item.imgStyleDownMd" :img-up-md="item.imgUpMd" :img-down-md="item.imgDownMd" :nuxt-link="item.nuxtLink" :title-style-up-md="item.titleStyleUpMd" :title-style-down-md="item.titleStyleDownMd" :card-color="item.cardColor" />
-
 			<template v-if="limitLabelsMobile">
 				<div class="col-12 d-flex justify-content-center d-md-none col-w-btn pt-3">
 					<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/labels" />

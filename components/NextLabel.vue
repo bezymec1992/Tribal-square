@@ -36,20 +36,7 @@ import LabelsNext from "@/constants/labelsNext";
 
 export default {
 	name: "NextLabel",
-	props: {
-		// label: {
-		// 	type: Object,
-		// 	default: () => ({})
-		// },
-		// img: {
-		// 	type: Object,
-		// 	default: () => ({})
-		// },
-		// btn: {
-		// 	type: Object,
-		// 	default: () => ({})
-		// }
-	},
+	props: {},
 	data() {
 		return {
 			label: {}
