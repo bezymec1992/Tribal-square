@@ -88,7 +88,7 @@
 				</div>
 				<div class="row">
 					<div v-for="item in productsList" :key="item.id" class="col-md-6">
-						<Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" />
+						<Card class="style2" :img="item.img" :category="item.category" :title="item.title" :description="item.description" :about-link="item.aboutLink" :card-img="item.cardImg" />
 					</div>
 					<div class="col-12 d-flex justify-content-center pt-3">
 						<Button title="VIEW ALL" class="btn-link d-md-none" type="nuxt-link" to="/products" />

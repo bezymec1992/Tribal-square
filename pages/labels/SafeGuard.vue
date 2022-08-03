@@ -64,7 +64,7 @@
 			</template>
 		</SectionInfoBlock >
 
-        <SectionBlock :img="{ desktop: 'img-042.jpg', mobile: 'img-043.jpg', alt: 'Where can you find us?' }" :text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet.', 'Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']">
+        <SectionBlock video="video-01.mp4" :text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet.', 'Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.']">
 			<template #title>
                 Where can you <br/> find us?
 			</template>

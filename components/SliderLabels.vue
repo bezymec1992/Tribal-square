@@ -1,13 +1,13 @@
 <template>
 	<div class="slider-labels">
-		<template v-if="up_lg">
+		<!-- <template v-if="up_lg">
 			<swiper :options="swiperOption">
 				<swiper-slide v-for="(item, index) in labelsList" :key="index">
 					<CardLable class="style2" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" :card-background-color="item.cardBackgroundColor" :btn-color="item.btnColor" :btn-background-color="item.btnBackgroundColor" :card-style="item.cardStyle" :style-img="item.styleImg" :img-style-up-md="item.imgStyleUpMd" :img-style-down-md="item.imgStyleDownMd" :img-up-md="item.imgUpMd" :img-down-md="item.imgDownMd" :nuxt-link="item.nuxtLink" :title-style-up-md="item.titleStyleUpMd" :card-color="item.cardColor" />
 				</swiper-slide>
 			</swiper>
-		</template>
-		<template v-else>
+		</template> -->
+		<template>
 			<CardLable v-for="(item, index) in sliceLabelsArray" :key="index" class="style2" :svg-title="item.svgTitle" :title="item.title" :description="item.description" :type="item.type" :topic="item.topic" :website-link="item.websiteLink" :img="item.img" :card-background-color="item.cardBackgroundColor" :btn-color="item.btnColor" :btn-background-color="item.btnBackgroundColor" :card-style="item.cardStyle" :img-style-up-md="item.imgStyleUpMd" :img-style-down-md="item.imgStyleDownMd" :img-up-md="item.imgUpMd" :img-down-md="item.imgDownMd" :nuxt-link="item.nuxtLink" :title-style-up-md="item.titleStyleUpMd" :title-style-down-md="item.titleStyleDownMd" :card-color="item.cardColor" />
 
 			<template v-if="limitLabelsMobile">
@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
+// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+// import "swiper/css/swiper.css";
 import LabelsBig from "@/constants/labelsBig";
 import CardLable from "@/components/CardLable";
 import getterBreakpoints from "@/mixins/getterBreakpoints";
@@ -35,8 +35,8 @@ export default {
 		}
 	},
 	components: {
-		Swiper,
-		SwiperSlide,
+		// Swiper,
+		// SwiperSlide,
 		CardLable
 	},
 	mixins: [getterBreakpoints],
@@ -78,8 +78,10 @@ export default {
 </script>
 
 <style lang="scss">
+
 .slider-labels {
 	overflow: hidden;
+	
 
 	.swiper-container {
 		overflow: visible;
@@ -91,7 +93,7 @@ export default {
 
 	.label-card {
 		@include media-breakpoint-up(lg) {
-			margin-bottom: 0;
+			margin-bottom: 40px;
 		}
 
 		.btn {

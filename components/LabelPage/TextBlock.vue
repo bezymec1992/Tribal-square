@@ -35,6 +35,7 @@ export default {
 	}
 
 	.h2 {
+		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 2rem;
 		@include media-breakpoint-down(md) {

@@ -26,7 +26,7 @@ export default {
 		margin-bottom: 0;
 		text-align: center;
 		line-height: 1.2;
-
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			font-size: 3.2rem;
 		}

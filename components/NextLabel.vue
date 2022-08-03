@@ -116,6 +116,7 @@ export default {
 		margin-bottom: 2.4rem;
 		font-size: 2.8rem;
 		line-height: 1.43;
+		text-transform: uppercase;
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 2.7rem;
 			font-size: 4rem;

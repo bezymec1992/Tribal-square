@@ -86,7 +86,7 @@ export default {
 	.h2 {
 		margin-bottom: 4rem;
 		line-height: 1;
-
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			margin-bottom: 1.5rem;
 		}

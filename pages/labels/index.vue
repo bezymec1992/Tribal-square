@@ -26,11 +26,13 @@
 			</div>
 		</Intro-section>
 		<Solutions class="pb-0 style-2" title="We provide solutions that help your business grow" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege." />
+
 		<div class="labels-section">
 			<div class="container">
 				<SliderLabels />
 			</div>
 		</div>
+		
 		<SolutionSection />
 	</div>
 </template>
