@@ -75,7 +75,9 @@ export default {
 			padding-left: 100px;
 		}
 		.solution__title {
-			max-width: 680px;
+			font-family: 'Oswald';
+			text-transform: uppercase;
+			max-width: 700px;
 			padding-bottom: 40px;
 			@include media-breakpoint-down(sm) {
 				padding-bottom: 30px;
@@ -121,6 +123,7 @@ export default {
 			@include media-breakpoint-down(md) {
 				position: relative;
 				height: 400px;
+				
 			}
 		}
 		.solution__picture img {
@@ -128,6 +131,7 @@ export default {
 				position: absolute;
 				right: -70px;
 				top: 0;
+				
 			}
 		}
 	}

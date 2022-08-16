@@ -32,9 +32,9 @@
 
 		<SecondImg :img="{ desktop: 'img-074.png', mobile: 'img-075.png' }" :section-style="'max-width: 124.5rem'" />
 
-		<SectionThreeCols title="Tagret audience" :paragraphs="['Small carcompanies', 'Different car dealers', 'Other car companies']" />
+		<SectionThreeCols title="Tagret audience" :paragraphs="['Small car companies', 'Different car dealers', 'Other car companies']" />
 
-		<SectionVideo video="video-02.mp4" />
+		<SectionVideo video="video-003.mp4" />
 
 		<TextBlock title="Here should be additional info about the product" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege." />
 
@@ -48,7 +48,7 @@
 
 <script>
 import IntroSection from "@/components/IntroSection";
-import Discover from "@/components/Discover";
+// import Discover from "@/components/Discover";
 import Button from "@/components/Button";
 import ContactSection from "@/components/ContactSection";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -64,7 +64,7 @@ import SectionVideo from "@/components/ProductPage/SectionVideo";
 export default {
 	name: "KnockKnock",
 	components: {
-		Discover,
+		// Discover,
 		IntroSection,
 		Button,
 		ContactSection,
@@ -77,7 +77,8 @@ export default {
 		MainImg,
 		SecondImg,
 		SectionVideo
-	}
+	},
+	
 };
 </script>
 

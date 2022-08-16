@@ -15,6 +15,7 @@
 									</svg>
 								</template>
 							</Button>
+							
 						</div>
 					</div>
 				</div>
@@ -33,9 +34,8 @@
 
 <script>
 import LabelsNext from "@/constants/labelsNext";
-
 export default {
-	name: "NextLabel",
+	name: "NextLabel", 
 	props: {},
 	data() {
 		return {
@@ -44,6 +44,7 @@ export default {
 	},
 	mounted() {
 		this.label = LabelsNext[this.getRandomInt(LabelsNext.length)];
+		
 	},
 	methods: {
 		getRandomInt(max) {
@@ -54,7 +55,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.btn-dark {
+		background: linear-gradient(#000, #000) padding-box, linear-gradient(45deg, rgba(255, 255, 255, 0.1), white) border-box !important;
+    	border: 0.1rem solid transparent !important;
+	}
 .next-label {
+	
 	&__section {
 		padding-bottom: 12rem;
 
@@ -92,7 +98,7 @@ export default {
 		margin-bottom: 2rem;
 		font-size: 1.6rem;
 		line-height: 1.5;
-		opacity: 40%;
+		opacity: 0.4;
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 3rem;
 			font-size: 1.8rem;
@@ -100,6 +106,7 @@ export default {
 		}
 	}
 	&__title {
+		font-family: 'Oswald';
 		margin-bottom: 2.4rem;
 		font-size: 2.8rem;
 		line-height: 1.43;

@@ -32,7 +32,7 @@
 
 		<SecondImg :img="{ desktop: 'img-081.jpg', mobile: 'img-082.jpg' }" :section-style="'max-width: 124.2rem'" />
 
-		<SectionThreeCols title="Tagret audience" :paragraphs="['Small carcompanies', 'Different car dealers', 'Other car companies']" />
+		<SectionThreeCols title="Tagret audience" :paragraphs="['Small car companies', 'Different car dealers', 'Other car companies']" />
 
 		<SectionLocation />
 
@@ -48,7 +48,7 @@
 
 <script>
 import IntroSection from "@/components/IntroSection";
-import Discover from "@/components/Discover";
+// import Discover from "@/components/Discover";
 import Button from "@/components/Button";
 import ContactSection from "@/components/ContactSection";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -59,13 +59,13 @@ import TextBlock from "@/components/ProductPage/TextBlock";
 import DiscoverProducts from "@/components/ProductPage/DiscoverProducts";
 import MainImg from "@/components/ProductPage/MainImg";
 import SecondImg from "@/components/ProductPage/SecondImg";
-import SectionVideo from "@/components/ProductPage/SectionVideo";
+// import SectionVideo from "@/components/ProductPage/SectionVideo";
 import SectionLocation from "@/components/SectionLocation";
 
 export default {
 	name: "GoingHome",
 	components: {
-		Discover,
+		// Discover,
 		IntroSection,
 		Button,
 		ContactSection,
@@ -77,7 +77,7 @@ export default {
 		DiscoverProducts,
 		MainImg,
 		SecondImg,
-		SectionVideo,
+		// SectionVideo,
 		SectionLocation
 	}
 };
@@ -87,7 +87,8 @@ export default {
 .second-img {
 	padding-top: 5rem;
 	padding-bottom: 2rem;
-
+	font-family: 'Oswald';
+	text-transform: uppercase;
 	@include media-breakpoint-up(md) {
 		padding-top: 10rem;
 		padding-bottom: 8rem;

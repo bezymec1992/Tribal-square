@@ -103,6 +103,8 @@ export default {
 		margin-bottom: 3rem;
 		font-size: 4rem;
 		line-height: 1.24;
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 6rem;
 			font-size: 6.4rem;
@@ -165,7 +167,8 @@ export default {
 		margin-bottom: 2.4rem;
 		font-size: 2.6rem;
 		line-height: 1.23;
-
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 3.8rem;
 			font-size: 3.2rem;

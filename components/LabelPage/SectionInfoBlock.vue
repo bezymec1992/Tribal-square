@@ -81,12 +81,14 @@ export default {
 		@include media-breakpoint-up(xl) {
 			padding-left: 5.8rem;
 		}
+		
 	}
 
 	.h2 {
 		margin-bottom: 4rem;
 		line-height: 1;
 		text-transform: uppercase;
+		font-family: 'Oswald';
 		@include media-breakpoint-down(md) {
 			margin-bottom: 1.5rem;
 		}
@@ -165,6 +167,21 @@ export default {
 			width: 100%;
 			height: auto;
 			border-radius: 1rem;
+		}
+	}
+	&.style2 {
+		.img-holder {
+			margin-right: -152px;
+			@include media-breakpoint-down(md) {
+				margin-right: -2rem;
+				margin-left: -3rem;
+			}
+		}
+		.content-holder {
+			width: 608px;
+			@include media-breakpoint-down(md) {
+				max-width: 100%;
+			}
 		}
 	}
 }

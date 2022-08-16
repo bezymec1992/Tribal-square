@@ -32,7 +32,7 @@
 
 		<SecondImg :img="{ desktop: 'img-0110.jpg', mobile: 'img-0111.jpg' }" :section-style="'max-width: 124rem'" />
 
-		<SectionThreeCols title="Tagret audience" :paragraphs="['Small carcompanies', 'Different car dealers', 'Other car companies']" />
+		<SectionThreeCols title="Tagret audience" :paragraphs="['Small car companies', 'Different car dealers', 'Other car companies']" />
 
 		<TextBlock title="Here should be additional info about the product" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege." />
 

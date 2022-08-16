@@ -54,6 +54,7 @@ export default {};
 				width: 335px;
 				.location__title {
 					padding-bottom: 20px;
+					
 				}
 			}
 		}
@@ -76,6 +77,8 @@ export default {};
 			margin-bottom: 20px;
 			padding-top: 20px;
 			font-size: 50px;
+			font-family: 'Oswald';
+			text-transform: uppercase;
 			@include media-breakpoint-down(md) {
 				font-size: 24px;
 			}

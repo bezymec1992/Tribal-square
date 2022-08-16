@@ -6,8 +6,8 @@
 					<div class="col-lg-8">
 						<div class="content-holder">
 							<h1 class="h1">
-								Easy to find and <br />
-								use what you need
+								Easy to find and use
+								what you need
 							</h1>
 							<div class="text-holder">
 								<p>
@@ -78,11 +78,11 @@ export default {
 	.intro-section {
 		color: $white;
 		background: url("@/assets/imgs/img-035.jpg");
-		background-position: 100% 100%;
+		// background-position: 100% 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		overflow: hidden;
-
+		height: 85rem;
 		@include media-breakpoint-up(lg) {
 			padding-top: 39rem;
 		}
@@ -95,6 +95,9 @@ export default {
 		.content-holder {
 			position: relative;
 			z-index: 2;
+			.h1 {
+				max-width: 600px;
+			}
 		}
 
 		.img-holder {

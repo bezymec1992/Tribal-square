@@ -34,7 +34,8 @@ export default {
 .txt-block {
 	.h2 {
 		margin-bottom: 4rem;
-
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			margin-bottom: 2.2rem;
 		}

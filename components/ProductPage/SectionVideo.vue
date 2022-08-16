@@ -37,24 +37,27 @@ export default {
 		}
 	}
 
-	.video-holder {
-		@include media-breakpoint-down(md) {
-			position: relative;
-			min-height: 44.5rem;
-		}
-	}
+	// .video-holder {
+	// 	@include media-breakpoint-down(md) {
+	// 		position: relative;
+	// 		min-height: 35rem;
+			
+			
+	// 	}
+	// }
 
 	video {
 		width: 100%;
+		
 		height: auto;
 
-		@include media-breakpoint-down(md) {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			object-fit: cover;
-		}
+		// @include media-breakpoint-down(md) {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	height: auto;
+		// 	object-fit: cover;
+		// }
 	}
 }
 </style>

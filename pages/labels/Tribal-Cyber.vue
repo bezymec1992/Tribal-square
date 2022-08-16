@@ -41,8 +41,7 @@
 
         <SectionInfoBlock :img="{ desktop: 'img-005.jpg', mobile: 'img-006.jpg', alt: 'Services we provide' }" :btn="{ href: '/' }">
 			<template #title>
-				Services we <br />
-				provide
+				Services we provide
 			</template>
 			<template #list>
 				<div class="row">
@@ -64,8 +63,8 @@
 
         <SectionSlogan>
 			<template #title>
-				This is a place for a final <br class="d-none d-md-block" />
-				slogan about this label
+				TThis is a place for a final
+				slogan <br class="d-none d-md-block" /> about this label
 			</template>
 		</SectionSlogan>
 

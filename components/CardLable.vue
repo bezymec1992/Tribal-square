@@ -306,10 +306,10 @@ export default {
 			padding: 3rem 2rem;
 		}
 
-		&:hover {
-			color: $white;
-			background: $cloud-burst;
-		}
+		// &:hover {
+		// 	color: $white;
+		// 	background: $cloud-burst;
+		// }
 
 		.img-holder {
 			@include media-breakpoint-down(md) {

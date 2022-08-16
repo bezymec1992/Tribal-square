@@ -28,4 +28,20 @@
 }
 
 
+/* @font-face {
+	font-family: 'Oswald';
+	src: url('Oswald-Medium.eot');
+	src: local('☺'), url('fonts/Oswald-Medium.woff') format('woff'), url('fonts/Oswald-Medium.ttf') format('truetype'), url('fonts/Oswald-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+} */
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('Oswald-Medium.woff2') format('woff2'), url('Oswald-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
 

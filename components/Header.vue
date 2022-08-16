@@ -33,19 +33,19 @@
 							<div class="accordion-content">
 								<ul class="inner-menu">
 									<li @click="menuClose">
-										<nuxt-link to="/products">All products overview</nuxt-link>
+										<nuxt-link to="/products" exact-active-class="active">All products overview</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">Knock Knock</nuxt-link>
+										<nuxt-link to="/products/knock-knock" exact-active-class="active">Knock Knock</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">Coffee App</nuxt-link>
+										<nuxt-link to="/products/coffee-app" exact-active-class="active">Coffee App</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">Digital Valet </nuxt-link>
+										<nuxt-link to="/products/digital-valet" exact-active-class="active">Digital Valet </nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">HandsRepublic</nuxt-link>
+										<nuxt-link to="/products/hands-republic" exact-active-class="active">HandsRepublic</nuxt-link>
 									</li>
 								</ul>
 							</div>
@@ -63,25 +63,25 @@
 							<div class="accordion-content">
 								<ul class="inner-menu">
 									<li @click="menuClose">
-										<nuxt-link to="/labels">All labels overview</nuxt-link>
+										<nuxt-link to="/labels" exact-active-class="active">All labels overview</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">TribalHands</nuxt-link>
+										<nuxt-link to="/labels/TribalHands" exact-active-class="active">TribalHands</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">Digital Chiefs</nuxt-link>
+										<nuxt-link to="/labels/Digital-Chiefs" exact-active-class="active">Digital Chiefs</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/labels/powwows">Powwows</nuxt-link>
+										<nuxt-link to="/labels/TribalDen" exact-active-class="active">Powwows</nuxt-link>
 									</li>
 									<li @click="menuClose">
-										<nuxt-link to="/">Tribal Cyber</nuxt-link>
+										<nuxt-link to="/labels/Tribal-Cyber" exact-active-class="active">Tribal Cyber</nuxt-link>
 									</li>
 								</ul>
 							</div>
 						</li>
 						<li @click="menuClose">
-							<nuxt-link to="/partner" exact-active-class="active">For partners</nuxt-link>
+							<nuxt-link to="/partner" exact-active-class="active" >For partners</nuxt-link>
 						</li>
 						<li @click="menuClose">
 							<nuxt-link to="/contact" exact-active-class="active">Contact</nuxt-link>
@@ -214,6 +214,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.active2 {
+	color: rgb(206, 206, 104) !important;
+}
 .header {
 	position: absolute;
 	width: 100%;

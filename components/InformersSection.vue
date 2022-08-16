@@ -30,8 +30,8 @@
 							<div class="col-lg-6">
 								<div class="content-holder">
 									<h3 class="h2">
-										Everything you <br class="d-none d-md-block" />
-										need at one <br class="d-none d-md-block" />
+										Everything you <br class="d-md-none" />
+										need at one 
 										place
 									</h3>
 									<Button title="Get in touch" class="btn-light shadow-sm" type="nuxt-link" to="/contact">
@@ -54,7 +54,7 @@
 					<div class="products-informer" anchor-section="section-2">
 						<div class="header d-flex align-items-baseline justify-content-between">
 							<h3 class="h2">Labels Overview</h3>
-							<Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/labels" />
+							<!-- <Button title="VIEW ALL" class="btn-link d-none d-md-inline-flex" type="nuxt-link" to="/labels" /> -->
 						</div>
 						<div class="row">
 							<div class="col-12">
@@ -64,7 +64,7 @@
 									</template>
 								</CardLable>
 							</div>
-							<div class="col-12 d-flex justify-content-center d-md-none col-w-btn">
+							<div class="col-12 d-flex justify-content-center  col-w-btn">
 								<Button title="VIEW ALL" class="btn-link" type="nuxt-link" to="/labels">
 									<template #icon>
 										<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -252,6 +252,8 @@ export default {
 		}
 
 		.h2 {
+			font-family: 'Oswald';
+			text-transform: uppercase;
 			margin-bottom: 0;
 		}
 
@@ -321,7 +323,8 @@ export default {
 		.h2 {
 			margin-bottom: 5.2rem;
 			line-height: 1.2;
-
+			font-family: 'Oswald';
+			text-transform: uppercase;
 			@include media-breakpoint-down(md) {
 				margin-bottom: 2.4rem;
 			}

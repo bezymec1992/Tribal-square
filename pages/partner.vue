@@ -255,7 +255,8 @@ export default {
 			margin-bottom: 3.5rem;
 			font-size: 2.8rem;
 			line-height: 1.42;
-
+			font-family: 'Oswald';
+			text-transform: uppercase;
 			@include media-breakpoint-up(md) {
 				max-width: 85.4rem;
 				margin: auto;
@@ -281,6 +282,8 @@ export default {
 			margin-bottom: 4rem;
 			font-size: 2.4rem;
 			line-height: 1.24;
+			font-family: 'Oswald';
+			text-transform: uppercase;
 			@include media-breakpoint-up(lg) {
 				font-size: 3.4rem;
 				line-height: 1.41;

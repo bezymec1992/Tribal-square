@@ -23,6 +23,7 @@ export default {
 	.h1 {
 		margin-bottom: 4rem;
 		text-transform: uppercase;
+		font-family: 'Oswald';
 		@include media-breakpoint-down(md) {
 			margin-bottom: 2rem;
 		}

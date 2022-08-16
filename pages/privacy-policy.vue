@@ -62,17 +62,19 @@ export default {
 		padding-top: 5.2rem;
 		padding-bottom: 8rem;
 		@include media-breakpoint-up(md) {
-			padding: 8rem 0 15rem;
+			padding: 10rem 0 15rem;
 		}
 	}
 	&__title {
 		font-size: 2.4rem;
 		line-height: 1.08;
 		color: $black;
+		margin-top: 5rem;
 
 		@include media-breakpoint-up(md) {
 			font-size: 4rem;
 			line-height: 1;
+			margin-top: 8rem;
 		}
 	}
 

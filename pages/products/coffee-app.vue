@@ -30,9 +30,9 @@
 
 		<SectionTwoTextCols first-title="Idea" :first-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" second-title="Assets" :second-text="['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. ']" />
 
-		<SecondImg :img="{ desktop: 'img-068.png', mobile: 'img-069.png' }" :section-style="'max-width: 83rem'" />
+		<SecondImg :img="{ desktop: 'img-068.png', mobile: 'img-069.png' }" :section-style="'max-width: 95rem'" />
 
-		<SectionThreeCols title="Tagret audience" :paragraphs="['Small carcompanies', 'Different car dealers', 'Other car companies']" />
+		<SectionThreeCols title="Tagret audience" :paragraphs="['Small car companies', 'Different car dealers', 'Other car companies']" />
 
 		<TextBlock title="Here should be additional info about the product" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege." />
 
@@ -46,7 +46,7 @@
 
 <script>
 import IntroSection from "@/components/IntroSection";
-import Discover from "@/components/Discover";
+// import Discover from "@/components/Discover";
 import Button from "@/components/Button";
 import ContactSection from "@/components/ContactSection";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -61,7 +61,7 @@ import SecondImg from "@/components/ProductPage/SecondImg";
 export default {
 	name: "CoffeeApp",
 	components: {
-		Discover,
+		// Discover,
 		IntroSection,
 		Button,
 		ContactSection,
@@ -77,4 +77,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+	
+
+</style>

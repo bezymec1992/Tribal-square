@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Knock Knock",
+		"title": " Knock Knock",
 		"category": "Platform & App",
 		"img": "img-01.png",
 		"cardImg": {
@@ -12,7 +12,7 @@
 		"aboutLink": "/products/knock-knock"
 	},
 	{
-		"title": "Coffee App",
+		"title": "Cofee App",
 		"category": "App",
 		"img": "img-02.png",
 		"cardImg": {
@@ -48,16 +48,16 @@
 		"aboutLink": "/products/hands-republic"
 	},
 	{
-		"title": "Going Home",
-		"category": "App",
-		"img": "img-078.png",
+		"title": "Safeplace",
+		"category": "Software",
+		"img": "img-0107.png",
 		"cardImg": {
-			"desktop": "img-0122.jpg",
-			"mobile": "img-0123.jpg"
+			"desktop": "img-0128.jpg",
+			"mobile": "img-0129.jpg"
 		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"aboutLink": "/products/going-home"
+		"aboutLink": "/products/safeplace"
 	},
 	{
 		"title": "Mother Goose",
@@ -65,7 +65,7 @@
 		"img": "img-087.png",
 		"cardImg": {
 			"desktop": "img-0124.jpg",
-			"mobile": "img-0123.jpg"
+			"mobile": "img-0124.jpg"
 		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
@@ -84,15 +84,18 @@
 		"aboutLink": "/products/training-app"
 	},
 	{
-		"title": "Safeplace",
-		"category": "Software",
-		"img": "img-0107.png",
+		"title": "Going Home",
+		"category": "App",
+		"img": "img-078.png",
 		"cardImg": {
-			"desktop": "img-0128.jpg",
-			"mobile": "img-0129.jpg"
+			"desktop": "img-0122.jpg",
+			"mobile": "img-0123.jpg"
 		},
 		"description": "Service which can help you to exchange your accommodation for a short period for free",
 		"link": "/",
-		"aboutLink": "/products/safeplace"
+		"aboutLink": "/products/going-home"
 	}
+	
+	
+	
 ]

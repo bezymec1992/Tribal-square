@@ -54,9 +54,9 @@
 							</p>
 							</div>
 							<ul class="test__list">
-							<li class="test__item">Full-Stack Apps</li>
-							<li class="test__item">Data-Intensive Apps</li>
-							<li class="test__item">Artificial Intelligence</li>
+								<li class="test__item">Full-Stack Apps</li>
+								<li class="test__item">Data-Intensive Apps</li>
+								<li class="test__item">Artificial Intelligence</li>
 							</ul>
 						</div>
 						</div>
@@ -68,19 +68,19 @@
       		</div>
 		</div>
 
-		<SectionInfoBlock :img="{ desktop: 'img-0035.png', mobile: 'img-0036.png', alt: 'Services we provide' }" :btn="{ href: '/' }">
+		<SectionInfoBlock class="style2" :img="{ desktop: 'img-0035.png', mobile: 'img-0036.png', alt: 'Services we provide' }" :btn="{ href: '/' }">
 			<template #title>
 				Services we provide
 			</template>
 			<template #list>
 				<div class="row">
-					<div class="col-6">
+					<div class="col-12 col-lg-6">
 						<ul>
 							<li>Product Scope</li>
                             <li>MVP Builder</li>
 						</ul>
 					</div>
-					<div class="col-6">
+					<div class="col-12 col-lg-6">
 						<ul>
 							<li>Dedicated Teams</li>
 							<li>UI/UX</li>
@@ -100,8 +100,8 @@
 
 		<SectionSlogan>
 			<template #title>
-				This is a place for a final <br class="d-none d-md-block" />
-				slogan about this label
+				This is a place for a final
+				slogan <br class="d-none d-md-block" /> about this label
 			</template>
 		</SectionSlogan>
 
@@ -137,6 +137,7 @@ export default {
 <style lang="scss" scoped>
 	.tribal-hands {
 		background: white;
+		overflow: hidden;
 	}
 
 	.test {
@@ -173,9 +174,10 @@ export default {
 			font-size: 32px;
 			text-transform: uppercase;
 			margin-bottom: 1.5rem;
+			font-family: 'Oswald';
 			@include media-breakpoint-up(md) {
 			margin-bottom: 2rem;
-			max-width: 360px;
+			max-width: 29.3rem;
 			}
 		}
 		&__text {
@@ -207,4 +209,6 @@ export default {
 			height: auto;
 		}
 	}
+
+	
 </style>

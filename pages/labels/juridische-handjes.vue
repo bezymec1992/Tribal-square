@@ -39,10 +39,10 @@
 			<div class="inner-holder">
 				<div class="row g-0">
 					<div class="col-12">
-						<p>
-							With our support <br />
-							you can keep focus <br />
-							on what you are <br />
+						<p class="back-title">
+							With our support you<br />
+							can keep focus on<br />
+							what you are
 							good at
 						</p>
 						<div class="img-holder">
@@ -60,8 +60,7 @@
 
 		<SectionInfoBlock :img="{ desktop: 'img-0023.jpg', mobile: 'img-0024.jpg', alt: 'Services we provide' }" :btn="{ href: '/' }">
 			<template #title>
-				Services we <br />
-				provide
+				Services we provide
 			</template>
 			<template #list>
 				<div class="row">
@@ -80,8 +79,8 @@
 
 		<SectionSlogan>
 			<template #title>
-				This is a place for a final <br class="d-none d-md-block" />
-				slogan about this label
+				This is a place for a final
+				slogan <br class="d-none d-md-block" /> about this label
 			</template>
 		</SectionSlogan>
 
@@ -165,7 +164,8 @@ export default {
 		p {
 			position: relative;
 			z-index: 2;
-
+			font-family: 'Oswald';
+			text-transform: uppercase;
 			@include media-breakpoint-down(lg) {
 				margin-bottom: 8rem;
 				font-size: 2.8rem;

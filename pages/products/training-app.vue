@@ -32,7 +32,7 @@
 
 		<SecondImg :img="{ desktop: 'img-0102.png', mobile: 'img-0103.png' }" :section-style="'max-width: 116.2rem'" />
 
-		<SectionThreeCols title="Tagret audience" :paragraphs="['Small carcompanies', 'Different car dealers', 'Other car companies']" />
+		<SectionThreeCols title="Tagret audience" :paragraphs="['Small car companies', 'Different car dealers', 'Other car companies']" />
 
 		<SecondImg class="second-img-2" :img="{ desktop: 'img-0103.jpg', mobile: 'img-0104.jpg' }" :section-style="'max-width: 124rem'" />
 

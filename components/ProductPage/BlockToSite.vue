@@ -69,6 +69,8 @@ export default {
 		margin-bottom: 6rem;
 		font-size: 5.4rem;
 		text-align: center;
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 8rem;
 			font-size: 40px;

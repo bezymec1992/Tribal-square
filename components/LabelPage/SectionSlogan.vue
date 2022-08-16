@@ -27,6 +27,7 @@ export default {
 		text-align: center;
 		line-height: 1.2;
 		text-transform: uppercase;
+		font-family: 'Oswald';
 		@include media-breakpoint-down(md) {
 			font-size: 3.2rem;
 		}

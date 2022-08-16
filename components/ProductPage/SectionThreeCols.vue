@@ -43,6 +43,8 @@ export default {
 	}
 	.section-three-cols__title {
 		margin-bottom: 50px;
+		font-family: 'Oswald';
+		text-transform: uppercase;
 	}
 	.section-three-cols__items {
 		@include media-breakpoint-down(lg) {

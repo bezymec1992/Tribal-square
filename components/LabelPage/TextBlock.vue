@@ -38,6 +38,7 @@ export default {
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 2rem;
+		font-family: 'Oswald';
 		@include media-breakpoint-down(md) {
 			text-align: left;
 		}

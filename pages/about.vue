@@ -7,8 +7,8 @@
 						<div class="col-lg-7">
 							<div class="about__info">
 								<h1 class="h1 first-section__title">
-									Everything you need <br class="d-none d-md-block" />
-									to know about us
+									Everything you need to<br class="d-none d-md-block" />
+									 know about us
 								</h1>
 								<p class="first-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet</p>
 							</div>
@@ -52,8 +52,8 @@
 		<div class="accelerate">
 			<div class="container">
 				<h2 class="h2 accelerate__title">Accelerate customer engagement initiatives with confidence</h2>
-				<div class="accelerate__items d-flex flex-column flex-lg-row justify-content-around align-items-center">
-					<div class="accelerate__item d-flex flex-column align-items-center">
+				<div class="accelerate__items d-flex flex-column flex-lg-row justify-content-around align-items-md-center align-items-left">
+					<div class="accelerate__item d-flex flex-column align-items-md-center align-items-left">
 						<picture class="accelerate__picture">
 							<source srcset="@/assets/imgs/img-028.png" media="(max-width: 767px)" width="408" height="360" />
 							<img src="@/assets/imgs/img-028.png" alt="partners-logo" width="437" height="365" />
@@ -61,7 +61,7 @@
 						<span class="accelerate__span">Consultancy Partners </span>
 						<p class="accelerate__text">Global execution and delivery of your technology strategy.</p>
 					</div>
-					<div class="accelerate__item d-flex flex-column align-items-center">
+					<div class="accelerate__item d-flex flex-column align-items-md-center align-items-left">
 						<picture class="accelerate__picture">
 							<source srcset="@/assets/imgs/img-029.png" media="(max-width: 767px)" width="409" height="360" />
 							<img src="@/assets/imgs/img-029.png" alt="partners-logo" width="437" height="365" />
@@ -147,15 +147,15 @@
 			</div>
 		</div>
 		<SolutionSection />
-		<ContactSection />
+		<!-- <ContactSection /> -->
 
-		<modal ref="modalPartner" class="contact-from">
+		<!-- <modal ref="modalPartner" class="contact-from">
 			<template #modal-body>
 				<div class="modal-form">
 					<ContactFormModal :modal-type="modalType" @submitForm="closeModal('modalPartner')" />
 				</div>
 			</template>
-		</modal>
+		</modal> -->
 	</div>
 </template>
 
@@ -163,11 +163,11 @@
 import Solutions from "@/components/Solutions";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
-import ContactSection from "@/components/ContactSection";
+// import ContactSection from "@/components/ContactSection";
 import SolutionSection from "@/components/SolutionSection";
-import SliderLabels from "@/components/SliderLabels";
-import ContactFormModal from "@/components/ContactFormModal";
-import Modal from "@/components/Modal";
+// import SliderLabels from "@/components/SliderLabels";
+// import ContactFormModal from "@/components/ContactFormModal";
+// import Modal from "@/components/Modal";
 import CardLable from "@/components/CardLable";
 import LabelsBig from "@/constants/labelsBig";
 import Products from "@/constants/products";
@@ -177,11 +177,11 @@ export default {
 		Solutions,
 		Card,
 		Button,
-		ContactSection,
+		// ContactSection,
 		SolutionSection,
-		SliderLabels,
-		ContactFormModal,
-		Modal,
+		// SliderLabels,
+		// ContactFormModal,
+		// Modal,
 		CardLable
 	},
 	data() {
@@ -226,9 +226,11 @@ export default {
 	background: url("@/assets/imgs/img-032.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 85rem;
+	overflow: hidden;
 
 	@include media-breakpoint-down(lg) {
-		padding-top: 13rem;
+		padding-top: 11rem;
 	}
 
 	@include media-breakpoint-up(lg) {
@@ -249,8 +251,11 @@ export default {
 	.first-section__title {
 		max-width: 73.1rem;
 		margin-bottom: 4rem;
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			max-width: 33.5rem;
+			margin-bottom: 2rem;
 		}
 	}
 	.first-section__text {
@@ -409,7 +414,8 @@ export default {
 		margin-bottom: 0;
 		font-size: 6.4rem;
 		line-height: 1.2;
-
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			font-size: 3.8rem;
 		}
@@ -427,15 +433,19 @@ export default {
 		max-width: 86.4rem;
 		text-align: center;
 		margin: 0 auto 5.2rem auto;
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			width: 33.9rem;
 			text-align: left;
+			margin-bottom: 5.2rem;
+			margin-left: 0;
 		}
 	}
 	.accelerate__picture {
 		@include media-breakpoint-down(md) {
 			position: relative;
-			left: 2rem;
+			left: -5rem;
 			top: 0;
 		}
 	}
@@ -460,6 +470,7 @@ export default {
 		margin-bottom: 2rem;
 		margin-top: 4.3rem;
 		@include media-breakpoint-down(md) {
+			text-align: left;
 			font-size: 1.8rem;
 			margin: 2rem 0;
 		}
@@ -487,6 +498,10 @@ export default {
 		display: block;
 		max-width: 85.4rem;
 		text-align: center;
+		h2 {
+			font-family: 'Oswald';
+			text-transform: uppercase;
+		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: 6rem;
 		}
@@ -500,7 +515,10 @@ export default {
 
 	.healp__title-wrapp2 {
 		margin-bottom: 3.2rem;
-
+		h2 {
+			font-family: 'Oswald';
+			text-transform: uppercase;
+		};
 		@include media-breakpoint-down(md) {
 			margin-bottom: 2.4rem;
 		}
@@ -508,14 +526,17 @@ export default {
 
 	.healp__title-wrapp3 {
 		padding-top: 12rem;
-
+		h2 {
+			font-family: 'Oswald';
+			text-transform: uppercase;
+		}
 		@include media-breakpoint-down(md) {
 			padding-top: 8rem;
 		}
 
 		.h2 {
 			margin-bottom: 3.2rem;
-
+			
 			@include media-breakpoint-down(md) {
 				margin-bottom: 1.6rem;
 			}
@@ -577,7 +598,10 @@ export default {
 
 	.toghether__info {
 		max-width: 55.4rem;
-
+		h2 {
+			font-family: 'Oswald';
+			text-transform: uppercase;
+		}
 		@include media-breakpoint-down(xl) {
 			margin-bottom: 3rem;
 		}

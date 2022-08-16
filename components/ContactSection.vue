@@ -4,7 +4,7 @@
 			<div class="row align-items-md-end">
 				<div class="col-lg-5">
 					<h2 class="h2">
-						Ready to <br class="d-none d-md-block" />
+						Ready to 
 						start <br class="d-md-none" />
 						right now?
 					</h2>
@@ -52,9 +52,11 @@ export default {
 	.h2 {
 		margin-bottom: 3.2rem;
 		line-height: 1.1;
-
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			margin-bottom: 3rem;
+			font-size: 36px;
 		}
 	}
 

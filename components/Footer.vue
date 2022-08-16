@@ -11,7 +11,7 @@
 					</div>
 					<div class="col-xl-7">
 						<div class="row">
-							<div class="col-6 col-md-3 order-1 order-md-1">
+							<div class="col-6 col-md-2 order-1 order-md-1">
 								<ul class="menu style-2">
 									<li v-for="(item, index) in menu[0]" :key="index">
 										<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
@@ -28,7 +28,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="col-6 col-md-3 order-4 order-md-3">
+							<div class="col-6 col-md-4 order-4 order-md-3">
 								<ul class="menu style-2">
 									<li v-for="(item, index) in menu[2]" :key="index">
 										<nuxt-link :to="item.to">{{ item.title }}</nuxt-link>
@@ -141,7 +141,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-	padding-top: 10.6rem;
+	padding-top: 12rem;
 	color: $white;
 	background: $tiber;
 

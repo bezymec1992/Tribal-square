@@ -10,9 +10,9 @@
 				<div class="col-12 col-md-6">
 					<div class="solution__body">
 						<h2 class="solution__title">
-							We provide <br class="d-none d-md-block" />
-							solutions <br class="d-md-none" />
-							that help <br class="d-none d-md-block" />your business grow
+							We provide 
+							solutions 
+							that help your business grow
 						</h2>
 						<p class="solution__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas in est ut aliquet. Pellentesque ac blandit leo, nec porta velit. Nulla facilisi. Phasellus at placerat felis. Intege.</p>
 					</div>
@@ -91,7 +91,9 @@ export default {
 		font-size: 2.8rem;
 		line-height: 1.42;
 		margin-bottom: 3rem;
-
+		font-family: 'Oswald';
+		text-transform: uppercase;
+		max-width: 434px;
 		@include media-breakpoint-up(lg) {
 			font-size: 4rem;
 			line-height: 1.5;
@@ -116,7 +118,8 @@ export default {
 		}
 
 		@include media-breakpoint-down(md) {
-			margin-right: -9rem;
+			    margin-right: -12rem;
+    			margin-left: -6rem;
 		}
 	}
 

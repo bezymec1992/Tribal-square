@@ -2,22 +2,25 @@
 		<nuxt-link :to="aboutLink">
 			<div class="card">
 				<div class="img-holder">
-					<picture>
+					
+						<picture>
 						<source v-if="cardImg.mobile" :srcset="require(`@/assets/imgs/${cardImg.mobile}`)" media="(max-width: 575px)" />
 						<img v-if="cardImg.desktop" :src="require(`@/assets/imgs/${cardImg.desktop}`)" :alt="title" />
 					</picture>
+					
+					
 				</div>
-			<div class="card-header">
-				<div class="d-flex align-items-center">
-					<div class="icon-holder">
-						<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
-					</div>
-					<div class="content-holder">
-						<span class="category">{{ category }}</span>
-						<h3 class="title">{{ title }}</h3>
+				<div class="card-header">
+					<div class="d-flex align-items-center">
+						<div class="icon-holder">
+							<img :src="require(`@/assets/imgs/${img}`)" :alt="title" />
+						</div>
+						<div class="content-holder">
+							<span class="category">{{ category }}</span>
+							<h3 class="title">{{ title }}</h3>
+						</div>
 					</div>
 				</div>
-			</div>
 				<!-- <span class="arrow-holder">
 					<span>
 						<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,27 +87,32 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-	margin-bottom: 2.6rem;
+	margin-bottom: 4rem;
 	padding-left: 3rem;
 	padding-right: 3rem;
 	padding-bottom: 5rem;
 	background: $white;
 	border-radius: 1.2rem;
 	transition: $transition;
-
+	overflow: hidden;
+	
 	@include media-breakpoint-down(md) {
 		padding-left: 2.4rem;
 		padding-right: 2.4rem;
-		padding-bottom: 2.3rem;
-		margin-bottom: 2rem;
+		padding-bottom: 0rem;
+		margin-bottom: 3rem;
 	}
 
 	&:hover {
-		color: $white;
-		background: $cloud-burst2;
+		// color: $white;
+		// background: $cloud-burst2;
 
-		.btn-link {
-			color: $white;
+		// .btn-link {
+		// 	color: $white;
+		// }
+		.img-holder img  {
+			transform: scale(1.1);
+			
 		}
 	}
 
@@ -126,6 +134,7 @@ export default {
 				height: auto;
 				border-radius: 0.8rem;
 			}
+			
 		}
 
 		.category {
@@ -188,7 +197,7 @@ export default {
 
 		@include media-breakpoint-down(md) {
 			margin-bottom: 2.4rem;
-			padding-bottom: 2.4rem;
+			padding-bottom: 0rem;
 			font-size: 1.6rem;
 		}
 
@@ -221,17 +230,27 @@ export default {
 		margin-left: -3rem;
 		margin-right: -3rem;
 		margin-bottom: 2.4rem;
-
+		transition: transform 0.5s;
+		overflow: hidden;
+		
 		@include media-breakpoint-down(md) {
 			margin-left: -2.4rem;
 			margin-right: -2.4rem;
 		}
+		// .img-holder picture {
+		// 	max-height: 190px !important;
+		// }
+		// .hol {
+		// 	max-height: 19rem !important;
+		// 	overflow: hidden !important;
+		// }
 
 		img {
 			width: 100%;
 			height: auto;
 			border-top-left-radius: 1.2rem;
 			border-top-right-radius: 1.2rem;
+			transition: transform 0.5s;
 		}
 	}
 
@@ -239,6 +258,7 @@ export default {
 		@include media-breakpoint-down(md) {
 			padding-top: 2.6rem;
 		}
+		
 
 		.btn-warning {
 			display: none !important;

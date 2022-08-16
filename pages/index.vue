@@ -46,14 +46,14 @@
 import OurPartners from "@/components/OurPartners";
 import IntroSection from "@/components/IntroSection";
 import Solutions from "@/components/Solutions";
-import Button from "@/components/Button";
+// import Button from "@/components/Button";
 import SolutionSection from "@/components/SolutionSection";
 import CustomerExperienceSection from "@/components/CustomerExperienceSection";
 import ContactSection from "@/components/ContactSection";
 import InformersSection from "@/components/InformersSection";
 
 export default {
-	components: { OurPartners, IntroSection, Button, CustomerExperienceSection, SolutionSection, ContactSection, Solutions, InformersSection },
+	components: { OurPartners, IntroSection, CustomerExperienceSection, SolutionSection, ContactSection, Solutions, InformersSection },
 	data() {
 		return {
 			info: {
@@ -78,8 +78,8 @@ export default {
 .home-page {
 	.intro-section {
 		background: $black;
-		min-height: 90vh;
-
+		min-height: 110vh;
+		
 		// color: $white;
 		// background: url("@/assets/imgs/img-030.jpg");
 		// background-size: cover;

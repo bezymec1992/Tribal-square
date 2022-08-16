@@ -78,6 +78,10 @@ export default {
 .our-partners {
 	padding: 10rem 0 0 0;
 	background: $white;
+	.h2	{
+		font-family: 'Oswald';
+		text-transform: uppercase;
+	}
 	.our-partners__items {
 		max-width: 116.3rem;
 		padding-bottom: 7rem;

@@ -41,7 +41,8 @@ export default {
 	.h2 {
 		margin-bottom: 2.6rem;
 		line-height: 1.2;
-
+		font-family: 'Oswald';
+		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			margin-bottom: 2.4rem;
 		}
