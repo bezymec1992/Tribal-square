@@ -1,7 +1,7 @@
 <template>
 	<div class="home-page">
 		<Intro-section>
-			<!-- <div class="container">
+			<div class="container">
 				<div class="row">
 					<div class="col-lg-8">
 						<h1 class="h1">
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</Intro-section>
 		<Solutions :title="info.title" :text="info.text" :img="info.img" :img-mob="info.imgMob" :button="true" class="style-3" />
 		<InformersSection />
@@ -80,53 +80,53 @@ export default {
 		background: $black;
 		min-height: 110vh;
 		
-		// color: $white;
-		// background: url("@/assets/imgs/img-030.jpg");
-		// background-size: cover;
-		// background-repeat: no-repeat;
+		color: $white;
+		background: url("@/assets/imgs/img-030.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
 
-		// @include media-breakpoint-up(xxl) {
-		// 	overflow: hidden;
-		// }
+		@include media-breakpoint-up(xxl) {
+			overflow: hidden;
+		}
 
-		// @include media-breakpoint-up(md) {
-		// 	padding-top: 25rem;
-		// }
+		@include media-breakpoint-up(md) {
+			padding-top: 25rem;
+		}
 
-		// .h1 {
-		// 	margin-bottom: 8rem;
+		.h1 {
+			margin-bottom: 8rem;
 
-		// 	@include media-breakpoint-down(md) {
-		// 		margin-bottom: 0;
-		// 	}
-		// }
+			@include media-breakpoint-down(md) {
+				margin-bottom: 0;
+			}
+		}
 
 		.container {
 			position: relative;
 		}
 
-		// .img-holder {
-		// 	@include media-breakpoint-up(md) {
-		// 		position: absolute;
-		// 		right: 0;
-		// 		width: 54.4%;
-		// 		max-width: 82rem;
-		// 		bottom: -17.8rem;
-		// 	}
+		.img-holder {
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				right: 0;
+				width: 54.4%;
+				max-width: 82rem;
+				bottom: -17.8rem;
+			}
 
-		// 	@include media-breakpoint-up(xxl) {
-		// 		right: -3.3rem;
-		// 	}
+			@include media-breakpoint-up(xxl) {
+				right: -3.3rem;
+			}
 
-		// 	@include media-breakpoint-down(md) {
-		// 		margin-bottom: 2rem;
-		// 	}
+			@include media-breakpoint-down(md) {
+				margin-bottom: 2rem;
+			}
 
-		// 	img {
-		// 		width: 100%;
-		// 		height: auto;
-		// 	}
-		// }
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 
 	.our-partners {
